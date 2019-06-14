@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsABGN.Logic", "NewsABGN.Logic\NewsABGN.Logic.csproj", "{90F0DC1C-D676-4D1E-A00B-75693DA03632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsABGN.UI", "NewsABGN.UI\NewsABGN.UI.csproj", "{9524A5D3-17AF-421C-BD6A-D6A0B1E365BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90F0DC1C-D676-4D1E-A00B-75693DA03632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F0DC1C-D676-4D1E-A00B-75693DA03632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F0DC1C-D676-4D1E-A00B-75693DA03632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F0DC1C-D676-4D1E-A00B-75693DA03632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9524A5D3-17AF-421C-BD6A-D6A0B1E365BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9524A5D3-17AF-421C-BD6A-D6A0B1E365BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9524A5D3-17AF-421C-BD6A-D6A0B1E365BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9524A5D3-17AF-421C-BD6A-D6A0B1E365BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52126A9B-8D27-4DAC-82C1-8AF76FC3EF6E}
+	EndGlobalSection
+EndGlobal
