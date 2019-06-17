@@ -1,4 +1,4 @@
-﻿namespace NewsABGN.UI.Forms
+﻿namespace NewsABGN.UI
 {
     partial class ArticleForm
     {

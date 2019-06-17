@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NewsABGN.UI.Forms;
+using System.Web;
+using System.IO;
 
 namespace NewsABGN.UI.User_Controls.Result
 {
@@ -37,6 +38,23 @@ namespace NewsABGN.UI.User_Controls.Result
         {
             string result = "";
             int i = 1;
+
+            //Console.WriteLine("Enter a string having '&', '<', '>' or '\"' in it: ");
+            //string myString = Console.ReadLine();
+
+            //// Encode the string.
+            //string myEncodedString = HttpUtility.HtmlEncode(myString);
+
+            //Console.WriteLine($"HTML Encoded string is: {myEncodedString}");
+            StringWriter myWriter = new StringWriter();
+
+            // Decode the encoded string.
+            HttpUtility.HtmlDecode(str, myWriter);
+
+            str = myWriter.ToString();
+           
+
+
 
             foreach (var letter in str)
             {

@@ -32,3 +32,6 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\IronPython.Wpf.xml
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\Microsoft.Dynamic.xml
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\Microsoft.Scripting.xml
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\Microsoft.Scripting.Metadata.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.ArticleForm.resources
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.ScrapPanel.resources
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.Scrap.resources

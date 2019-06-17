@@ -37,6 +37,7 @@
             this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Gulim", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
             this.lblTitle.Location = new System.Drawing.Point(15, 20);
             this.lblTitle.Name = "lblTitle";
@@ -49,6 +50,7 @@
             this.lblContents.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblContents.AutoSize = true;
+            this.lblContents.BackColor = System.Drawing.Color.Transparent;
             this.lblContents.Location = new System.Drawing.Point(17, 73);
             this.lblContents.Name = "lblContents";
             this.lblContents.Size = new System.Drawing.Size(149, 12);
@@ -59,12 +61,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
             this.Controls.Add(this.lblContents);
             this.Controls.Add(this.lblTitle);
             this.Name = "NewsResult";
             this.Size = new System.Drawing.Size(603, 172);
-            this.DoubleClick += new System.EventHandler(this.Open_Article);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -49,7 +49,7 @@
             // 
             this.picbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picbExit.Image = global::NewsABGN.UI.Properties.Resources.exit;
-            this.picbExit.Location = new System.Drawing.Point(1218, 4);
+            this.picbExit.Location = new System.Drawing.Point(1219, 4);
             this.picbExit.Name = "picbExit";
             this.picbExit.Size = new System.Drawing.Size(55, 50);
             this.picbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

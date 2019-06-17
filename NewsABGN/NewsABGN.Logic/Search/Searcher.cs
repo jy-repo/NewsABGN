@@ -28,8 +28,8 @@ namespace NewsABGN.Logic
             
             //build query string
             string query = keyword;
-            string url = "https://openapi.naver.com/v1/search/news.json?query=" + query +
-                $"&display = {displayNumber} & start = {startNumber} & sort = {sortSytle}";
+            string url = "https://openapi.naver.com/v1/search/news.json?query=" + query;
+            // +$"&display = {displayNumber} & start = {startNumber} & sort = {sortSytle}";
 
             // get response with NAVER API ID/Secret
             HttpWebResponse response = GetResponse(url);
@@ -72,6 +72,7 @@ namespace NewsABGN.Logic
                 newsContents.Add("pubDate", item["pubDate"].ToString());
                 newsContents.Add("title", item["title"].ToString());
                 newsContents.Add("description", item["description"].ToString());
+                newsContents.Add("link", item["link"].ToString());
 
                 contentsList.Add(newsContents);
             }

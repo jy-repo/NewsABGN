@@ -56,6 +56,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -93,6 +94,18 @@
     <Compile Include="User Controls\Result\ResultPanel.Designer.cs">
       <DependentUpon>ResultPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\Scrap\ScrapPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\Scrap\ScrapPanel.Designer.cs">
+      <DependentUpon>ScrapPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\Scrap\Scrap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\Scrap\Scrap.Designer.cs">
+      <DependentUpon>Scrap.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\Search\SearchBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -126,6 +139,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Result\ResultPanel.resx">
       <DependentUpon>ResultPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\Scrap\ScrapPanel.resx">
+      <DependentUpon>ScrapPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\Scrap\Scrap.resx">
+      <DependentUpon>Scrap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Search\SearchBar.resx">
       <DependentUpon>SearchBar.cs</DependentUpon>
