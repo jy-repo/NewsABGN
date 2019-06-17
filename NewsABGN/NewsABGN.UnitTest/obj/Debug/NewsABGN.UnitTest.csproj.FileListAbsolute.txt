@@ -1,0 +1,14 @@
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\NewsABGN.UnitTest.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\NewsABGN.UnitTest.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\obj\Debug\NewsABGN.UnitTest.csprojAssemblyReference.cache
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\obj\Debug\NewsABGN.UnitTest.csproj.CoreCompileInputs.cache
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\obj\Debug\NewsABGN.UnitTest.csproj.CopyComplete
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\obj\Debug\NewsABGN.UnitTest.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\obj\Debug\NewsABGN.UnitTest.pdb

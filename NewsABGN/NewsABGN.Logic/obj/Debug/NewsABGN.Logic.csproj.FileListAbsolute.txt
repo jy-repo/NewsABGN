@@ -1,0 +1,10 @@
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\NewsABGN.Logic.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\obj\Debug\NewsABGN.Logic.csprojAssemblyReference.cache
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\obj\Debug\NewsABGN.Logic.csproj.CoreCompileInputs.cache
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\obj\Debug\NewsABGN.Logic.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\NewsABGN.Logic.dll.config
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\NewsABGN.Logic.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\obj\Debug\NewsABGN.Logic.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\Newtonsoft.Json.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\Newtonsoft.Json.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\obj\Debug\NewsABGN.Logic.csproj.CopyComplete
