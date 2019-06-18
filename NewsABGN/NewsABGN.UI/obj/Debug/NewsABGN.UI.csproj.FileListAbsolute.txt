@@ -17,17 +17,9 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\NewsABGN.Logic.dll.co
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.csproj.CopyComplete
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\Newtonsoft.Json.dll
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\Newtonsoft.Json.xml
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\IronPython.dll
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\IronPython.Modules.dll
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\IronPython.SQLite.dll
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\IronPython.Wpf.dll
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\Microsoft.Dynamic.dll
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\Microsoft.Scripting.dll
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\Microsoft.Scripting.Metadata.dll
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\IronPython.xml
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\IronPython.Modules.xml
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\IronPython.SQLite.xml
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\IronPython.Wpf.xml
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\Microsoft.Dynamic.xml
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\Microsoft.Scripting.xml
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\Microsoft.Scripting.Metadata.xml

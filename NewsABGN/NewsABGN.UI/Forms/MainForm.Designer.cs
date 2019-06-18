@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.spcKeyword_News = new System.Windows.Forms.SplitContainer();
+            this.uscRealTimeKeywordPanel = new NewsABGN.UI.User_Controls.RealTimeKeywordPanel();
             this.spcSearch_Scrap = new System.Windows.Forms.SplitContainer();
             this.uscResultPanel = new NewsABGN.UI.User_Controls.Result.ResultPanel();
             this.uscSearchBar = new NewsABGN.UI.User_Controls.Search.SearchBar();
             this.scrapPanel1 = new NewsABGN.UI.User_Controls.ScrapPanel();
             this.uscTitleBar = new NewsABGN.UI.User_Controls.TitleBar.TitleBar();
-            this.uscRealTimeKeywordPanel = new NewsABGN.UI.User_Controls.RealTimeKeywordPanel();
             ((System.ComponentModel.ISupportInitialize)(this.spcKeyword_News)).BeginInit();
             this.spcKeyword_News.Panel1.SuspendLayout();
             this.spcKeyword_News.Panel2.SuspendLayout();
@@ -61,8 +61,18 @@
             // 
             this.spcKeyword_News.Panel2.Controls.Add(this.spcSearch_Scrap);
             this.spcKeyword_News.Size = new System.Drawing.Size(1276, 823);
-            this.spcKeyword_News.SplitterDistance = 271;
+            this.spcKeyword_News.SplitterDistance = 235;
             this.spcKeyword_News.TabIndex = 3;
+            // 
+            // uscRealTimeKeywordPanel
+            // 
+            this.uscRealTimeKeywordPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uscRealTimeKeywordPanel.Location = new System.Drawing.Point(4, 16);
+            this.uscRealTimeKeywordPanel.Name = "uscRealTimeKeywordPanel";
+            this.uscRealTimeKeywordPanel.Size = new System.Drawing.Size(229, 344);
+            this.uscRealTimeKeywordPanel.TabIndex = 0;
+            this.uscRealTimeKeywordPanel.KeywordClicked += new System.EventHandler<NewsABGN.UI.User_Controls.RealTimeKeywordPanel.KeywordClickedEventArgs>(this.UscRealTimeKeywordPanel_KeywordClicked);
             // 
             // spcSearch_Scrap
             // 
@@ -72,14 +82,15 @@
             // 
             // spcSearch_Scrap.Panel1
             // 
+            this.spcSearch_Scrap.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.spcSearch_Scrap.Panel1.Controls.Add(this.uscResultPanel);
             this.spcSearch_Scrap.Panel1.Controls.Add(this.uscSearchBar);
             // 
             // spcSearch_Scrap.Panel2
             // 
             this.spcSearch_Scrap.Panel2.Controls.Add(this.scrapPanel1);
-            this.spcSearch_Scrap.Size = new System.Drawing.Size(1001, 823);
-            this.spcSearch_Scrap.SplitterDistance = 639;
+            this.spcSearch_Scrap.Size = new System.Drawing.Size(1037, 823);
+            this.spcSearch_Scrap.SplitterDistance = 661;
             this.spcSearch_Scrap.SplitterWidth = 15;
             this.spcSearch_Scrap.TabIndex = 3;
             // 
@@ -92,7 +103,7 @@
             this.uscResultPanel.Location = new System.Drawing.Point(3, 64);
             this.uscResultPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uscResultPanel.Name = "uscResultPanel";
-            this.uscResultPanel.Size = new System.Drawing.Size(633, 566);
+            this.uscResultPanel.Size = new System.Drawing.Size(655, 566);
             this.uscResultPanel.TabIndex = 2;
             // 
             // uscSearchBar
@@ -112,7 +123,7 @@
             this.scrapPanel1.Location = new System.Drawing.Point(3, 25);
             this.scrapPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.scrapPanel1.Name = "scrapPanel1";
-            this.scrapPanel1.Size = new System.Drawing.Size(319, 605);
+            this.scrapPanel1.Size = new System.Drawing.Size(300, 605);
             this.scrapPanel1.TabIndex = 0;
             // 
             // uscTitleBar
@@ -129,15 +140,6 @@
             this.uscTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseDown);
             this.uscTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseMove);
             this.uscTitleBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseUp);
-            // 
-            // uscRealTimeKeywordPanel
-            // 
-            this.uscRealTimeKeywordPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uscRealTimeKeywordPanel.Location = new System.Drawing.Point(4, 16);
-            this.uscRealTimeKeywordPanel.Name = "uscRealTimeKeywordPanel";
-            this.uscRealTimeKeywordPanel.Size = new System.Drawing.Size(265, 344);
-            this.uscRealTimeKeywordPanel.TabIndex = 0;
             // 
             // MainForm
             // 

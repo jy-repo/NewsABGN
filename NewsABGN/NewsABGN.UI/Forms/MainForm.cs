@@ -101,8 +101,18 @@ namespace NewsABGN.UI
 
         private void SearchKeyword(object sender, User_Controls.Search.SearchBar.SearchCatClickedEventArgs e)
         {
+            SearchAndFill(e.Keyword);
+        }
+
+        private void UscRealTimeKeywordPanel_KeywordClicked(object sender, User_Controls.RealTimeKeywordPanel.KeywordClickedEventArgs e)
+        {
+            SearchAndFill(e.Keyword);
+        }
+
+        private void SearchAndFill(string keyword)
+        {
             // search news with keyword - Logic
-            var contentList = LogicRepository.Controller.Searcher.Search(e.Keyword);
+            var contentList = LogicRepository.Controller.Searcher.Search(keyword);
             // fill result panel - UI
             var newsResults = uscResultPanel.FillResults(contentList);
 
