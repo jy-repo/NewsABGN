@@ -12,3 +12,8 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\obj\Debug\NewsABGN.UnitTe
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\obj\Debug\NewsABGN.UnitTest.csproj.CopyComplete
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\obj\Debug\NewsABGN.UnitTest.dll
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\obj\Debug\NewsABGN.UnitTest.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\NewsABGN.UnitTest.dll.config
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\EntityFramework.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\EntityFramework.SqlServer.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\EntityFramework.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\EntityFramework.SqlServer.xml

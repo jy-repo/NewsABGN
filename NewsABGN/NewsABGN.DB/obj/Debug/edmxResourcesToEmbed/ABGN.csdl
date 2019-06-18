@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ABGNDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Keyword">
+    <Key>
+      <PropertyRef Name="KeywordId" />
+    </Key>
+    <Property Name="KeywordId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PushName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PushDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Members" Relationship="Self.MemberKeyword" FromRole="Keyword" ToRole="Member" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="MemberId" />
+    </Key>
+    <Property Name="MemberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Scraps" Relationship="Self.MemberScrap" FromRole="Member" ToRole="Scrap" />
+    <NavigationProperty Name="Keywords" Relationship="Self.MemberKeyword" FromRole="Member" ToRole="Keyword" />
+  </EntityType>
+  <EntityType Name="Scrap">
+    <Key>
+      <PropertyRef Name="ScrapId" />
+    </Key>
+    <Property Name="ScrapId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OriginalLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Link" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PubDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Members" Relationship="Self.MemberScrap" FromRole="Scrap" ToRole="Member" />
+  </EntityType>
+  <Association Name="MemberScrap">
+    <End Role="Member" Type="Self.Member" Multiplicity="*" />
+    <End Role="Scrap" Type="Self.Scrap" Multiplicity="*" />
+  </Association>
+  <Association Name="MemberKeyword">
+    <End Role="Keyword" Type="Self.Keyword" Multiplicity="*" />
+    <End Role="Member" Type="Self.Member" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="ABGNDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Keywords" EntityType="Self.Keyword" />
+    <EntitySet Name="Members" EntityType="Self.Member" />
+    <EntitySet Name="Scraps" EntityType="Self.Scrap" />
+    <AssociationSet Name="MemberScrap" Association="Self.MemberScrap">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="Scrap" EntitySet="Scraps" />
+    </AssociationSet>
+    <AssociationSet Name="MemberKeyword" Association="Self.MemberKeyword">
+      <End Role="Keyword" EntitySet="Keywords" />
+      <End Role="Member" EntitySet="Members" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

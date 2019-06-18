@@ -33,7 +33,9 @@
             this.spcSearch_Scrap = new System.Windows.Forms.SplitContainer();
             this.uscResultPanel = new NewsABGN.UI.User_Controls.Result.ResultPanel();
             this.uscSearchBar = new NewsABGN.UI.User_Controls.Search.SearchBar();
-            this.scrapPanel1 = new NewsABGN.UI.User_Controls.ScrapPanel();
+            this.lblLoginWaring = new System.Windows.Forms.Label();
+            this.uscScrapPanel = new NewsABGN.UI.User_Controls.ScrapPanelControl();
+            this.label1 = new System.Windows.Forms.Label();
             this.uscTitleBar = new NewsABGN.UI.User_Controls.TitleBar.TitleBar();
             ((System.ComponentModel.ISupportInitialize)(this.spcKeyword_News)).BeginInit();
             this.spcKeyword_News.Panel1.SuspendLayout();
@@ -55,6 +57,7 @@
             // 
             // spcKeyword_News.Panel1
             // 
+            this.spcKeyword_News.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(240)))), ((int)(((byte)(230)))));
             this.spcKeyword_News.Panel1.Controls.Add(this.uscRealTimeKeywordPanel);
             // 
             // spcKeyword_News.Panel2
@@ -88,7 +91,9 @@
             // 
             // spcSearch_Scrap.Panel2
             // 
-            this.spcSearch_Scrap.Panel2.Controls.Add(this.scrapPanel1);
+            this.spcSearch_Scrap.Panel2.Controls.Add(this.lblLoginWaring);
+            this.spcSearch_Scrap.Panel2.Controls.Add(this.uscScrapPanel);
+            this.spcSearch_Scrap.Panel2.Controls.Add(this.label1);
             this.spcSearch_Scrap.Size = new System.Drawing.Size(1037, 823);
             this.spcSearch_Scrap.SplitterDistance = 661;
             this.spcSearch_Scrap.SplitterWidth = 15;
@@ -115,16 +120,37 @@
             this.uscSearchBar.TabIndex = 1;
             this.uscSearchBar.SearchCatClicked += new System.EventHandler<NewsABGN.UI.User_Controls.Search.SearchBar.SearchCatClickedEventArgs>(this.SearchKeyword);
             // 
-            // scrapPanel1
+            // lblLoginWaring
             // 
-            this.scrapPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblLoginWaring.AutoSize = true;
+            this.lblLoginWaring.Font = new System.Drawing.Font("GungsuhChe", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblLoginWaring.Location = new System.Drawing.Point(78, 143);
+            this.lblLoginWaring.Name = "lblLoginWaring";
+            this.lblLoginWaring.Size = new System.Drawing.Size(197, 32);
+            this.lblLoginWaring.TabIndex = 3;
+            this.lblLoginWaring.Text = "로그인 해라";
+            // 
+            // uscScrapPanel
+            // 
+            this.uscScrapPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.scrapPanel1.Location = new System.Drawing.Point(3, 25);
-            this.scrapPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.scrapPanel1.Name = "scrapPanel1";
-            this.scrapPanel1.Size = new System.Drawing.Size(300, 605);
-            this.scrapPanel1.TabIndex = 0;
+            this.uscScrapPanel.Location = new System.Drawing.Point(23, 41);
+            this.uscScrapPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uscScrapPanel.Name = "uscScrapPanel";
+            this.uscScrapPanel.Size = new System.Drawing.Size(309, 589);
+            this.uscScrapPanel.TabIndex = 0;
+            this.uscScrapPanel.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Haan Sale M", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(19, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "내가 스크랩 한 기사";
             // 
             // uscTitleBar
             // 
@@ -160,6 +186,7 @@
             this.spcKeyword_News.ResumeLayout(false);
             this.spcSearch_Scrap.Panel1.ResumeLayout(false);
             this.spcSearch_Scrap.Panel2.ResumeLayout(false);
+            this.spcSearch_Scrap.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcSearch_Scrap)).EndInit();
             this.spcSearch_Scrap.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -173,7 +200,9 @@
         private System.Windows.Forms.SplitContainer spcKeyword_News;
         private User_Controls.Result.ResultPanel uscResultPanel;
         private System.Windows.Forms.SplitContainer spcSearch_Scrap;
-        private User_Controls.ScrapPanel scrapPanel1;
+        private User_Controls.ScrapPanelControl uscScrapPanel;
         private User_Controls.RealTimeKeywordPanel uscRealTimeKeywordPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLoginWaring;
     }
 }

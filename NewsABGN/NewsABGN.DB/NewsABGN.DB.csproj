@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F15A4114-8A86-426E-BBC4-1A2C87BC80F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NewsABGN.DB</RootNamespace>
+    <AssemblyName>NewsABGN.DB</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <EntityDeploy Include="ABGN.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ABGN.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ABGN.edmx.diagram">
+      <DependentUpon>ABGN.edmx</DependentUpon>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABGN.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABGN.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ABGN.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABGN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ABGN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABGN.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataRepository.cs" />
+    <Compile Include="Data\EntityData.cs" />
+    <Compile Include="Data\MemberData.cs" />
+    <Compile Include="Data\ScrapData.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\Member.cs" />
+    <Compile Include="Entities\Scrap.cs" />
+    <Compile Include="Keyword.cs">
+      <DependentUpon>ABGN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Member.cs">
+      <DependentUpon>ABGN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scrap.cs">
+      <DependentUpon>ABGN.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ABGN.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ABGN.Context.cs</LastGenOutput>
+      <DependentUpon>ABGN.edmx</DependentUpon>
+    </Content>
+    <Content Include="ABGN.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ABGN.edmx</DependentUpon>
+      <LastGenOutput>ABGN.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

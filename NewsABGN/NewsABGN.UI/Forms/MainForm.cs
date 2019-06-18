@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewsABGN.Logic;
+using NewsABGN.DB;
+using NewsABGN.UI.User_Controls.Result;
 
 namespace NewsABGN.UI
 {
@@ -18,6 +20,9 @@ namespace NewsABGN.UI
             InitializeComponent();
             uscRealTimeKeywordPanel.FillKeywords();
         }
+
+        private bool _loggedIn = false;
+        // private Member member = null;
 
 
         private void UscTitleBar_ExitButtonClicked(object sender, User_Controls.TitleBar.TitleBar.ExitButtonClickedEventArgs e)
@@ -115,9 +120,28 @@ namespace NewsABGN.UI
             var contentList = LogicRepository.Controller.Searcher.Search(keyword);
             // fill result panel - UI
             var newsResults = uscResultPanel.FillResults(contentList);
+            
+            foreach(var result in newsResults)
+                result.ResultDoubleClicked += 
+                    new EventHandler<Result.ResultDoubleClickedEventArgs>(Open_Article);
 
             // save added news results to a list : for access to each control
             _newsResults = newsResults;
+        }
+
+        private void Open_Article(object sender, Result.ResultDoubleClickedEventArgs e)
+        {
+            ArticleForm articleForm = new ArticleForm(e.Url);
+            articleForm.ShowDialog();
+        }
+
+        // TODO: get and save scraps
+        private void GetScrapsAndFill(int memberId)
+        {
+            lblLoginWaring.Visible = false;
+            uscScrapPanel.Visible = true;
+            List<Scrap> scraps = LogicRepository.Controller.Scrapper.GetScraps(memberId);
+            uscScrapPanel.FillScrapPanel(scraps);
         }
     }
 }

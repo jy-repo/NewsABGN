@@ -1,0 +1,12 @@
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.DB\obj\Debug\NewsABGN.DB.csprojAssemblyReference.cache
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.DB\obj\Debug\NewsABGN.DB.csproj.CoreCompileInputs.cache
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.DB\bin\Debug\NewsABGN.DB.dll.config
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.DB\bin\Debug\NewsABGN.DB.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.DB\bin\Debug\NewsABGN.DB.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.DB\bin\Debug\EntityFramework.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.DB\bin\Debug\EntityFramework.SqlServer.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.DB\bin\Debug\EntityFramework.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.DB\bin\Debug\EntityFramework.SqlServer.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.DB\obj\Debug\NewsABGN.DB.csproj.CopyComplete
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.DB\obj\Debug\NewsABGN.DB.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.DB\obj\Debug\NewsABGN.DB.pdb

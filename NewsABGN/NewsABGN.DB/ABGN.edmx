@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ABGNDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Keyword">
+          <Key>
+            <PropertyRef Name="KeywordId" />
+          </Key>
+          <Property Name="KeywordId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PushName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PushDate" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="MemberId" />
+          </Key>
+          <Property Name="MemberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ABGNDB.dbo.MemberKeyword' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MemberKeyword">
+          <Key>
+            <PropertyRef Name="MemberId" />
+            <PropertyRef Name="KeywordId" />
+          </Key>
+          <Property Name="MemberId" Type="int" Nullable="false" />
+          <Property Name="KeywordId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MemberScrap">
+          <Key>
+            <PropertyRef Name="MemberId" />
+            <PropertyRef Name="ScrapId" />
+          </Key>
+          <Property Name="MemberId" Type="int" Nullable="false" />
+          <Property Name="ScrapId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Scrap">
+          <Key>
+            <PropertyRef Name="ScrapId" />
+          </Key>
+          <Property Name="ScrapId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="OriginalLink" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Link" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="PubDate" Type="date" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_MemberKeyword_Keyword">
+          <End Role="Keyword" Type="Self.Keyword" Multiplicity="1" />
+          <End Role="MemberKeyword" Type="Self.MemberKeyword" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Keyword">
+              <PropertyRef Name="KeywordId" />
+            </Principal>
+            <Dependent Role="MemberKeyword">
+              <PropertyRef Name="KeywordId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MemberKeyword_Member">
+          <End Role="Member" Type="Self.Member" Multiplicity="1" />
+          <End Role="MemberKeyword" Type="Self.MemberKeyword" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="MemberKeyword">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MemberScrap_Member">
+          <End Role="Member" Type="Self.Member" Multiplicity="1" />
+          <End Role="MemberScrap" Type="Self.MemberScrap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Member">
+              <PropertyRef Name="MemberId" />
+            </Principal>
+            <Dependent Role="MemberScrap">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MemberScrap_Scrap">
+          <End Role="Scrap" Type="Self.Scrap" Multiplicity="1" />
+          <End Role="MemberScrap" Type="Self.MemberScrap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Scrap">
+              <PropertyRef Name="ScrapId" />
+            </Principal>
+            <Dependent Role="MemberScrap">
+              <PropertyRef Name="ScrapId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ABGNDBModelStoreContainer">
+          <EntitySet Name="Keyword" EntityType="Self.Keyword" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MemberScrap" EntityType="Self.MemberScrap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Scrap" EntityType="Self.Scrap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MemberKeyword" EntityType="Self.MemberKeyword" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MemberKeyword].[MemberId] AS [MemberId], 
+    [MemberKeyword].[KeywordId] AS [KeywordId]
+    FROM [dbo].[MemberKeyword] AS [MemberKeyword]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_MemberKeyword_Keyword" Association="Self.FK_MemberKeyword_Keyword">
+            <End Role="Keyword" EntitySet="Keyword" />
+            <End Role="MemberKeyword" EntitySet="MemberKeyword" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MemberKeyword_Member" Association="Self.FK_MemberKeyword_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="MemberKeyword" EntitySet="MemberKeyword" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MemberScrap_Member" Association="Self.FK_MemberScrap_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="MemberScrap" EntitySet="MemberScrap" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MemberScrap_Scrap" Association="Self.FK_MemberScrap_Scrap">
+            <End Role="Scrap" EntitySet="Scrap" />
+            <End Role="MemberScrap" EntitySet="MemberScrap" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ABGNDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Keyword">
+          <Key>
+            <PropertyRef Name="KeywordId" />
+          </Key>
+          <Property Name="KeywordId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PushName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PushDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Members" Relationship="Self.MemberKeyword" FromRole="Keyword" ToRole="Member" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="MemberId" />
+          </Key>
+          <Property Name="MemberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Scraps" Relationship="Self.MemberScrap" FromRole="Member" ToRole="Scrap" />
+          <NavigationProperty Name="Keywords" Relationship="Self.MemberKeyword" FromRole="Member" ToRole="Keyword" />
+        </EntityType>
+        <EntityType Name="Scrap">
+          <Key>
+            <PropertyRef Name="ScrapId" />
+          </Key>
+          <Property Name="ScrapId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OriginalLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Link" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PubDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Members" Relationship="Self.MemberScrap" FromRole="Scrap" ToRole="Member" />
+        </EntityType>
+        <Association Name="MemberScrap">
+          <End Role="Member" Type="Self.Member" Multiplicity="*" />
+          <End Role="Scrap" Type="Self.Scrap" Multiplicity="*" />
+        </Association>
+        <Association Name="MemberKeyword">
+          <End Role="Keyword" Type="Self.Keyword" Multiplicity="*" />
+          <End Role="Member" Type="Self.Member" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="ABGNDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Keywords" EntityType="Self.Keyword" />
+          <EntitySet Name="Members" EntityType="Self.Member" />
+          <EntitySet Name="Scraps" EntityType="Self.Scrap" />
+          <AssociationSet Name="MemberScrap" Association="Self.MemberScrap">
+            <End Role="Member" EntitySet="Members" />
+            <End Role="Scrap" EntitySet="Scraps" />
+          </AssociationSet>
+          <AssociationSet Name="MemberKeyword" Association="Self.MemberKeyword">
+            <End Role="Keyword" EntitySet="Keywords" />
+            <End Role="Member" EntitySet="Members" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ABGNDBModelStoreContainer" CdmEntityContainer="ABGNDBEntities">
+          <EntitySetMapping Name="Keywords">
+            <EntityTypeMapping TypeName="ABGNDBModel.Keyword">
+              <MappingFragment StoreEntitySet="Keyword">
+                <ScalarProperty Name="KeywordId" ColumnName="KeywordId" />
+                <ScalarProperty Name="PushName" ColumnName="PushName" />
+                <ScalarProperty Name="PushDate" ColumnName="PushDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Members">
+            <EntityTypeMapping TypeName="ABGNDBModel.Member">
+              <MappingFragment StoreEntitySet="Member">
+                <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Scraps">
+            <EntityTypeMapping TypeName="ABGNDBModel.Scrap">
+              <MappingFragment StoreEntitySet="Scrap">
+                <ScalarProperty Name="ScrapId" ColumnName="ScrapId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="OriginalLink" ColumnName="OriginalLink" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="PubDate" ColumnName="PubDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="MemberScrap" TypeName="ABGNDBModel.MemberScrap" StoreEntitySet="MemberScrap">
+            <EndProperty Name="Member">
+              <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+            </EndProperty>
+            <EndProperty Name="Scrap">
+              <ScalarProperty Name="ScrapId" ColumnName="ScrapId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="MemberKeyword" TypeName="ABGNDBModel.MemberKeyword" StoreEntitySet="MemberKeyword">
+            <EndProperty Name="Keyword">
+              <ScalarProperty Name="KeywordId" ColumnName="KeywordId" />
+            </EndProperty>
+            <EndProperty Name="Member">
+              <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

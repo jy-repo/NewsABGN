@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsABGN.UnitTest", "NewsAB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsABGN.Console", "NewsABGN.Console\NewsABGN.Console.csproj", "{6DC69BE9-4A83-4C4C-9FF9-9DB9ACDE09EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsABGN.DB", "NewsABGN.DB\NewsABGN.DB.csproj", "{F15A4114-8A86-426E-BBC4-1A2C87BC80F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6DC69BE9-4A83-4C4C-9FF9-9DB9ACDE09EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DC69BE9-4A83-4C4C-9FF9-9DB9ACDE09EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DC69BE9-4A83-4C4C-9FF9-9DB9ACDE09EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F15A4114-8A86-426E-BBC4-1A2C87BC80F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F15A4114-8A86-426E-BBC4-1A2C87BC80F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F15A4114-8A86-426E-BBC4-1A2C87BC80F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F15A4114-8A86-426E-BBC4-1A2C87BC80F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

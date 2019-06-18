@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Dynamic, Version=1.2.2.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamicLanguageRuntime.1.2.2\lib\net45\Microsoft.Dynamic.dll</HintPath>
     </Reference>
@@ -43,6 +49,7 @@
       <HintPath>..\packages\DynamicLanguageRuntime.1.2.2\lib\net45\Microsoft.Scripting.Metadata.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -88,17 +95,17 @@
     <Compile Include="User Controls\ResultPanel.Designer.cs">
       <DependentUpon>ResultPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\ScrapPanel.cs">
+    <Compile Include="User Controls\ScrapPanelControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\ScrapPanel.Designer.cs">
-      <DependentUpon>ScrapPanel.cs</DependentUpon>
+    <Compile Include="User Controls\ScrapPanelControl.Designer.cs">
+      <DependentUpon>ScrapPanelControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\Scrap.cs">
+    <Compile Include="User Controls\ScrapControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\Scrap.Designer.cs">
-      <DependentUpon>Scrap.cs</DependentUpon>
+    <Compile Include="User Controls\ScrapControl.Designer.cs">
+      <DependentUpon>ScrapControl.cs</DependentUpon>
     </Compile>
     <Compile Include="User Controls\SearchBar.cs">
       <SubType>UserControl</SubType>
@@ -137,11 +144,11 @@
     <EmbeddedResource Include="User Controls\ResultPanel.resx">
       <DependentUpon>ResultPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\ScrapPanel.resx">
-      <DependentUpon>ScrapPanel.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls\ScrapPanelControl.resx">
+      <DependentUpon>ScrapPanelControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Scrap.resx">
-      <DependentUpon>Scrap.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls\ScrapControl.resx">
+      <DependentUpon>ScrapControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\SearchBar.resx">
       <DependentUpon>SearchBar.cs</DependentUpon>
@@ -173,6 +180,10 @@
     <None Include="resources\cat_search.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NewsABGN.DB\NewsABGN.DB.csproj">
+      <Project>{f15a4114-8a86-426e-bbc4-1a2c87bc80f8}</Project>
+      <Name>NewsABGN.DB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NewsABGN.Logic\NewsABGN.Logic.csproj">
       <Project>{90f0dc1c-d676-4d1e-a00b-75693da03632}</Project>
       <Name>NewsABGN.Logic</Name>

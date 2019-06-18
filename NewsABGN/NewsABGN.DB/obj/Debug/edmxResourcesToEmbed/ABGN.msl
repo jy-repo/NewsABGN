@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ABGNDBModelStoreContainer" CdmEntityContainer="ABGNDBEntities">
+    <EntitySetMapping Name="Keywords">
+      <EntityTypeMapping TypeName="ABGNDBModel.Keyword">
+        <MappingFragment StoreEntitySet="Keyword">
+          <ScalarProperty Name="KeywordId" ColumnName="KeywordId" />
+          <ScalarProperty Name="PushName" ColumnName="PushName" />
+          <ScalarProperty Name="PushDate" ColumnName="PushDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="ABGNDBModel.Member">
+        <MappingFragment StoreEntitySet="Member">
+          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Scraps">
+      <EntityTypeMapping TypeName="ABGNDBModel.Scrap">
+        <MappingFragment StoreEntitySet="Scrap">
+          <ScalarProperty Name="ScrapId" ColumnName="ScrapId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="OriginalLink" ColumnName="OriginalLink" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PubDate" ColumnName="PubDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MemberScrap" TypeName="ABGNDBModel.MemberScrap" StoreEntitySet="MemberScrap">
+      <EndProperty Name="Member">
+        <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+      </EndProperty>
+      <EndProperty Name="Scrap">
+        <ScalarProperty Name="ScrapId" ColumnName="ScrapId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MemberKeyword" TypeName="ABGNDBModel.MemberKeyword" StoreEntitySet="MemberKeyword">
+      <EndProperty Name="Keyword">
+        <ScalarProperty Name="KeywordId" ColumnName="KeywordId" />
+      </EndProperty>
+      <EndProperty Name="Member">
+        <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

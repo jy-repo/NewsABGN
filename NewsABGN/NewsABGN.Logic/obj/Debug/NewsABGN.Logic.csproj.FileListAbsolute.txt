@@ -15,3 +15,10 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\AngleSharp.xml
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\log4net.xml
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\HtmlAgilityPack.pdb
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\HtmlAgilityPack.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\EntityFramework.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\EntityFramework.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\EntityFramework.SqlServer.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\EntityFramework.SqlServer.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\NewsABGN.DB.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\NewsABGN.DB.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\NewsABGN.DB.dll.config

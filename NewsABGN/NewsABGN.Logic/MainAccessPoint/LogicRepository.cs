@@ -28,9 +28,11 @@ namespace NewsABGN.Logic
         {
             Searcher = new Searcher();
             Crawler = new Crawler();
+            Scrapper = new Scrapper();
         }
 
         public Searcher Searcher { get; }
         public Crawler Crawler { get; }
+        public Scrapper Scrapper { get; }
     }
 }

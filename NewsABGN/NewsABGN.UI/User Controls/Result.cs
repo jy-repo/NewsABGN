@@ -17,7 +17,7 @@ namespace NewsABGN.UI.User_Controls.Result
         private const int lineLengthTitle = 36;
         private const int lineLengthContent = 55;
 
-        private string _link;
+        private string _url;
 
         public Result()
         {
@@ -31,7 +31,7 @@ namespace NewsABGN.UI.User_Controls.Result
                 FitWidth(news["pubDate"], "content") + 
                 "\r\n\r\n" +
                 FitWidth(news["description"], "content");
-            _link = news["link"];
+            _url = news["link"];
         }
 
         private string FitWidth(string str, string type)
@@ -82,10 +82,49 @@ namespace NewsABGN.UI.User_Controls.Result
             return result;
         }
 
-        private void Open_Article(object sender, EventArgs e)
+        #region ResultDoubleClicked event things for C# 3.0
+        public event EventHandler<ResultDoubleClickedEventArgs> ResultDoubleClicked;
+
+        protected virtual void OnResultDoubleClicked(ResultDoubleClickedEventArgs e)
         {
-            ArticleForm articleForm = new ArticleForm(_link);
-            articleForm.ShowDialog();
+            if (ResultDoubleClicked != null)
+                ResultDoubleClicked(this, e);
+        }
+
+        private ResultDoubleClickedEventArgs OnResultDoubleClicked(string url)
+        {
+            ResultDoubleClickedEventArgs args = new ResultDoubleClickedEventArgs(url);
+            OnResultDoubleClicked(args);
+
+            return args;
+        }
+
+        private ResultDoubleClickedEventArgs OnResultDoubleClickedForOut()
+        {
+            ResultDoubleClickedEventArgs args = new ResultDoubleClickedEventArgs();
+            OnResultDoubleClicked(args);
+
+            return args;
+        }
+
+        public class ResultDoubleClickedEventArgs : EventArgs
+        {
+            public string Url { get; set; }
+
+            public ResultDoubleClickedEventArgs()
+            {
+            }
+
+            public ResultDoubleClickedEventArgs(string url)
+            {
+                Url = url;
+            }
+        }
+        #endregion
+
+        private void Result_DoubleClick(object sender, EventArgs e)
+        {
+            OnResultDoubleClicked(_url);
         }
     }
 }

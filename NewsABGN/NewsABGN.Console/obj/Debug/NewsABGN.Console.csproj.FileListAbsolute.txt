@@ -14,3 +14,8 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\Newtonsoft.Json.
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\obj\Debug\NewsABGN.Console.csproj.CopyComplete
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\obj\Debug\NewsABGN.Console.exe
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\obj\Debug\NewsABGN.Console.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\NewsABGN.DB.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\EntityFramework.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\NewsABGN.DB.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\NewsABGN.DB.dll.config
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\EntityFramework.xml
