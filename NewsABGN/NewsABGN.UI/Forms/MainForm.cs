@@ -16,13 +16,14 @@ namespace NewsABGN.UI
         public MainForm()
         {
             InitializeComponent();
+            uscRealTimeKeywordPanel.FillKeywords();
         }
+
 
         private void UscTitleBar_ExitButtonClicked(object sender, User_Controls.TitleBar.TitleBar.ExitButtonClickedEventArgs e)
         {
             this.Close();
         }
-
 
         // drag & move
 
@@ -96,9 +97,9 @@ namespace NewsABGN.UI
         }
 
         // search results to result panel and a list
-        private List<User_Controls.Result.NewsResult> _newsResults = new List<User_Controls.Result.NewsResult>();
+        private List<User_Controls.Result.Result> _newsResults = new List<User_Controls.Result.Result>();
 
-        private void UscSearchBar_SearchCatClicked(object sender, User_Controls.Search.SearchBar.SearchCatClickedEventArgs e)
+        private void SearchKeyword(object sender, User_Controls.Search.SearchBar.SearchCatClickedEventArgs e)
         {
             // search news with keyword - Logic
             var contentList = LogicRepository.Controller.Searcher.Search(e.Keyword);

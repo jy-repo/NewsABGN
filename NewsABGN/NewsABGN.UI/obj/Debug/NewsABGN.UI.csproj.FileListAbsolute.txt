@@ -10,7 +10,6 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\NewsABGN.UI.pdb
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.exe
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.pdb
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.Search.SearchBar.resources
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.Result.NewsResult.resources
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.Result.ResultPanel.resources
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\NewsABGN.Logic.dll
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\NewsABGN.Logic.pdb
@@ -35,3 +34,8 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\Microsoft.Scripting.M
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.ArticleForm.resources
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.ScrapPanel.resources
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.Scrap.resources
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\HtmlAgilityPack.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\HtmlAgilityPack.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\HtmlAgilityPack.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.Result.Result.resources
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.RealTimeKeywordPanel.resources

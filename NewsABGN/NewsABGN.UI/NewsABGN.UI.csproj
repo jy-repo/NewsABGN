@@ -33,18 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IronPython, Version=2.7.9.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronPython.2.7.9\lib\net45\IronPython.dll</HintPath>
-    </Reference>
-    <Reference Include="IronPython.Modules, Version=2.7.9.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronPython.2.7.9\lib\net45\IronPython.Modules.dll</HintPath>
-    </Reference>
-    <Reference Include="IronPython.SQLite, Version=2.7.9.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronPython.2.7.9\lib\net45\IronPython.SQLite.dll</HintPath>
-    </Reference>
-    <Reference Include="IronPython.Wpf, Version=2.7.9.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
-      <HintPath>..\packages\IronPython.2.7.9\lib\net45\IronPython.Wpf.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Dynamic, Version=1.2.2.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamicLanguageRuntime.1.2.2\lib\net45\Microsoft.Dynamic.dll</HintPath>
     </Reference>
@@ -82,40 +70,46 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User Controls\Result\NewsResult.cs">
+    <Compile Include="User Controls\RealTimeKeywordPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\Result\NewsResult.Designer.cs">
-      <DependentUpon>NewsResult.cs</DependentUpon>
+    <Compile Include="User Controls\RealTimeKeywordPanel.Designer.cs">
+      <DependentUpon>RealTimeKeywordPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\Result\ResultPanel.cs">
+    <Compile Include="User Controls\Result.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\Result\ResultPanel.Designer.cs">
+    <Compile Include="User Controls\Result.Designer.cs">
+      <DependentUpon>Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\ResultPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ResultPanel.Designer.cs">
       <DependentUpon>ResultPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\Scrap\ScrapPanel.cs">
+    <Compile Include="User Controls\ScrapPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\Scrap\ScrapPanel.Designer.cs">
+    <Compile Include="User Controls\ScrapPanel.Designer.cs">
       <DependentUpon>ScrapPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\Scrap\Scrap.cs">
+    <Compile Include="User Controls\Scrap.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\Scrap\Scrap.Designer.cs">
+    <Compile Include="User Controls\Scrap.Designer.cs">
       <DependentUpon>Scrap.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\Search\SearchBar.cs">
+    <Compile Include="User Controls\SearchBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\Search\SearchBar.Designer.cs">
+    <Compile Include="User Controls\SearchBar.Designer.cs">
       <DependentUpon>SearchBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\TitleBar\TitleBar.cs">
+    <Compile Include="User Controls\TitleBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\TitleBar\TitleBar.Designer.cs">
+    <Compile Include="User Controls\TitleBar.Designer.cs">
       <DependentUpon>TitleBar.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\ArticleForm.resx">
@@ -134,22 +128,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="User Controls\Result\NewsResult.resx">
-      <DependentUpon>NewsResult.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls\RealTimeKeywordPanel.resx">
+      <DependentUpon>RealTimeKeywordPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Result\ResultPanel.resx">
+    <EmbeddedResource Include="User Controls\Result.resx">
+      <DependentUpon>Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\ResultPanel.resx">
       <DependentUpon>ResultPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Scrap\ScrapPanel.resx">
+    <EmbeddedResource Include="User Controls\ScrapPanel.resx">
       <DependentUpon>ScrapPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Scrap\Scrap.resx">
+    <EmbeddedResource Include="User Controls\Scrap.resx">
       <DependentUpon>Scrap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Search\SearchBar.resx">
+    <EmbeddedResource Include="User Controls\SearchBar.resx">
       <DependentUpon>SearchBar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\TitleBar\TitleBar.resx">
+    <EmbeddedResource Include="User Controls\TitleBar.resx">
       <DependentUpon>TitleBar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -180,6 +177,9 @@
       <Project>{90f0dc1c-d676-4d1e-a00b-75693da03632}</Project>
       <Name>NewsABGN.Logic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\refresh.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

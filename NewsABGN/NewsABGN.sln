@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsABGN.UI", "NewsABGN.UI\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsABGN.UnitTest", "NewsABGN.UnitTest\NewsABGN.UnitTest.csproj", "{E7B00383-F52B-47D2-842E-E523F96D10E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsABGN.Console", "NewsABGN.Console\NewsABGN.Console.csproj", "{6DC69BE9-4A83-4C4C-9FF9-9DB9ACDE09EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E7B00383-F52B-47D2-842E-E523F96D10E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7B00383-F52B-47D2-842E-E523F96D10E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7B00383-F52B-47D2-842E-E523F96D10E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC69BE9-4A83-4C4C-9FF9-9DB9ACDE09EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC69BE9-4A83-4C4C-9FF9-9DB9ACDE09EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC69BE9-4A83-4C4C-9FF9-9DB9ACDE09EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC69BE9-4A83-4C4C-9FF9-9DB9ACDE09EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

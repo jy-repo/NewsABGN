@@ -8,3 +8,11 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\obj\Debug\NewsABGN.Logic.dll
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\Newtonsoft.Json.dll
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\Newtonsoft.Json.xml
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\obj\Debug\NewsABGN.Logic.csproj.CopyComplete
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\AngleSharp.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\HtmlAgilityPack.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\log4net.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\Robots.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\AngleSharp.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\log4net.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\HtmlAgilityPack.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Logic\bin\Debug\HtmlAgilityPack.xml

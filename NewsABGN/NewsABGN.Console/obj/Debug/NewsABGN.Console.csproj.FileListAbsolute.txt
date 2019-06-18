@@ -1,0 +1,16 @@
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\obj\Debug\NewsABGN.Console.csprojAssemblyReference.cache
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\obj\Debug\NewsABGN.Console.csproj.CoreCompileInputs.cache
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\NewsABGN.Console.exe.config
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\NewsABGN.Console.exe
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\NewsABGN.Console.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\NewsABGN.Logic.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\HtmlAgilityPack.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\Newtonsoft.Json.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\NewsABGN.Logic.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\NewsABGN.Logic.dll.config
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\HtmlAgilityPack.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\HtmlAgilityPack.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\Newtonsoft.Json.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\obj\Debug\NewsABGN.Console.csproj.CopyComplete
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\obj\Debug\NewsABGN.Console.exe
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\obj\Debug\NewsABGN.Console.pdb
