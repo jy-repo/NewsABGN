@@ -113,6 +113,18 @@
     <Compile Include="User Controls\SearchBarControl.Designer.cs">
       <DependentUpon>SearchBarControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\SignInControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\SignInControl.Designer.cs">
+      <DependentUpon>SignInControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\SignInPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\SignInPanel.Designer.cs">
+      <DependentUpon>SignInPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\TitleBarControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +164,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\SearchBarControl.resx">
       <DependentUpon>SearchBarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\SignInControl.resx">
+      <DependentUpon>SignInControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\SignInPanel.resx">
+      <DependentUpon>SignInPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\TitleBarControl.resx">
       <DependentUpon>TitleBarControl.cs</DependentUpon>

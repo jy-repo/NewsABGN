@@ -39,21 +39,9 @@ namespace NewsABGN.UI.User_Controls.Result
             string result = "";
             int i = 1;
 
-            //Console.WriteLine("Enter a string having '&', '<', '>' or '\"' in it: ");
-            //string myString = Console.ReadLine();
-
-            //// Encode the string.
-            //string myEncodedString = HttpUtility.HtmlEncode(myString);
-
-            //Console.WriteLine($"HTML Encoded string is: {myEncodedString}");
-            StringWriter myWriter = new StringWriter();
-
-            // Decode the encoded string.
-            HttpUtility.HtmlDecode(str, myWriter);
-
-            str = myWriter.ToString();
-           
-
+            str = str.Replace("<b>", "");
+            str = str.Replace("</b>", "");
+            str = str.Replace("&quot;", "");
 
 
             foreach (var letter in str)
@@ -125,6 +113,16 @@ namespace NewsABGN.UI.User_Controls.Result
         private void Result_DoubleClick(object sender, EventArgs e)
         {
             OnResultDoubleClicked(_url);
+        }
+
+        private void LblTitle_MouseHover(object sender, EventArgs e)
+        {
+            lblTitle.ForeColor = Color.Blue;
+        }
+
+        private void LblTitle_MouseLeave(object sender, EventArgs e)
+        {
+            lblTitle.ForeColor = Color.Black;
         }
     }
 }

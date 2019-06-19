@@ -131,7 +131,16 @@ namespace NewsABGN.UI
 
         private void Open_Article(object sender, ArticleControl.ResultDoubleClickedEventArgs e)
         {
-            ArticleForm articleForm = new ArticleForm(e.Url);
+            Open_Article(e.Url);
+        }
+        private void Open_Article(object sender, User_Controls.ScrapControl.ScrapDoubleClickedEventArgs e)
+        {
+            Open_Article(e.Url);
+        }
+
+        private void Open_Article(string url)
+        {
+            ArticleForm articleForm = new ArticleForm(url);
             articleForm.ShowDialog();
         }
 
@@ -150,28 +159,31 @@ namespace NewsABGN.UI
                     new EventHandler<User_Controls.ScrapControl.ScrapDoubleClickedEventArgs>(Open_Article);
         }
         
-        private void Open_Article(object sender, User_Controls.ScrapControl.ScrapDoubleClickedEventArgs e)
+
+        private void UscSignInPanel_BtnSignInClick(object sender, User_Controls.SignInPanel.BtnSignInClickEventArgs e)
         {
-            ArticleForm articleForm = new ArticleForm(e.Url);
-            articleForm.ShowDialog();
+            if (!_loggedIn)
+                uscSignInControl.Visible = !uscSignInControl.Visible;
+            else
+            {
+                _loggedIn = !_loggedIn;
+                uscSignInPanel.SignOut();
+                uscScrapListControl.EmptyScrapPanel();
+                lblLoginWaring.Visible = true;
+            }
+                    
+
         }
 
-        private void BtnLogin_Click(object sender, EventArgs e)
+        private void UscSignInControl_BtnSignInClick(object sender, User_Controls.SignInControl.BtnSignInClickEventArgs e)
         {
             lblLoginWaring.Visible = _loggedIn;
             _loggedIn = !_loggedIn;
             uscScrapListControl.Visible = _loggedIn;
 
-            if (_loggedIn)  // in
-            {
-                btnLogin.Text = "Logged in / click to log out";
-                GetScrapsAndFill(0);
-            }
-            else    // out
-            {
-                btnLogin.Text = "Logged out / click to log in";
-                uscScrapListControl.EmptyScrapPanel();
-            }
+            uscSignInControl.Visible = false;
+            uscSignInPanel.ShowMemberName(e.Member);
+            GetScrapsAndFill(e.Member.MemberId);
         }
     }
 }

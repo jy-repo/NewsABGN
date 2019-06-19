@@ -36,8 +36,9 @@
             this.lblLoginWaring = new System.Windows.Forms.Label();
             this.uscScrapListControl = new NewsABGN.UI.User_Controls.ScrapListControl();
             this.label1 = new System.Windows.Forms.Label();
+            this.uscSignInControl = new NewsABGN.UI.User_Controls.SignInControl();
+            this.uscSignInPanel = new NewsABGN.UI.User_Controls.SignInPanel();
             this.uscTitleBar = new NewsABGN.UI.User_Controls.TitleBar.TitleBarControl();
-            this.btnLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.spcKeyword_News)).BeginInit();
             this.spcKeyword_News.Panel1.SuspendLayout();
             this.spcKeyword_News.Panel2.SuspendLayout();
@@ -85,7 +86,7 @@
             // 
             // spcSearch_Scrap.Panel1
             // 
-            this.spcSearch_Scrap.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.spcSearch_Scrap.Panel1.BackColor = System.Drawing.Color.White;
             this.spcSearch_Scrap.Panel1.Controls.Add(this.uscResultPanel);
             this.spcSearch_Scrap.Panel1.Controls.Add(this.uscSearchBar);
             // 
@@ -138,7 +139,7 @@
             this.uscScrapListControl.Location = new System.Drawing.Point(23, 41);
             this.uscScrapListControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uscScrapListControl.Name = "uscScrapListControl";
-            this.uscScrapListControl.Size = new System.Drawing.Size(285, 589);
+            this.uscScrapListControl.Size = new System.Drawing.Size(241, 589);
             this.uscScrapListControl.TabIndex = 0;
             this.uscScrapListControl.Visible = false;
             // 
@@ -146,11 +147,35 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Haan Sale M", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(19, 9);
+            this.label1.Location = new System.Drawing.Point(28, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "내가 스크랩 한 기사";
+            // 
+            // uscSignInControl
+            // 
+            this.uscSignInControl.BackColor = System.Drawing.Color.Azure;
+            this.uscSignInControl.Location = new System.Drawing.Point(938, 48);
+            this.uscSignInControl.MaximumSize = new System.Drawing.Size(265, 220);
+            this.uscSignInControl.MinimumSize = new System.Drawing.Size(265, 220);
+            this.uscSignInControl.Name = "uscSignInControl";
+            this.uscSignInControl.Size = new System.Drawing.Size(265, 220);
+            this.uscSignInControl.TabIndex = 5;
+            this.uscSignInControl.Visible = false;
+            this.uscSignInControl.BtnSignInClick += new System.EventHandler<NewsABGN.UI.User_Controls.SignInControl.BtnSignInClickEventArgs>(this.UscSignInControl_BtnSignInClick);
+            // 
+            // uscSignInPanel
+            // 
+            this.uscSignInPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.uscSignInPanel.Location = new System.Drawing.Point(841, 5);
+            this.uscSignInPanel.Name = "uscSignInPanel";
+            this.uscSignInPanel.Size = new System.Drawing.Size(379, 53);
+            this.uscSignInPanel.TabIndex = 4;
+            this.uscSignInPanel.BtnSignInClick += new System.EventHandler<NewsABGN.UI.User_Controls.SignInPanel.BtnSignInClickEventArgs>(this.UscSignInPanel_BtnSignInClick);
+            this.uscSignInPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseDown);
+            this.uscSignInPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseMove);
+            this.uscSignInPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseUp);
             // 
             // uscTitleBar
             // 
@@ -167,23 +192,14 @@
             this.uscTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseMove);
             this.uscTitleBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseUp);
             // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(879, 12);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(230, 23);
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Logged out /  click to log in";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(1280, 707);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.uscSignInControl);
+            this.Controls.Add(this.uscSignInPanel);
             this.Controls.Add(this.spcKeyword_News);
             this.Controls.Add(this.uscTitleBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -215,6 +231,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblLoginWaring;
         private User_Controls.RealTimeKeywordPanelControl uscRealTimeKeywordPanelControl;
-        private System.Windows.Forms.Button btnLogin;
+        private User_Controls.SignInPanel uscSignInPanel;
+        private User_Controls.SignInControl uscSignInControl;
     }
 }
