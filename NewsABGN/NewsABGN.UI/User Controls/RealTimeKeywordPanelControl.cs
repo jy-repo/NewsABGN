@@ -16,10 +16,32 @@ namespace NewsABGN.UI.User_Controls
         public RealTimeKeywordPanelControl()
         {
             InitializeComponent();
+            FillLabelLists();
         }
 
+        private List<Label> _numberLabels = new List<Label>();
+        private List<Label> _keywordLabels = new List<Label>();
         private List<string> _keywords = new List<string>();
         private int page = 0;
+        private int _selectedLabelPage;
+        private Label _selectedLabel;
+
+        private void FillLabelLists()
+        {
+            _numberLabels.Add(lblKeywordNumberA);
+            _numberLabels.Add(lblKeywordNumberB);
+            _numberLabels.Add(lblKeywordNumberC);
+            _numberLabels.Add(lblKeywordNumberD);
+            _numberLabels.Add(lblKeywordNumberE);
+
+            _keywordLabels.Add(lblKeywordA);
+            _keywordLabels.Add(lblKeywordB);
+            _keywordLabels.Add(lblKeywordC);
+            _keywordLabels.Add(lblKeywordD);
+            _keywordLabels.Add(lblKeywordE);
+        }
+
+
         public void FillKeywords()
         {
             _keywords = LogicRepository.Controller.Crawler.GetRealTimeKeywordList();
@@ -31,43 +53,59 @@ namespace NewsABGN.UI.User_Controls
         private void Paging(int page)
         {
             int p = page * 5;
-            lblKeywordA.Text = _keywords.ElementAt(p);
-            lblKeywordB.Text = _keywords.ElementAt(p + 1);
-            lblKeywordC.Text = _keywords.ElementAt(p + 2);
-            lblKeywordD.Text = _keywords.ElementAt(p + 3);
-            lblKeywordE.Text = _keywords.ElementAt(p + 4);
-
-            lblKeywordNumberA.Text = p + 1 + "";
-            lblKeywordNumberB.Text = p + 2 + "";
-            lblKeywordNumberC.Text = p + 3 + "";
-            lblKeywordNumberD.Text = p + 4 + "";
-            lblKeywordNumberE.Text = p + 5 + "";
-
+            for (int i=0; i < _numberLabels.Count; i++)
+            {
+                _numberLabels.ElementAt(i).Text = (p + 1 + i) + "";
+                _keywordLabels.ElementAt(i).Text = _keywords.ElementAt(p + i);
+            }
         }
 
-        private void Refresh_Clicked(object sender, EventArgs e)
+        private void Refresh_Click(object sender, EventArgs e)
         {
             page = 0;
+            _selectedLabel = null;
+            HightlightSelected(_selectedLabelPage, _selectedLabel);
+
             FillKeywords();
         }
 
         private void LblPrev_Click(object sender, EventArgs e)
         {
-            Paging((page + 3) % 4);
-            page--;
+            page = (page + 3) % 4;
+            Paging(page);
+            HightlightSelected(_selectedLabelPage, _selectedLabel);
         }
 
         private void LblNext_Click(object sender, EventArgs e)
         {
-            Paging((page + 1) % 4);
-            page++;
+            page = (page + 1) % 4;
+            Paging(page);
+            HightlightSelected(_selectedLabelPage, _selectedLabel);
         }
 
         private void Keyword_Click(object sender, EventArgs e)
         {
-            var keywordLabel = (Label)sender;
-            OnKeywordClicked(keywordLabel.Text);
+            _selectedLabel = (Label)sender;
+            _selectedLabelPage = page;
+
+            HightlightSelected(_selectedLabelPage, _selectedLabel);
+
+            OnKeywordClicked(_selectedLabel.Text);
         }
+        
+        public void HightlightSelected(int selectedPage, Label selectedLabel)
+        {
+            foreach(var label in _keywordLabels)
+            {
+                if (page == selectedPage && label == selectedLabel)
+                    label.Font = new Font(label.Font, FontStyle.Bold);
+                else
+                    label.Font = new Font(label.Font, FontStyle.Regular);
+            }
+            if (selectedLabel == null)
+                _selectedLabel = null;
+        }
+
 
         #region KeywordClicked event things for C# 3.0
         public event EventHandler<KeywordClickedEventArgs> KeywordClicked;

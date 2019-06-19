@@ -106,6 +106,9 @@ namespace NewsABGN.UI
 
         private void SearchKeyword(object sender, User_Controls.Search.SearchBarControl.SearchCatClickedEventArgs e)
         {
+            // reset keyword highlight in real time keywords panel
+            uscRealTimeKeywordPanelControl.HightlightSelected(0, null);
+            
             SearchAndFill(e.Keyword);
         }
 
