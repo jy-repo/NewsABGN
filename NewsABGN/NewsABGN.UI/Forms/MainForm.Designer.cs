@@ -138,7 +138,7 @@
             this.uscScrapListControl.Location = new System.Drawing.Point(23, 41);
             this.uscScrapListControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uscScrapListControl.Name = "uscScrapListControl";
-            this.uscScrapListControl.Size = new System.Drawing.Size(307, 589);
+            this.uscScrapListControl.Size = new System.Drawing.Size(285, 589);
             this.uscScrapListControl.TabIndex = 0;
             this.uscScrapListControl.Visible = false;
             // 

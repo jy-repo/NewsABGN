@@ -17,3 +17,17 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\EntityFramework
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\EntityFramework.SqlServer.dll
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\EntityFramework.xml
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\EntityFramework.SqlServer.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\NewsABGN.DB.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\NewsABGN.Logic.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\NewsABGN.UI.exe
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\HtmlAgilityPack.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Newtonsoft.Json.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\NewsABGN.DB.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\NewsABGN.DB.dll.config
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\NewsABGN.Logic.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\NewsABGN.Logic.dll.config
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\NewsABGN.UI.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\NewsABGN.UI.exe.config
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\HtmlAgilityPack.pdb
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\HtmlAgilityPack.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Newtonsoft.Json.xml

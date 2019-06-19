@@ -25,7 +25,7 @@ namespace NewsABGN.Logic
             List<Dictionary<string, string>> contentsList = new List<Dictionary<string, string>>();
 
             //////// NAVER API
-            
+
             //build query string
             string query = keyword;
             string url = "https://openapi.naver.com/v1/search/news.json?query=" + query +

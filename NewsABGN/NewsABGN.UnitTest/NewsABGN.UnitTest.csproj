@@ -56,12 +56,26 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Tests\DBTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NewsABGN.DB\NewsABGN.DB.csproj">
+      <Project>{f15a4114-8a86-426e-bbc4-1a2c87bc80f8}</Project>
+      <Name>NewsABGN.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewsABGN.Logic\NewsABGN.Logic.csproj">
+      <Project>{90f0dc1c-d676-4d1e-a00b-75693da03632}</Project>
+      <Name>NewsABGN.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewsABGN.UI\NewsABGN.UI.csproj">
+      <Project>{9524a5d3-17af-421c-bd6a-d6a0b1e365bc}</Project>
+      <Name>NewsABGN.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

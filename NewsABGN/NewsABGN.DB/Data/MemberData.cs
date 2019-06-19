@@ -26,5 +26,12 @@ namespace NewsABGN.DB
             }
         }
 
+        public Member GetLastMember()
+        {
+            using (ABGNDBEntities context = new ABGNDBEntities())
+            {
+                return context.Members.OrderByDescending(x => x.MemberId).First();
+            }
+        }
     }
 }

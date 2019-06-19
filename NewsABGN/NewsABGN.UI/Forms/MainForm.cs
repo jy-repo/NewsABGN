@@ -158,22 +158,17 @@ namespace NewsABGN.UI
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            if (!_loggedIn)
+            lblLoginWaring.Visible = _loggedIn;
+            _loggedIn = !_loggedIn;
+            uscScrapListControl.Visible = _loggedIn;
+
+            if (_loggedIn)  // in
             {
-
-                _loggedIn = true;
-                lblLoginWaring.Visible = false;
-                uscScrapListControl.Visible = true;
-
                 btnLogin.Text = "Logged in / click to log out";
                 GetScrapsAndFill(0);
             }
-            else
+            else    // out
             {
-                _loggedIn = false;
-                lblLoginWaring.Visible = true;
-                uscScrapListControl.Visible = false;
-
                 btnLogin.Text = "Logged out / click to log in";
                 uscScrapListControl.EmptyScrapPanel();
             }
