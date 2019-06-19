@@ -1,6 +1,6 @@
 ﻿namespace NewsABGN.UI.User_Controls
 {
-    partial class RealTimeKeywordPanel
+    partial class RealTimeKeywordPanelControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -123,7 +123,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::NewsABGN.UI.Properties.Resources.refresh;
-            this.pictureBox1.Location = new System.Drawing.Point(199, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(191, 273);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 29);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -196,7 +196,7 @@
             this.lblKeywordNumberE.TabIndex = 14;
             this.lblKeywordNumberE.Text = "label6";
             // 
-            // RealTimeKeywordPanel
+            // RealTimeKeywordPanelControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,8 +215,9 @@
             this.Controls.Add(this.lblKeywordB);
             this.Controls.Add(this.lblKeywordA);
             this.Controls.Add(this.label1);
-            this.Name = "RealTimeKeywordPanel";
-            this.Size = new System.Drawing.Size(238, 344);
+            this.MinimumSize = new System.Drawing.Size(225, 340);
+            this.Name = "RealTimeKeywordPanelControl";
+            this.Size = new System.Drawing.Size(225, 344);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

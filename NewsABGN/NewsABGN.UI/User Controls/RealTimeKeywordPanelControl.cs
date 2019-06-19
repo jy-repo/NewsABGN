@@ -11,9 +11,9 @@ using NewsABGN.Logic;
 
 namespace NewsABGN.UI.User_Controls
 {
-    public partial class RealTimeKeywordPanel : UserControl
+    public partial class RealTimeKeywordPanelControl : UserControl
     {
-        public RealTimeKeywordPanel()
+        public RealTimeKeywordPanelControl()
         {
             InitializeComponent();
         }

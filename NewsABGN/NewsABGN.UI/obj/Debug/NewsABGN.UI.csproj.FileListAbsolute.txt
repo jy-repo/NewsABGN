@@ -1,7 +1,6 @@
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.csprojAssemblyReference.cache
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.MainForm.resources
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.Properties.Resources.resources
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.TitleBar.TitleBar.resources
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.csproj.GenerateResource.cache
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.csproj.CoreCompileInputs.cache
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\NewsABGN.UI.exe.config
@@ -9,8 +8,6 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\NewsABGN.UI.exe
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\NewsABGN.UI.pdb
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.exe
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.pdb
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.Search.SearchBar.resources
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.Result.ResultPanel.resources
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\NewsABGN.Logic.dll
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\NewsABGN.Logic.pdb
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\NewsABGN.Logic.dll.config
@@ -27,8 +24,6 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.ArticleFo
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\HtmlAgilityPack.dll
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\HtmlAgilityPack.pdb
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\HtmlAgilityPack.xml
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.Result.Result.resources
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.RealTimeKeywordPanel.resources
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\EntityFramework.dll
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\EntityFramework.xml
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\EntityFramework.SqlServer.dll
@@ -37,4 +32,9 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\NewsABGN.DB.dll
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\NewsABGN.DB.pdb
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\NewsABGN.DB.dll.config
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.ScrapControl.resources
-D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.ScrapPanelControl.resources
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.RealTimeKeywordPanelControl.resources
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.ScrapListControl.resources
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.Result.ArticleControl.resources
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.Result.ArticleListControl.resources
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.Search.SearchBarControl.resources
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.TitleBar.TitleBarControl.resources

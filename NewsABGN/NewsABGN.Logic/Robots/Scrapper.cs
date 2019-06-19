@@ -18,6 +18,19 @@ namespace NewsABGN.Logic
 
         public List<Scrap> GetScraps(int memberid)
         {
+            if (memberid == 0)  // test
+            {
+                List<Scrap> testList = new List<Scrap>();
+
+                for (int i = 0; i < 99; i++)
+                {
+                    Scrap scrap = new Scrap();
+                    testList.Add(scrap);
+                }
+
+                return testList;    
+            }
+
             return DataRepository.Scrap.GetByMemberId(memberid);
         }
     }

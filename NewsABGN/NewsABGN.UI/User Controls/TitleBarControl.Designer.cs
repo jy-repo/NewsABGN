@@ -1,6 +1,6 @@
 ﻿namespace NewsABGN.UI.User_Controls.TitleBar
 {
-    partial class TitleBar
+    partial class TitleBarControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -67,7 +67,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // TitleBar
+            // TitleBarControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -75,7 +75,7 @@
             this.Controls.Add(this.picbExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "TitleBar";
+            this.Name = "TitleBarControl";
             this.Size = new System.Drawing.Size(1276, 60);
             ((System.ComponentModel.ISupportInitialize)(this.picbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

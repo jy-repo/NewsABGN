@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NewsABGN.UI.User_Controls.TitleBar
 {
-    public partial class TitleBar : UserControl
+    public partial class TitleBarControl : UserControl
     {
-        public TitleBar()
+        public TitleBarControl()
         {
             InitializeComponent();
         }

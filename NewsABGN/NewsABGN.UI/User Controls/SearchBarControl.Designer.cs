@@ -1,6 +1,6 @@
 ﻿namespace NewsABGN.UI.User_Controls.Search
 {
-    partial class SearchBar
+    partial class SearchBarControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -65,12 +65,12 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
-            // SearchBar
+            // SearchBarControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Name = "SearchBar";
+            this.Name = "SearchBarControl";
             this.Size = new System.Drawing.Size(382, 40);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

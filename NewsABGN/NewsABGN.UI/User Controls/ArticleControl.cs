@@ -12,19 +12,19 @@ using System.IO;
 
 namespace NewsABGN.UI.User_Controls.Result
 {
-    public partial class Result : UserControl
+    public partial class ArticleControl : UserControl
     {
         private const int lineLengthTitle = 36;
         private const int lineLengthContent = 55;
 
         private string _url;
 
-        public Result()
+        public ArticleControl()
         {
             InitializeComponent();
         }
 
-        public Result(Dictionary<string, string> news) : this()
+        public ArticleControl(Dictionary<string, string> news) : this()
         {
             lblTitle.Text = FitWidth(news["title"], "title");
             lblContents.Text =

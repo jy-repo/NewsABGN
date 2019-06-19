@@ -77,29 +77,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User Controls\RealTimeKeywordPanel.cs">
+    <Compile Include="User Controls\RealTimeKeywordPanelControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\RealTimeKeywordPanel.Designer.cs">
-      <DependentUpon>RealTimeKeywordPanel.cs</DependentUpon>
+    <Compile Include="User Controls\RealTimeKeywordPanelControl.Designer.cs">
+      <DependentUpon>RealTimeKeywordPanelControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\Result.cs">
+    <Compile Include="User Controls\ArticleControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\Result.Designer.cs">
-      <DependentUpon>Result.cs</DependentUpon>
+    <Compile Include="User Controls\ArticleControl.Designer.cs">
+      <DependentUpon>ArticleControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\ResultPanel.cs">
+    <Compile Include="User Controls\ArticleListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\ResultPanel.Designer.cs">
-      <DependentUpon>ResultPanel.cs</DependentUpon>
+    <Compile Include="User Controls\ArticleListControl.Designer.cs">
+      <DependentUpon>ArticleListControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\ScrapPanelControl.cs">
+    <Compile Include="User Controls\ScrapListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\ScrapPanelControl.Designer.cs">
-      <DependentUpon>ScrapPanelControl.cs</DependentUpon>
+    <Compile Include="User Controls\ScrapListControl.Designer.cs">
+      <DependentUpon>ScrapListControl.cs</DependentUpon>
     </Compile>
     <Compile Include="User Controls\ScrapControl.cs">
       <SubType>UserControl</SubType>
@@ -107,17 +107,17 @@
     <Compile Include="User Controls\ScrapControl.Designer.cs">
       <DependentUpon>ScrapControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\SearchBar.cs">
+    <Compile Include="User Controls\SearchBarControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\SearchBar.Designer.cs">
-      <DependentUpon>SearchBar.cs</DependentUpon>
+    <Compile Include="User Controls\SearchBarControl.Designer.cs">
+      <DependentUpon>SearchBarControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\TitleBar.cs">
+    <Compile Include="User Controls\TitleBarControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\TitleBar.Designer.cs">
-      <DependentUpon>TitleBar.cs</DependentUpon>
+    <Compile Include="User Controls\TitleBarControl.Designer.cs">
+      <DependentUpon>TitleBarControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\ArticleForm.resx">
       <DependentUpon>ArticleForm.cs</DependentUpon>
@@ -135,26 +135,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="User Controls\RealTimeKeywordPanel.resx">
-      <DependentUpon>RealTimeKeywordPanel.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls\RealTimeKeywordPanelControl.resx">
+      <DependentUpon>RealTimeKeywordPanelControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\Result.resx">
-      <DependentUpon>Result.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls\ArticleControl.resx">
+      <DependentUpon>ArticleControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\ResultPanel.resx">
-      <DependentUpon>ResultPanel.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls\ArticleListControl.resx">
+      <DependentUpon>ArticleListControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\ScrapPanelControl.resx">
-      <DependentUpon>ScrapPanelControl.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls\ScrapListControl.resx">
+      <DependentUpon>ScrapListControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\ScrapControl.resx">
       <DependentUpon>ScrapControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\SearchBar.resx">
-      <DependentUpon>SearchBar.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls\SearchBarControl.resx">
+      <DependentUpon>SearchBarControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\TitleBar.resx">
-      <DependentUpon>TitleBar.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls\TitleBarControl.resx">
+      <DependentUpon>TitleBarControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

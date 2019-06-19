@@ -1,6 +1,6 @@
 ﻿namespace NewsABGN.UI.User_Controls
 {
-    partial class ScrapPanelControl
+    partial class ScrapListControl
     {
         /// <summary> 
         /// Required designer variable.

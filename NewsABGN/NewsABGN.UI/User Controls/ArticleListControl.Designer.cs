@@ -1,6 +1,6 @@
 ﻿namespace NewsABGN.UI.User_Controls.Result
 {
-    partial class ResultPanel
+    partial class ArticleListControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -42,13 +42,13 @@
             this.flpResultPanel.TabIndex = 0;
             this.flpResultPanel.WrapContents = false;
             // 
-            // ResultPanel
+            // ArticleListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(200)))), ((int)(((byte)(150)))));
             this.Controls.Add(this.flpResultPanel);
-            this.Name = "ResultPanel";
+            this.Name = "ArticleListControl";
             this.Size = new System.Drawing.Size(678, 579);
             this.ResumeLayout(false);
 

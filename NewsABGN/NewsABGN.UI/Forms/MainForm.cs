@@ -18,14 +18,14 @@ namespace NewsABGN.UI
         public MainForm()
         {
             InitializeComponent();
-            uscRealTimeKeywordPanel.FillKeywords();
+            uscRealTimeKeywordPanelControl.FillKeywords();
         }
 
         private bool _loggedIn = false;
         // private Member member = null;
 
 
-        private void UscTitleBar_ExitButtonClicked(object sender, User_Controls.TitleBar.TitleBar.ExitButtonClickedEventArgs e)
+        private void UscTitleBar_ExitButtonClicked(object sender, User_Controls.TitleBar.TitleBarControl.ExitButtonClickedEventArgs e)
         {
             this.Close();
         }
@@ -102,14 +102,14 @@ namespace NewsABGN.UI
         }
 
         // search results to result panel and a list
-        private List<User_Controls.Result.Result> _newsResults = new List<User_Controls.Result.Result>();
+        private List<User_Controls.Result.ArticleControl> _newsResults = new List<User_Controls.Result.ArticleControl>();
 
-        private void SearchKeyword(object sender, User_Controls.Search.SearchBar.SearchCatClickedEventArgs e)
+        private void SearchKeyword(object sender, User_Controls.Search.SearchBarControl.SearchCatClickedEventArgs e)
         {
             SearchAndFill(e.Keyword);
         }
 
-        private void UscRealTimeKeywordPanel_KeywordClicked(object sender, User_Controls.RealTimeKeywordPanel.KeywordClickedEventArgs e)
+        private void UscRealTimeKeywordPanel_KeywordClicked(object sender, User_Controls.RealTimeKeywordPanelControl.KeywordClickedEventArgs e)
         {
             SearchAndFill(e.Keyword);
         }
@@ -123,13 +123,13 @@ namespace NewsABGN.UI
             
             foreach(var result in newsResults)
                 result.ResultDoubleClicked += 
-                    new EventHandler<Result.ResultDoubleClickedEventArgs>(Open_Article);
+                    new EventHandler<ArticleControl.ResultDoubleClickedEventArgs>(Open_Article);
 
             // save added news results to a list : for access to each control
             _newsResults = newsResults;
         }
 
-        private void Open_Article(object sender, Result.ResultDoubleClickedEventArgs e)
+        private void Open_Article(object sender, ArticleControl.ResultDoubleClickedEventArgs e)
         {
             ArticleForm articleForm = new ArticleForm(e.Url);
             articleForm.ShowDialog();
@@ -138,10 +138,45 @@ namespace NewsABGN.UI
         // TODO: get and save scraps
         private void GetScrapsAndFill(int memberId)
         {
-            lblLoginWaring.Visible = false;
-            uscScrapPanel.Visible = true;
+            // get scrap list from DB through logic
             List<Scrap> scraps = LogicRepository.Controller.Scrapper.GetScraps(memberId);
-            uscScrapPanel.FillScrapPanel(scraps);
+
+            
+
+            // fill scrap panel UI with scrap list
+            var scrapControls = uscScrapListControl.FillScrapPanel(scraps);
+            foreach (var scrapControl in scrapControls)
+                scrapControl.ScrapDoubleClicked +=
+                    new EventHandler<User_Controls.ScrapControl.ScrapDoubleClickedEventArgs>(Open_Article);
+        }
+        
+        private void Open_Article(object sender, User_Controls.ScrapControl.ScrapDoubleClickedEventArgs e)
+        {
+            ArticleForm articleForm = new ArticleForm(e.Url);
+            articleForm.ShowDialog();
+        }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            if (!_loggedIn)
+            {
+
+                _loggedIn = true;
+                lblLoginWaring.Visible = false;
+                uscScrapListControl.Visible = true;
+
+                btnLogin.Text = "Logged in / click to log out";
+                GetScrapsAndFill(0);
+            }
+            else
+            {
+                _loggedIn = false;
+                lblLoginWaring.Visible = true;
+                uscScrapListControl.Visible = false;
+
+                btnLogin.Text = "Logged out / click to log in";
+                uscScrapListControl.EmptyScrapPanel();
+            }
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NewsABGN.UI.User_Controls.Search
 {
-    public partial class SearchBar : UserControl
+    public partial class SearchBarControl : UserControl
     {
-        public SearchBar()
+        public SearchBarControl()
         {
             InitializeComponent();
         }

@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace NewsABGN.UI.User_Controls.Result
 {
-    public partial class ResultPanel : UserControl
+    public partial class ArticleListControl : UserControl
     {
-        public ResultPanel()
+        public ArticleListControl()
         {
             InitializeComponent();
         }
 
-        public List<Result> FillResults(List<Dictionary<string,string>> newsList)
+        public List<ArticleControl> FillResults(List<Dictionary<string,string>> newsList)
         {
             flpResultPanel.Controls.Clear();
-            List<Result> results = new List<Result>();
+            List<ArticleControl> results = new List<ArticleControl>();
 
             foreach(var news in newsList)
             {
-                Result nr = new Result(news);
+                ArticleControl nr = new ArticleControl(news);
                 results.Add(nr);
                 flpResultPanel.Controls.Add(nr);
             }

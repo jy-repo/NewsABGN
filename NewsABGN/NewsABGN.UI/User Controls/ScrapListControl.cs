@@ -11,9 +11,9 @@ using NewsABGN.DB;
 
 namespace NewsABGN.UI.User_Controls
 {
-    public partial class ScrapPanelControl : UserControl
+    public partial class ScrapListControl : UserControl
     {
-        public ScrapPanelControl()
+        public ScrapListControl()
         {
             InitializeComponent();
         }
@@ -26,9 +26,16 @@ namespace NewsABGN.UI.User_Controls
             {
                 ScrapControl s = new ScrapControl(scrap);
                 _scrapControls.Add(s);
+                flpScrapPanel.Controls.Add(s);
             }
 
             return _scrapControls;
+        }
+
+        public void EmptyScrapPanel()
+        {
+            _scrapControls.Clear();
+            flpScrapPanel.Controls.Clear();
         }
     }
 }
