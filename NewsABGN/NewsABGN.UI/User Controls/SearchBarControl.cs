@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NewsABGN.UI.User_Controls.Search
+namespace NewsABGN.UI.User_Controls
 {
     public partial class SearchBarControl : UserControl
     {

@@ -21,6 +21,18 @@ namespace NewsABGN.UI.User_Controls
 
         private void BtnSignIn_Click(object sender, EventArgs e)
         {
+            TryLogin();
+        }
+
+
+        private void Txt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                TryLogin();
+        }
+
+        private void TryLogin()
+        {
             if (txtID.Text == "" && txtPW.Text == "")
                 return;
 
@@ -28,8 +40,6 @@ namespace NewsABGN.UI.User_Controls
 
             if (member != null)
             {
-                //usc컨트롤 visible -> false
-                //usc로그인패널 member값 전달 -> 이름표시
                 OnBtnSignInClick(member);
                 txtID.Text = "";
                 txtPW.Text = "";

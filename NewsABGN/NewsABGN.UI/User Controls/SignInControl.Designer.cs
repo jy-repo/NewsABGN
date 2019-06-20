@@ -76,6 +76,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 27);
             this.txtID.TabIndex = 6;
+            this.txtID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_KeyDown);
             // 
             // txtPW
             // 
@@ -85,6 +86,7 @@
             this.txtPW.PasswordChar = '●';
             this.txtPW.Size = new System.Drawing.Size(100, 27);
             this.txtPW.TabIndex = 8;
+            this.txtPW.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_KeyDown);
             // 
             // label3
             // 

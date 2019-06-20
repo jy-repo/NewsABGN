@@ -1,6 +1,6 @@
 ﻿namespace NewsABGN.UI.User_Controls
 {
-    partial class UserKeywordPanelControl
+    partial class UserKeywordListControl
     {
         /// <summary> 
         /// Required designer variable.

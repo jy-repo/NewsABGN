@@ -137,11 +137,11 @@
     <Compile Include="User Controls\UserKeywordControl.Designer.cs">
       <DependentUpon>UserKeywordControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\UserKeywordPanelControl.cs">
+    <Compile Include="User Controls\UserKeywordListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Controls\UserKeywordPanelControl.Designer.cs">
-      <DependentUpon>UserKeywordPanelControl.cs</DependentUpon>
+    <Compile Include="User Controls\UserKeywordListControl.Designer.cs">
+      <DependentUpon>UserKeywordListControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\ArticleForm.resx">
       <DependentUpon>ArticleForm.cs</DependentUpon>
@@ -189,8 +189,8 @@
     <EmbeddedResource Include="User Controls\UserKeywordControl.resx">
       <DependentUpon>UserKeywordControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\UserKeywordPanelControl.resx">
-      <DependentUpon>UserKeywordPanelControl.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls\UserKeywordListControl.resx">
+      <DependentUpon>UserKeywordListControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

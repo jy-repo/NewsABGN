@@ -32,7 +32,7 @@ namespace NewsABGN.UI.User_Controls
             return _scrapControls;
         }
 
-        public void EmptyScrapPanel()
+        public void EmptyScraps()
         {
             _scrapControls.Clear();
             flpScrapPanel.Controls.Clear();

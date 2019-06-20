@@ -10,13 +10,14 @@ using System.Windows.Forms;
 
 namespace NewsABGN.UI.User_Controls
 {
-    public partial class UserKeywordPanelControl : UserControl
+    public partial class UserKeywordListControl : UserControl
     {
-        public UserKeywordPanelControl()
+        public UserKeywordListControl()
         {
             InitializeComponent();
         }
 
+        private List<UserKeywordControl> _userKeywordControls = new List<UserKeywordControl>();
         public List<UserKeywordControl> TestFill()
         {
             flpKeywordList.Controls.Clear();
@@ -25,11 +26,17 @@ namespace NewsABGN.UI.User_Controls
             for (int i=0; i< 20; i++)
             {
                 UserKeywordControl userKeyword = new UserKeywordControl((i+1)+"    "+ "keyword" + i);
-                list.Add(userKeyword);
+                _userKeywordControls.Add(userKeyword);
                 flpKeywordList.Controls.Add(userKeyword);
             }
 
-            return list;
+            return _userKeywordControls;
+        }
+
+        public void EmptyKeywords()
+        {
+            _userKeywordControls.Clear();
+            flpKeywordList.Controls.Clear();
         }
     }
 }

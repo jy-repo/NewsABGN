@@ -31,12 +31,12 @@
             this.spcKeyword_News = new System.Windows.Forms.SplitContainer();
             this.lblKeywordTItleAlt = new System.Windows.Forms.Label();
             this.lblKeywordTitle = new System.Windows.Forms.Label();
-            this.uscUserKeywordPanelControl = new NewsABGN.UI.User_Controls.UserKeywordPanelControl();
+            this.uscUserKeywordPanelControl = new NewsABGN.UI.User_Controls.UserKeywordListControl();
             this.uscRealTimeKeywordPanelControl = new NewsABGN.UI.User_Controls.RealTimeKeywordPanelControl();
             this.spcSearch_Scrap = new System.Windows.Forms.SplitContainer();
             this.uscResultPanel = new NewsABGN.UI.User_Controls.Result.ArticleListControl();
-            this.uscSearchBar = new NewsABGN.UI.User_Controls.Search.SearchBarControl();
-            this.lblLoginWaring = new System.Windows.Forms.Label();
+            this.uscSearchBar = new NewsABGN.UI.User_Controls.SearchBarControl();
+            this.lblLoginWarning = new System.Windows.Forms.Label();
             this.uscScrapListControl = new NewsABGN.UI.User_Controls.ScrapListControl();
             this.label1 = new System.Windows.Forms.Label();
             this.uscSignInControl = new NewsABGN.UI.User_Controls.SignInControl();
@@ -85,6 +85,7 @@
             this.lblKeywordTItleAlt.Size = new System.Drawing.Size(59, 12);
             this.lblKeywordTItleAlt.TabIndex = 3;
             this.lblKeywordTItleAlt.Text = "유저 검색어";
+            this.lblKeywordTItleAlt.Visible = false;
             this.lblKeywordTItleAlt.Click += new System.EventHandler(this.LblKeywordTItleAlt_Click);
             // 
             // lblKeywordTitle
@@ -127,7 +128,7 @@
             // 
             // spcSearch_Scrap.Panel2
             // 
-            this.spcSearch_Scrap.Panel2.Controls.Add(this.lblLoginWaring);
+            this.spcSearch_Scrap.Panel2.Controls.Add(this.lblLoginWarning);
             this.spcSearch_Scrap.Panel2.Controls.Add(this.uscScrapListControl);
             this.spcSearch_Scrap.Panel2.Controls.Add(this.label1);
             this.spcSearch_Scrap.Size = new System.Drawing.Size(1037, 823);
@@ -154,17 +155,17 @@
             this.uscSearchBar.Name = "uscSearchBar";
             this.uscSearchBar.Size = new System.Drawing.Size(382, 40);
             this.uscSearchBar.TabIndex = 1;
-            this.uscSearchBar.SearchCatClicked += new System.EventHandler<NewsABGN.UI.User_Controls.Search.SearchBarControl.SearchCatClickedEventArgs>(this.SearchKeyword);
+            this.uscSearchBar.SearchCatClicked += new System.EventHandler<NewsABGN.UI.User_Controls.SearchBarControl.SearchCatClickedEventArgs>(this.SearchKeyword);
             // 
             // lblLoginWaring
             // 
-            this.lblLoginWaring.AutoSize = true;
-            this.lblLoginWaring.Font = new System.Drawing.Font("GungsuhChe", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblLoginWaring.Location = new System.Drawing.Point(78, 143);
-            this.lblLoginWaring.Name = "lblLoginWaring";
-            this.lblLoginWaring.Size = new System.Drawing.Size(197, 32);
-            this.lblLoginWaring.TabIndex = 3;
-            this.lblLoginWaring.Text = "로그인 해라";
+            this.lblLoginWarning.AutoSize = true;
+            this.lblLoginWarning.Font = new System.Drawing.Font("GungsuhChe", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblLoginWarning.Location = new System.Drawing.Point(78, 143);
+            this.lblLoginWarning.Name = "lblLoginWaring";
+            this.lblLoginWarning.Size = new System.Drawing.Size(197, 32);
+            this.lblLoginWarning.TabIndex = 3;
+            this.lblLoginWarning.Text = "로그인 해라";
             // 
             // uscScrapListControl
             // 
@@ -174,7 +175,7 @@
             this.uscScrapListControl.Location = new System.Drawing.Point(23, 41);
             this.uscScrapListControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uscScrapListControl.Name = "uscScrapListControl";
-            this.uscScrapListControl.Size = new System.Drawing.Size(208, 589);
+            this.uscScrapListControl.Size = new System.Drawing.Size(197, 589);
             this.uscScrapListControl.TabIndex = 0;
             this.uscScrapListControl.Visible = false;
             // 
@@ -259,17 +260,17 @@
         #endregion
 
         private User_Controls.TitleBar.TitleBarControl uscTitleBar;
-        private User_Controls.Search.SearchBarControl uscSearchBar;
+        private User_Controls.SearchBarControl uscSearchBar;
         private System.Windows.Forms.SplitContainer spcKeyword_News;
         private User_Controls.Result.ArticleListControl uscResultPanel;
         private System.Windows.Forms.SplitContainer spcSearch_Scrap;
         private User_Controls.ScrapListControl uscScrapListControl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblLoginWaring;
+        private System.Windows.Forms.Label lblLoginWarning;
         private User_Controls.RealTimeKeywordPanelControl uscRealTimeKeywordPanelControl;
         private User_Controls.SignInPanel uscSignInPanel;
         private User_Controls.SignInControl uscSignInControl;
-        private User_Controls.UserKeywordPanelControl uscUserKeywordPanelControl;
+        private User_Controls.UserKeywordListControl uscUserKeywordPanelControl;
         private System.Windows.Forms.Label lblKeywordTitle;
         private System.Windows.Forms.Label lblKeywordTItleAlt;
     }

@@ -1,4 +1,4 @@
-﻿namespace NewsABGN.UI.User_Controls.Search
+﻿namespace NewsABGN.UI.User_Controls
 {
     partial class SearchBarControl
     {
