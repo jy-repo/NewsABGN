@@ -131,6 +131,18 @@
     <Compile Include="User Controls\TitleBarControl.Designer.cs">
       <DependentUpon>TitleBarControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Controls\UserKeywordControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserKeywordControl.Designer.cs">
+      <DependentUpon>UserKeywordControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UserKeywordPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UserKeywordPanelControl.Designer.cs">
+      <DependentUpon>UserKeywordPanelControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\ArticleForm.resx">
       <DependentUpon>ArticleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +185,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\TitleBarControl.resx">
       <DependentUpon>TitleBarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserKeywordControl.resx">
+      <DependentUpon>UserKeywordControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UserKeywordPanelControl.resx">
+      <DependentUpon>UserKeywordPanelControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

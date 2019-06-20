@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.spcKeyword_News = new System.Windows.Forms.SplitContainer();
+            this.lblKeywordTItleAlt = new System.Windows.Forms.Label();
+            this.lblKeywordTitle = new System.Windows.Forms.Label();
+            this.uscUserKeywordPanelControl = new NewsABGN.UI.User_Controls.UserKeywordPanelControl();
             this.uscRealTimeKeywordPanelControl = new NewsABGN.UI.User_Controls.RealTimeKeywordPanelControl();
             this.spcSearch_Scrap = new System.Windows.Forms.SplitContainer();
             this.uscResultPanel = new NewsABGN.UI.User_Controls.Result.ArticleListControl();
@@ -60,6 +63,9 @@
             // spcKeyword_News.Panel1
             // 
             this.spcKeyword_News.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(240)))), ((int)(((byte)(230)))));
+            this.spcKeyword_News.Panel1.Controls.Add(this.lblKeywordTItleAlt);
+            this.spcKeyword_News.Panel1.Controls.Add(this.lblKeywordTitle);
+            this.spcKeyword_News.Panel1.Controls.Add(this.uscUserKeywordPanelControl);
             this.spcKeyword_News.Panel1.Controls.Add(this.uscRealTimeKeywordPanelControl);
             // 
             // spcKeyword_News.Panel2
@@ -69,9 +75,38 @@
             this.spcKeyword_News.SplitterDistance = 235;
             this.spcKeyword_News.TabIndex = 3;
             // 
+            // lblKeywordTItleAlt
+            // 
+            this.lblKeywordTItleAlt.AutoSize = true;
+            this.lblKeywordTItleAlt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblKeywordTItleAlt.Font = new System.Drawing.Font("Magic R", 9F);
+            this.lblKeywordTItleAlt.Location = new System.Drawing.Point(144, 16);
+            this.lblKeywordTItleAlt.Name = "lblKeywordTItleAlt";
+            this.lblKeywordTItleAlt.Size = new System.Drawing.Size(59, 12);
+            this.lblKeywordTItleAlt.TabIndex = 3;
+            this.lblKeywordTItleAlt.Text = "유저 검색어";
+            this.lblKeywordTItleAlt.Click += new System.EventHandler(this.LblKeywordTItleAlt_Click);
+            // 
+            // lblKeywordTitle
+            // 
+            this.lblKeywordTitle.Font = new System.Drawing.Font("Magic R", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblKeywordTitle.Location = new System.Drawing.Point(11, 23);
+            this.lblKeywordTitle.Name = "lblKeywordTitle";
+            this.lblKeywordTitle.Size = new System.Drawing.Size(136, 24);
+            this.lblKeywordTitle.TabIndex = 2;
+            this.lblKeywordTitle.Text = "실시간 검색어";
+            // 
+            // uscUserKeywordPanelControl
+            // 
+            this.uscUserKeywordPanelControl.Location = new System.Drawing.Point(4, 64);
+            this.uscUserKeywordPanelControl.Name = "uscUserKeywordPanelControl";
+            this.uscUserKeywordPanelControl.Size = new System.Drawing.Size(229, 576);
+            this.uscUserKeywordPanelControl.TabIndex = 1;
+            this.uscUserKeywordPanelControl.Visible = false;
+            // 
             // uscRealTimeKeywordPanelControl
             // 
-            this.uscRealTimeKeywordPanelControl.Location = new System.Drawing.Point(4, 9);
+            this.uscRealTimeKeywordPanelControl.Location = new System.Drawing.Point(4, 64);
             this.uscRealTimeKeywordPanelControl.MinimumSize = new System.Drawing.Size(225, 340);
             this.uscRealTimeKeywordPanelControl.Name = "uscRealTimeKeywordPanelControl";
             this.uscRealTimeKeywordPanelControl.Size = new System.Drawing.Size(229, 344);
@@ -139,7 +174,7 @@
             this.uscScrapListControl.Location = new System.Drawing.Point(23, 41);
             this.uscScrapListControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uscScrapListControl.Name = "uscScrapListControl";
-            this.uscScrapListControl.Size = new System.Drawing.Size(241, 589);
+            this.uscScrapListControl.Size = new System.Drawing.Size(208, 589);
             this.uscScrapListControl.TabIndex = 0;
             this.uscScrapListControl.Visible = false;
             // 
@@ -208,6 +243,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "News An Bol Ggo Nyang ?_?";
             this.spcKeyword_News.Panel1.ResumeLayout(false);
+            this.spcKeyword_News.Panel1.PerformLayout();
             this.spcKeyword_News.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.spcKeyword_News)).EndInit();
             this.spcKeyword_News.ResumeLayout(false);
@@ -233,5 +269,8 @@
         private User_Controls.RealTimeKeywordPanelControl uscRealTimeKeywordPanelControl;
         private User_Controls.SignInPanel uscSignInPanel;
         private User_Controls.SignInControl uscSignInControl;
+        private User_Controls.UserKeywordPanelControl uscUserKeywordPanelControl;
+        private System.Windows.Forms.Label lblKeywordTitle;
+        private System.Windows.Forms.Label lblKeywordTItleAlt;
     }
 }

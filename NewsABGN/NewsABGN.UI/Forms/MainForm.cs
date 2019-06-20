@@ -188,5 +188,30 @@ namespace NewsABGN.UI
             uscSignInPanel.ShowMemberName(e.Member);
             GetScrapsAndFill(e.Member.MemberId);
         }
+
+        private bool rt_up = true;  // 실시간 검색어 보이는 중??
+        private List<User_Controls.UserKeywordControl> _ukControls = new List<User_Controls.UserKeywordControl>();
+        private void LblKeywordTItleAlt_Click(object sender, EventArgs e)
+        {
+            var temp = lblKeywordTitle.Text;
+            lblKeywordTitle.Text = lblKeywordTItleAlt.Text;
+            lblKeywordTItleAlt.Text = temp;
+            uscUserKeywordPanelControl.Visible = rt_up;
+            rt_up = !rt_up;
+            uscRealTimeKeywordPanelControl.Visible = rt_up;
+
+            if (uscUserKeywordPanelControl.Visible)
+            {
+                _ukControls = uscUserKeywordPanelControl.TestFill();
+                foreach (var uscUserKeywordContrl in _ukControls)
+                    uscUserKeywordContrl.KeywordClicked +=
+                        new EventHandler<User_Controls.UserKeywordControl.KeywordClickedEventArgs>(UserKeywordClicked);
+            }
+        }
+
+        private void UserKeywordClicked(object sender, User_Controls.UserKeywordControl.KeywordClickedEventArgs e)
+        {
+            SearchAndFill(e.Keyword);
+        }
     }
 }
