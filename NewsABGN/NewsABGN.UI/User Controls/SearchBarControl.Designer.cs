@@ -30,9 +30,11 @@
         {
             this.txbKeyword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptbAddKeyword = new System.Windows.Forms.PictureBox();
+            this.ptbSearch = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAddKeyword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // txbKeyword
@@ -47,23 +49,35 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(207)))), ((int)(((byte)(93)))));
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.ptbAddKeyword);
+            this.panel1.Controls.Add(this.ptbSearch);
             this.panel1.Controls.Add(this.txbKeyword);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(382, 40);
+            this.panel1.Size = new System.Drawing.Size(431, 40);
             this.panel1.TabIndex = 1;
             // 
-            // pictureBox1
+            // ptbAddKeyword
             // 
-            this.pictureBox1.Image = global::NewsABGN.UI.Properties.Resources.cat_search;
-            this.pictureBox1.Location = new System.Drawing.Point(334, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            this.ptbAddKeyword.Image = global::NewsABGN.UI.Properties.Resources.output_onlinepngtools;
+            this.ptbAddKeyword.Location = new System.Drawing.Point(384, 3);
+            this.ptbAddKeyword.Name = "ptbAddKeyword";
+            this.ptbAddKeyword.Size = new System.Drawing.Size(43, 32);
+            this.ptbAddKeyword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbAddKeyword.TabIndex = 2;
+            this.ptbAddKeyword.TabStop = false;
+            this.ptbAddKeyword.Click += new System.EventHandler(this.PtbAddKeyword_Click);
+            // 
+            // ptbSearch
+            // 
+            this.ptbSearch.Image = global::NewsABGN.UI.Properties.Resources.cat_search;
+            this.ptbSearch.Location = new System.Drawing.Point(334, 3);
+            this.ptbSearch.Name = "ptbSearch";
+            this.ptbSearch.Size = new System.Drawing.Size(43, 32);
+            this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbSearch.TabIndex = 1;
+            this.ptbSearch.TabStop = false;
+            this.ptbSearch.Click += new System.EventHandler(this.PtbSearch_Click);
             // 
             // SearchBarControl
             // 
@@ -71,10 +85,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "SearchBarControl";
-            this.Size = new System.Drawing.Size(382, 40);
+            this.Size = new System.Drawing.Size(431, 40);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAddKeyword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -83,6 +98,7 @@
 
         private System.Windows.Forms.TextBox txbKeyword;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbSearch;
+        private System.Windows.Forms.PictureBox ptbAddKeyword;
     }
 }

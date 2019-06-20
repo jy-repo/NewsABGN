@@ -44,7 +44,7 @@ namespace NewsABGN.UI.User_Controls
 
         public void FillKeywords()
         {
-            _keywords = LogicRepository.Controller.Crawler.GetRealTimeKeywordList();
+            _keywords = LogicRepository.Controller.WebCrawlbot.GetRealTimeKeywordList();
             Paging(page);
             lblLastUpdateTime.Text = "마지막 업데이트 시각: " + DateTime.Now.ToString("HH:mm:ss");
             

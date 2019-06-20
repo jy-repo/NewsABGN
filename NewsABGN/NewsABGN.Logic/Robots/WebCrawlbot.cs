@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NewsABGN.Logic
 {
-    public class Crawler
+    public class WebCrawlbot
     {
         public List<string> GetRealTimeKeywordList()
         {

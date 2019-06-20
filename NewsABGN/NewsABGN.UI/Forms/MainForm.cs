@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NewsABGN.Logic;
-using NewsABGN.DB;
 using NewsABGN.UI.User_Controls;
 using NewsABGN.UI.User_Controls.Result;
 
@@ -102,22 +101,24 @@ namespace NewsABGN.UI
 
         #region User login/logout
         private bool _loginState = false;
-        private Member _member;
+        private int _memberId;
+        private string _memberName;
         // title bar '로그인' button clicked
         private void UscSignInPanel_BtnSignInClick(object sender, SignInPanel.BtnSignInClickEventArgs e)
         {
             if (!_loginState) // 로그인
                 uscSignInControl.Visible = !uscSignInControl.Visible;
             else    // 로그아웃
-                Toggle(_member);
+                Toggle(_memberId, _memberName);
         }
         // popup '로그인' succeed
         private void UscSignInControl_BtnSignInClick(object sender, SignInControl.BtnSignInClickEventArgs e)
         {
-            _member = e.Member;
-            Toggle(_member);
+            _memberId = e.Member.MemberId;
+            _memberName = e.Member.Name;
+            Toggle(_memberId, _memberName);
         }
-        private void Toggle(Member member)
+        private void Toggle(int memberId, string name)
         {
             // close login control if open
             if(!_loginState)
@@ -134,9 +135,9 @@ namespace NewsABGN.UI
 
             if (_loginState)  // 로그인
             {   
-                uscSignInPanel.ShowMemberName(member);
-                FillUserKeywords(member.MemberId);
-                FillUserScraps(member.MemberId);
+                uscSignInPanel.ShowMemberName(name);
+                FillUserKeywords(memberId);
+                FillUserScraps(memberId);
             }  // 로그 아웃
             else
             {
@@ -177,10 +178,14 @@ namespace NewsABGN.UI
 
         private void FillUserKeywords(int memberId)
         {
-            var _ukControls = uscUserKeywordPanelControl.FillKeywords(_member.MemberId);
+            var _ukControls = uscUserKeywordPanelControl.FillKeywords(memberId);
             foreach (var uscUserKeywordContrl in _ukControls)
+            {
                 uscUserKeywordContrl.KeywordClicked +=
                     new EventHandler<UserKeywordControl.KeywordClickedEventArgs>(UserKeywordClicked);
+                uscUserKeywordContrl.DeleteKeywordClicked +=
+                    new EventHandler<UserKeywordControl.DeleteKeywordClickedEventArgs>(UserDeletedKeywordClicked);
+            }
         }
 
         private void UserKeywordClicked(object sender, UserKeywordControl.KeywordClickedEventArgs e)
@@ -188,9 +193,26 @@ namespace NewsABGN.UI
             SearchAndFill(e.Keyword);
         }
 
+        private void UserDeletedKeywordClicked(object sender, UserKeywordControl.DeleteKeywordClickedEventArgs e)
+        {
+            LogicRepository.Controller.DBbot.DeleteKeyword(_memberId, e.Keyword);
+            uscUserKeywordPanelControl.EmptyKeywords();
+            FillUserKeywords(_memberId);
+        }
+
         private void UscRealTimeKeywordPanel_KeywordClicked(object sender, RealTimeKeywordPanelControl.KeywordClickedEventArgs e)
         {
             SearchAndFill(e.Keyword);
+        }
+
+        private void UscSearchBar_AddKeywordCatClicked(object sender, SearchBarControl.AddKeywordCatClickedEventArgs e)
+        {
+            if (_loginState == false)
+                return;
+
+            LogicRepository.Controller.DBbot.AddKeyword(_memberId, e.Keyword);
+            uscUserKeywordPanelControl.EmptyKeywords();
+            FillUserKeywords(_memberId);
         }
         #endregion
 
@@ -213,13 +235,8 @@ namespace NewsABGN.UI
         #region Scrap Section
         private void FillUserScraps(int memberId)
         {
-            // get scrap list from DB through logic
-            List<Scrap> scraps = LogicRepository.Controller.Scrapper.GetScraps(memberId);
-
-
-
-            // fill scrap panel UI with scrap list
-            var scrapControls = uscScrapListControl.FillScrapPanel(scraps);
+            // add open article fuction
+            var scrapControls = uscScrapListControl.FillScrapPanel(memberId);
             foreach (var scrapControl in scrapControls)
                 scrapControl.ScrapDoubleClicked +=
                     new EventHandler<ScrapControl.ScrapDoubleClickedEventArgs>(Open_Article);
@@ -237,7 +254,7 @@ namespace NewsABGN.UI
         private void SearchAndFill(string keyword)
         {
             // search news with keyword - Logic
-            var contentList = LogicRepository.Controller.Searcher.Search(keyword);
+            var contentList = LogicRepository.Controller.APIbot.Search(keyword);
             // fill result panel - UI
             var newsResults = uscResultPanel.FillResults(contentList);
 
@@ -254,5 +271,7 @@ namespace NewsABGN.UI
             articleForm.ShowDialog();
         }
         #endregion
+
+
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NewsABGN.DB;
+using NewsABGN.Logic;
 
 namespace NewsABGN.UI.User_Controls
 {
@@ -20,8 +20,10 @@ namespace NewsABGN.UI.User_Controls
 
         private List<ScrapControl> _scrapControls = new List<ScrapControl>();
         
-        public List<ScrapControl> FillScrapPanel(List<Scrap> scraps)
-        { 
+        public List<ScrapControl> FillScrapPanel(int memberId)
+        {
+            var scraps = LogicRepository.Controller.DBbot.GetScraps(memberId);
+
             foreach(var scrap in scraps)
             {
                 ScrapControl s = new ScrapControl(scrap);

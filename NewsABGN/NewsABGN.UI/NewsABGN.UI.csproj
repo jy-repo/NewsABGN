@@ -234,5 +234,14 @@
   <ItemGroup>
     <None Include="resources\right.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\cat_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\cat_addKeyword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\output-onlinepngtools.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

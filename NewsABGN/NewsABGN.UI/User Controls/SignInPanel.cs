@@ -65,12 +65,12 @@ namespace NewsABGN.UI.User_Controls
         #endregion
 
         //로그인 성공 시,
-        internal void ShowMemberName(Member member)
+        internal void ShowMemberName(string name)
         {
             lblSignInName.Visible = true;
             lblSignInSuccess.Visible = true;
 
-            lblSignInName.Text = member.Name;
+            lblSignInName.Text = name;
             btnSignIn.Text = "로그아웃";
         }
 

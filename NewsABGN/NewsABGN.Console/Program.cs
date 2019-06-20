@@ -16,7 +16,7 @@ namespace NewsABGN.Console
 
         private static void Test()
         {
-            var list = LogicRepository.Controller.Crawler.GetRealTimeKeywordList();
+            var list = LogicRepository.Controller.WebCrawlbot.GetRealTimeKeywordList();
 
             foreach(var w in list)
                 System.Console.WriteLine(w);

@@ -22,6 +22,12 @@ namespace NewsABGN.UI.User_Controls
             lblUserKeyword.Text = keyword;
         }
 
+
+        private void LblUserKeyword_Click(object sender, EventArgs e)
+        {
+            OnKeywordClicked(lblUserKeyword.Text);
+        }
+        
         #region KeywordClicked event things for C# 3.0
         public event EventHandler<KeywordClickedEventArgs> KeywordClicked;
 
@@ -62,9 +68,49 @@ namespace NewsABGN.UI.User_Controls
         }
         #endregion
 
-        private void LblUserKeyword_Click(object sender, EventArgs e)
+        #region DeleteKeywordClicked event things for C# 3.0
+        public event EventHandler<DeleteKeywordClickedEventArgs> DeleteKeywordClicked;
+
+        protected virtual void OnDeleteKeywordClicked(DeleteKeywordClickedEventArgs e)
         {
-            OnKeywordClicked(lblUserKeyword.Text);
+            if (DeleteKeywordClicked != null)
+                DeleteKeywordClicked(this, e);
+        }
+
+        private DeleteKeywordClickedEventArgs OnDeleteKeywordClicked(string keyword)
+        {
+            DeleteKeywordClickedEventArgs args = new DeleteKeywordClickedEventArgs(keyword);
+            OnDeleteKeywordClicked(args);
+
+            return args;
+        }
+
+        private DeleteKeywordClickedEventArgs OnDeleteKeywordClickedForOut()
+        {
+            DeleteKeywordClickedEventArgs args = new DeleteKeywordClickedEventArgs();
+            OnDeleteKeywordClicked(args);
+
+            return args;
+        }
+
+        public class DeleteKeywordClickedEventArgs : EventArgs
+        {
+            public string Keyword { get; set; }
+
+            public DeleteKeywordClickedEventArgs()
+            {
+            }
+
+            public DeleteKeywordClickedEventArgs(string keyword)
+            {
+                Keyword = keyword;
+            }
+        }
+        #endregion
+
+        private void LblRemoveKeyword_Click(object sender, EventArgs e)
+        {
+            OnDeleteKeywordClicked(lblUserKeyword.Text);
         }
     }
 }

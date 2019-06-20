@@ -26,13 +26,13 @@ namespace NewsABGN.Logic
 
         private LogicRepository()
         {
-            Searcher = new Searcher();
-            Crawler = new Crawler();
-            Scrapper = new Scrapper();
+            APIbot = new APIbot();
+            WebCrawlbot = new WebCrawlbot();
+            DBbot = new DBbot();
         }
 
-        public Searcher Searcher { get; }
-        public Crawler Crawler { get; }
-        public Scrapper Scrapper { get; }
+        public APIbot APIbot { get; }
+        public WebCrawlbot WebCrawlbot { get; }
+        public DBbot DBbot { get; }
     }
 }

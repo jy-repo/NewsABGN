@@ -9,7 +9,7 @@ using Newtonsoft.Json.Linq;
 
 namespace NewsABGN.Logic
 {
-    public class Searcher
+    public class APIbot
     {
         // search variables
         private const int displayNumber = 10;

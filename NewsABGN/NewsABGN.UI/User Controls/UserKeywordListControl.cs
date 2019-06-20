@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NewsABGN.DB;
+using NewsABGN.Logic;
 
 namespace NewsABGN.UI.User_Controls
 {
@@ -19,25 +19,15 @@ namespace NewsABGN.UI.User_Controls
         }
 
         private List<UserKeywordControl> _userKeywordControls = new List<UserKeywordControl>();
-        public List<UserKeywordControl> TestFill()
-        {
-            flpKeywordList.Controls.Clear();
-            List<UserKeywordControl> list = new List<UserKeywordControl>();
-
-            for (int i=0; i< 20; i++)
-            {
-                UserKeywordControl userKeyword = new UserKeywordControl((i+1)+"    "+ "keyword" + i);
-                _userKeywordControls.Add(userKeyword);
-                flpKeywordList.Controls.Add(userKeyword);
-            }
-
-            return _userKeywordControls;
-        }
 
         public List<UserKeywordControl> FillKeywords(int memberId)
         {
-            List<Keyword> keywords = DataRepository.Keyword.GetByMemberId(memberId);
+            // get user keywords from DB
+            var keywords = LogicRepository.Controller.DBbot.GetKeywords(memberId);
 
+            // Make and fill UserKeywordControl
+            // Add to flow layout panel for display
+            // Add to _userKeywordControls list for data access
             foreach(var keyword in keywords)
             {
                 var userKeywordControl = new UserKeywordControl(keyword.PushName);

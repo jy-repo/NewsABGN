@@ -52,6 +52,7 @@
             this.lblRemoveKeyword.TabIndex = 1;
             this.lblRemoveKeyword.Text = "X";
             this.lblRemoveKeyword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRemoveKeyword.Click += new System.EventHandler(this.LblRemoveKeyword_Click);
             // 
             // UserKeywordControl
             // 
