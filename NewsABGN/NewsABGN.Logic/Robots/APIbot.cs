@@ -41,7 +41,6 @@ namespace NewsABGN.Logic
                 // API error
             }
 
-
             return contentsList;
         }
 
@@ -73,6 +72,7 @@ namespace NewsABGN.Logic
                 newsContents.Add("title", item["title"].ToString());
                 newsContents.Add("description", item["description"].ToString());
                 newsContents.Add("link", item["link"].ToString());
+                newsContents.Add("originalLink", item["originallink"].ToString());
 
                 contentsList.Add(newsContents);
             }

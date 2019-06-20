@@ -224,7 +224,16 @@ namespace NewsABGN.UI
 
             SearchAndFill(e.Keyword);
         }
-        
+
+        private void Scrap_Article(object sender, ArticleControl.ScrapCatClickedEventArgs e)
+        {
+            if (_loginState == false)
+                return;
+            LogicRepository.Controller.DBbot.AddScrap(_memberId, e.News);
+            uscScrapListControl.EmptyScraps();
+            uscScrapListControl.FillScrapPanel(_memberId);
+        }
+
         private void Open_Article(object sender, ArticleControl.ResultDoubleClickedEventArgs e)
         {
             Open_Article(e.Url);
@@ -238,9 +247,22 @@ namespace NewsABGN.UI
             // add open article fuction
             var scrapControls = uscScrapListControl.FillScrapPanel(memberId);
             foreach (var scrapControl in scrapControls)
+            {
                 scrapControl.ScrapDoubleClicked +=
                     new EventHandler<ScrapControl.ScrapDoubleClickedEventArgs>(Open_Article);
+                scrapControl.DeleteScrapclicked +=
+                    new EventHandler<ScrapControl.DeleteScrapclickedEventArgs>(DeleteScrapClicked);
+            }
         }
+
+        private void DeleteScrapClicked(object sender, ScrapControl.DeleteScrapclickedEventArgs e)
+        {
+            LogicRepository.Controller.DBbot.DeleteScrap(_memberId, e.Link);
+            uscScrapListControl.EmptyScraps();
+            FillUserScraps(_memberId);
+        }
+
+
 
         private void Open_Article(object sender, ScrapControl.ScrapDoubleClickedEventArgs e)
         {
@@ -259,12 +281,17 @@ namespace NewsABGN.UI
             var newsResults = uscResultPanel.FillResults(contentList);
 
             foreach (var result in newsResults)
+            {
                 result.ResultDoubleClicked +=
                     new EventHandler<ArticleControl.ResultDoubleClickedEventArgs>(Open_Article);
+                result.ScrapCatClicked +=
+                    new EventHandler<ArticleControl.ScrapCatClickedEventArgs>(Scrap_Article);
+            }
 
             // save added news results to a list : for access to each control
             _newsResults = newsResults;
         }
+
         private void Open_Article(string url)
         {
             ArticleForm articleForm = new ArticleForm(url);

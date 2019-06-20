@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Web;
 using System.IO;
+using NewsABGN.Logic;
 
 namespace NewsABGN.UI.User_Controls.Result
 {
@@ -17,7 +18,7 @@ namespace NewsABGN.UI.User_Controls.Result
         private const int lineLengthTitle = 36;
         private const int lineLengthContent = 55;
 
-        private string _url;
+        private Dictionary<string, string> _news = new Dictionary<string, string>();
 
         public ArticleControl()
         {
@@ -26,12 +27,12 @@ namespace NewsABGN.UI.User_Controls.Result
 
         public ArticleControl(Dictionary<string, string> news) : this()
         {
+            _news = news;
             lblTitle.Text = FitWidth(news["title"], "title");
             lblContents.Text =
                 FitWidth(news["pubDate"], "content") + 
                 "\r\n\r\n" +
                 FitWidth(news["description"], "content");
-            _url = news["link"];
         }
 
         private string FitWidth(string str, string type)
@@ -68,6 +69,26 @@ namespace NewsABGN.UI.User_Controls.Result
             }
 
             return result;
+        }
+
+        private void Result_DoubleClick(object sender, EventArgs e)
+        {
+            OnResultDoubleClicked(_news["link"]);
+        }
+
+        private void LblTitle_MouseHover(object sender, EventArgs e)
+        {
+            lblTitle.ForeColor = Color.Blue;
+        }
+
+        private void LblTitle_MouseLeave(object sender, EventArgs e)
+        {
+            lblTitle.ForeColor = Color.Black;
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            OnScrapCatClicked(_news);
         }
 
         #region ResultDoubleClicked event things for C# 3.0
@@ -110,19 +131,44 @@ namespace NewsABGN.UI.User_Controls.Result
         }
         #endregion
 
-        private void Result_DoubleClick(object sender, EventArgs e)
+        #region ScrapCatClicked event things for C# 3.0
+        public event EventHandler<ScrapCatClickedEventArgs> ScrapCatClicked;
+
+        protected virtual void OnScrapCatClicked(ScrapCatClickedEventArgs e)
         {
-            OnResultDoubleClicked(_url);
+            if (ScrapCatClicked != null)
+                ScrapCatClicked(this, e);
         }
 
-        private void LblTitle_MouseHover(object sender, EventArgs e)
+        private ScrapCatClickedEventArgs OnScrapCatClicked(Dictionary<string, string> news)
         {
-            lblTitle.ForeColor = Color.Blue;
+            ScrapCatClickedEventArgs args = new ScrapCatClickedEventArgs(news);
+            OnScrapCatClicked(args);
+
+            return args;
         }
 
-        private void LblTitle_MouseLeave(object sender, EventArgs e)
+        private ScrapCatClickedEventArgs OnScrapCatClickedForOut()
         {
-            lblTitle.ForeColor = Color.Black;
+            ScrapCatClickedEventArgs args = new ScrapCatClickedEventArgs();
+            OnScrapCatClicked(args);
+
+            return args;
         }
+
+        public class ScrapCatClickedEventArgs : EventArgs
+        {
+            public Dictionary<string, string> News { get; set; }
+
+            public ScrapCatClickedEventArgs()
+            {
+            }
+
+            public ScrapCatClickedEventArgs(Dictionary<string, string> news)
+            {
+                News = news;
+            }
+        }
+        #endregion
     }
 }

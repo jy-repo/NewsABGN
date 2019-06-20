@@ -29,5 +29,15 @@ namespace NewsABGN.Logic
         {
             DataRepository.Keyword.DeleteKeyword(memberId, str);
         }
+
+        public void AddScrap(int memberId, Dictionary<string,string> news)
+        {
+            DataRepository.Scrap.InsertByMemberId(memberId, news);
+        }
+
+        public void DeleteScrap(int memberId, string link)
+        {
+            DataRepository.Scrap.DeleteScrap(memberId, link);
+        }
     }
 }

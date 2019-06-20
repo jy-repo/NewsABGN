@@ -173,10 +173,10 @@
             this.uscScrapListControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.uscScrapListControl.Location = new System.Drawing.Point(23, 41);
+            this.uscScrapListControl.Location = new System.Drawing.Point(8, 41);
             this.uscScrapListControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uscScrapListControl.Name = "uscScrapListControl";
-            this.uscScrapListControl.Size = new System.Drawing.Size(306, 589);
+            this.uscScrapListControl.Size = new System.Drawing.Size(345, 589);
             this.uscScrapListControl.TabIndex = 0;
             this.uscScrapListControl.Visible = false;
             // 

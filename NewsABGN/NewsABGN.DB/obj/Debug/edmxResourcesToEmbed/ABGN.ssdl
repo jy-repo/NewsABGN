@@ -42,8 +42,8 @@
       <PropertyRef Name="ScrapId" />
     </Key>
     <Property Name="ScrapId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="OriginalLink" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="OriginalLink" Type="nvarchar" MaxLength="1000" Nullable="false" />
     <Property Name="Link" Type="nvarchar" MaxLength="1000" Nullable="false" />
     <Property Name="Description" Type="nvarchar" MaxLength="1000" Nullable="false" />
     <Property Name="PubDate" Type="date" Nullable="false" />

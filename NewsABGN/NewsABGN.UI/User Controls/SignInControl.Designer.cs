@@ -35,6 +35,7 @@
             this.txtPW = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSignIn = new System.Windows.Forms.Button();
+            this.btnSignUp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("휴먼가는샘체", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(87, 20);
+            this.label1.Location = new System.Drawing.Point(96, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 33);
             this.label1.TabIndex = 2;
@@ -100,7 +101,7 @@
             // 
             // btnSignIn
             // 
-            this.btnSignIn.Location = new System.Drawing.Point(93, 158);
+            this.btnSignIn.Location = new System.Drawing.Point(154, 164);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(73, 36);
             this.btnSignIn.TabIndex = 9;
@@ -108,11 +109,22 @@
             this.btnSignIn.UseVisualStyleBackColor = true;
             this.btnSignIn.Click += new System.EventHandler(this.BtnSignIn_Click);
             // 
+            // btnSignUp
+            // 
+            this.btnSignUp.Location = new System.Drawing.Point(38, 164);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(73, 36);
+            this.btnSignUp.TabIndex = 10;
+            this.btnSignUp.Text = "회원가입";
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.BtnSignUp_Click);
+            // 
             // SignInControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.txtPW);
             this.Controls.Add(this.label3);
@@ -139,5 +151,6 @@
         private System.Windows.Forms.TextBox txtPW;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSignIn;
+        private System.Windows.Forms.Button btnSignUp;
     }
 }

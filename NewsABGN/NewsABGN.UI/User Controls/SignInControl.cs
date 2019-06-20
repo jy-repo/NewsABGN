@@ -90,5 +90,11 @@ namespace NewsABGN.UI.User_Controls
             }
         }
         #endregion
+
+        private void BtnSignUp_Click(object sender, EventArgs e)
+        {
+            SignUpForm signUp = new SignUpForm();
+            signUp.ShowDialog();
+        }
     }
 }
