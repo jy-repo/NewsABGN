@@ -23,6 +23,8 @@ namespace NewsABGN.UI.User_Controls
         {
             // scrap
             _url = scrap.Link;
+            lblTitle.Text = scrap.Title;
+            lblPubDate.Text = scrap.PubDate.ToString();
         }
 
 

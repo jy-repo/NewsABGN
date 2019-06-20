@@ -12,11 +12,11 @@ namespace NewsABGN.DB
         {
             Scrap = new ScrapData();
             Member = new MemberData();
-            //Keyword = new KeywordData();
+            Keyword = new KeywordData();
         }
 
         public static ScrapData Scrap { get; }
         public static MemberData Member { get; }
-        //public static KeywordData Keyword { get; }
+        public static KeywordData Keyword { get; }
     }
 }

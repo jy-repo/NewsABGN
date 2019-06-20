@@ -64,9 +64,11 @@
     </Compile>
     <Compile Include="DataRepository.cs" />
     <Compile Include="Data\EntityData.cs" />
+    <Compile Include="Data\KeywordData.cs" />
     <Compile Include="Data\MemberData.cs" />
     <Compile Include="Data\ScrapData.cs" />
     <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\Keyword.cs" />
     <Compile Include="Entities\Member.cs" />
     <Compile Include="Entities\Scrap.cs" />
     <Compile Include="Keyword.cs">

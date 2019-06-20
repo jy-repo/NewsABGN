@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NewsABGN.DB;
 
 namespace NewsABGN.UI.User_Controls
 {
@@ -30,6 +31,19 @@ namespace NewsABGN.UI.User_Controls
                 flpKeywordList.Controls.Add(userKeyword);
             }
 
+            return _userKeywordControls;
+        }
+
+        public List<UserKeywordControl> FillKeywords(int memberId)
+        {
+            List<Keyword> keywords = DataRepository.Keyword.GetByMemberId(memberId);
+
+            foreach(var keyword in keywords)
+            {
+                var userKeywordControl = new UserKeywordControl(keyword.PushName);
+                _userKeywordControls.Add(userKeywordControl);
+                flpKeywordList.Controls.Add(userKeywordControl);
+            }
             return _userKeywordControls;
         }
 

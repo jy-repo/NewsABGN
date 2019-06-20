@@ -177,7 +177,7 @@ namespace NewsABGN.UI
 
         private void FillUserKeywords(int memberId)
         {
-            var _ukControls = uscUserKeywordPanelControl.TestFill();
+            var _ukControls = uscUserKeywordPanelControl.FillKeywords(_member.MemberId);
             foreach (var uscUserKeywordContrl in _ukControls)
                 uscUserKeywordContrl.KeywordClicked +=
                     new EventHandler<UserKeywordControl.KeywordClickedEventArgs>(UserKeywordClicked);
