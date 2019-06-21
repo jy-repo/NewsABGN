@@ -147,5 +147,16 @@ namespace NewsABGN.UI.User_Controls
         }
         #endregion
 
+        private void Keyword_MouseHover(object sender, EventArgs e)
+        {
+            var label = (Label)sender;
+            label.ForeColor = Color.Gray;
+        }
+
+        private void KeywordA_MouseLeave(object sender, EventArgs e)
+        {
+            var label = (Label)sender;
+            label.ForeColor = Color.Black;
+        }
     }
 }

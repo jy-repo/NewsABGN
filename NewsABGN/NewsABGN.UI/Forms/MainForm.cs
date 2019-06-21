@@ -137,6 +137,11 @@ namespace NewsABGN.UI
             {   
                 uscSignInPanel.ShowMemberName(name);
                 FillUserKeywords(memberId);
+                foreach (var article in _newsResults)
+                {
+                    article.ToggleScrapButton();
+                    article.Refresh();
+                }
                 FillUserScraps(memberId);
             }  // 로그 아웃
             else
@@ -145,6 +150,11 @@ namespace NewsABGN.UI
                 uscUserKeywordPanelControl.EmptyKeywords();
                 if (uscUserKeywordPanelControl.Visible)
                     SwapKeywordPanels();
+                foreach (var article in _newsResults)
+                {
+                    article.ToggleScrapButton();
+                    article.Refresh();
+                }
                 uscScrapListControl.EmptyScraps();
             }
             lblKeywordTItleAlt.Visible = _loginState;

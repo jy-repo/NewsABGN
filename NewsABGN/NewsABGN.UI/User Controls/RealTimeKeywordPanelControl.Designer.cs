@@ -48,6 +48,7 @@
             // lblKeywordA
             // 
             this.lblKeywordA.AutoSize = true;
+            this.lblKeywordA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblKeywordA.Font = new System.Drawing.Font("Gulim", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblKeywordA.Location = new System.Drawing.Point(65, 11);
             this.lblKeywordA.Name = "lblKeywordA";
@@ -55,10 +56,13 @@
             this.lblKeywordA.TabIndex = 1;
             this.lblKeywordA.Text = "1   a";
             this.lblKeywordA.Click += new System.EventHandler(this.Keyword_Click);
+            this.lblKeywordA.MouseLeave += new System.EventHandler(this.KeywordA_MouseLeave);
+            this.lblKeywordA.MouseHover += new System.EventHandler(this.Keyword_MouseHover);
             // 
             // lblKeywordB
             // 
             this.lblKeywordB.AutoSize = true;
+            this.lblKeywordB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblKeywordB.Font = new System.Drawing.Font("Gulim", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblKeywordB.Location = new System.Drawing.Point(64, 52);
             this.lblKeywordB.Name = "lblKeywordB";
@@ -66,10 +70,13 @@
             this.lblKeywordB.TabIndex = 2;
             this.lblKeywordB.Text = "2   a";
             this.lblKeywordB.Click += new System.EventHandler(this.Keyword_Click);
+            this.lblKeywordB.MouseLeave += new System.EventHandler(this.KeywordA_MouseLeave);
+            this.lblKeywordB.MouseHover += new System.EventHandler(this.Keyword_MouseHover);
             // 
             // lblKeywordC
             // 
             this.lblKeywordC.AutoSize = true;
+            this.lblKeywordC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblKeywordC.Font = new System.Drawing.Font("Gulim", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblKeywordC.Location = new System.Drawing.Point(64, 92);
             this.lblKeywordC.Name = "lblKeywordC";
@@ -77,10 +84,13 @@
             this.lblKeywordC.TabIndex = 3;
             this.lblKeywordC.Text = "3   a";
             this.lblKeywordC.Click += new System.EventHandler(this.Keyword_Click);
+            this.lblKeywordC.MouseLeave += new System.EventHandler(this.KeywordA_MouseLeave);
+            this.lblKeywordC.MouseHover += new System.EventHandler(this.Keyword_MouseHover);
             // 
             // lblKeywordD
             // 
             this.lblKeywordD.AutoSize = true;
+            this.lblKeywordD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblKeywordD.Font = new System.Drawing.Font("Gulim", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblKeywordD.Location = new System.Drawing.Point(64, 132);
             this.lblKeywordD.Name = "lblKeywordD";
@@ -88,10 +98,13 @@
             this.lblKeywordD.TabIndex = 4;
             this.lblKeywordD.Text = "4   a";
             this.lblKeywordD.Click += new System.EventHandler(this.Keyword_Click);
+            this.lblKeywordD.MouseLeave += new System.EventHandler(this.KeywordA_MouseLeave);
+            this.lblKeywordD.MouseHover += new System.EventHandler(this.Keyword_MouseHover);
             // 
             // lblKeywordE
             // 
             this.lblKeywordE.AutoSize = true;
+            this.lblKeywordE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblKeywordE.Font = new System.Drawing.Font("Gulim", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblKeywordE.Location = new System.Drawing.Point(64, 172);
             this.lblKeywordE.Name = "lblKeywordE";
@@ -99,6 +112,8 @@
             this.lblKeywordE.TabIndex = 5;
             this.lblKeywordE.Text = "5   a";
             this.lblKeywordE.Click += new System.EventHandler(this.Keyword_Click);
+            this.lblKeywordE.MouseLeave += new System.EventHandler(this.KeywordA_MouseLeave);
+            this.lblKeywordE.MouseHover += new System.EventHandler(this.Keyword_MouseHover);
             // 
             // lblLastUpdateTime
             // 
@@ -113,22 +128,28 @@
             // lblPrev
             // 
             this.lblPrev.AutoSize = true;
+            this.lblPrev.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPrev.Location = new System.Drawing.Point(24, 209);
             this.lblPrev.Name = "lblPrev";
             this.lblPrev.Size = new System.Drawing.Size(29, 12);
             this.lblPrev.TabIndex = 8;
             this.lblPrev.Text = "<<<";
             this.lblPrev.Click += new System.EventHandler(this.LblPrev_Click);
+            this.lblPrev.MouseLeave += new System.EventHandler(this.KeywordA_MouseLeave);
+            this.lblPrev.MouseHover += new System.EventHandler(this.Keyword_MouseHover);
             // 
             // lblNext
             // 
             this.lblNext.AutoSize = true;
+            this.lblNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblNext.Location = new System.Drawing.Point(191, 209);
             this.lblNext.Name = "lblNext";
             this.lblNext.Size = new System.Drawing.Size(29, 12);
             this.lblNext.TabIndex = 9;
             this.lblNext.Text = ">>>";
             this.lblNext.Click += new System.EventHandler(this.LblNext_Click);
+            this.lblNext.MouseLeave += new System.EventHandler(this.KeywordA_MouseLeave);
+            this.lblNext.MouseHover += new System.EventHandler(this.Keyword_MouseHover);
             // 
             // lblKeywordNumberA
             // 

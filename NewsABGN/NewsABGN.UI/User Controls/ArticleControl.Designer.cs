@@ -31,8 +31,8 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblContents = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ptbScrap = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbScrap)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -72,29 +72,30 @@
             this.label1.Size = new System.Drawing.Size(580, 1);
             this.label1.TabIndex = 2;
             // 
-            // pictureBox1
+            // ptbScrap
             // 
-            this.pictureBox1.Image = global::NewsABGN.UI.Properties.Resources.output_onlinepngtools__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(554, 124);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            this.ptbScrap.Image = global::NewsABGN.UI.Properties.Resources.output_onlinepngtools__1_;
+            this.ptbScrap.Location = new System.Drawing.Point(554, 124);
+            this.ptbScrap.Name = "ptbScrap";
+            this.ptbScrap.Size = new System.Drawing.Size(43, 35);
+            this.ptbScrap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbScrap.TabIndex = 3;
+            this.ptbScrap.TabStop = false;
+            this.ptbScrap.Visible = false;
+            this.ptbScrap.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // ArticleControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ptbScrap);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblContents);
             this.Controls.Add(this.lblTitle);
             this.Name = "ArticleControl";
             this.Size = new System.Drawing.Size(603, 172);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbScrap)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,6 +106,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblContents;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbScrap;
     }
 }

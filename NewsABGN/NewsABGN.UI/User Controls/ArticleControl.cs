@@ -91,6 +91,11 @@ namespace NewsABGN.UI.User_Controls.Result
             OnScrapCatClicked(_news);
         }
 
+        public void ToggleScrapButton()
+        {
+            ptbScrap.Visible = !ptbScrap.Visible;
+        }
+
         #region ResultDoubleClicked event things for C# 3.0
         public event EventHandler<ResultDoubleClickedEventArgs> ResultDoubleClicked;
 
