@@ -28,34 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblMainContent = new System.Windows.Forms.Label();
+            this.articleMainControl1 = new NewsABGN.UI.User_Controls.ArticleMainControl();
+            this.articleTitleBarControl1 = new NewsABGN.UI.User_Controls.ArticleTitleBarControl();
             this.SuspendLayout();
             // 
-            // lblMainContent
+            // articleMainControl1
             // 
-            this.lblMainContent.AutoSize = true;
-            this.lblMainContent.Location = new System.Drawing.Point(47, 96);
-            this.lblMainContent.Name = "lblMainContent";
-            this.lblMainContent.Size = new System.Drawing.Size(38, 12);
-            this.lblMainContent.TabIndex = 0;
-            this.lblMainContent.Text = "label1";
+            this.articleMainControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.articleMainControl1.BackColor = System.Drawing.Color.Transparent;
+            this.articleMainControl1.Location = new System.Drawing.Point(8, 51);
+            this.articleMainControl1.Name = "articleMainControl1";
+            this.articleMainControl1.Size = new System.Drawing.Size(580, 440);
+            this.articleMainControl1.TabIndex = 1;
+            // 
+            // articleTitleBarControl1
+            // 
+            this.articleTitleBarControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.articleTitleBarControl1.Location = new System.Drawing.Point(3, 3);
+            this.articleTitleBarControl1.Name = "articleTitleBarControl1";
+            this.articleTitleBarControl1.Size = new System.Drawing.Size(590, 44);
+            this.articleTitleBarControl1.TabIndex = 0;
+            this.articleTitleBarControl1.ExitButtonClicked += new System.EventHandler<NewsABGN.UI.User_Controls.ArticleTitleBarControl.ExitButtonClickedEventArgs>(this.ArticleTitleBarControl1_ExitButtonClicked);
+            this.articleTitleBarControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseDown);
+            this.articleTitleBarControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseMove);
+            this.articleTitleBarControl1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseUp);
             // 
             // ArticleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblMainContent);
+            this.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.ClientSize = new System.Drawing.Size(596, 496);
+            this.Controls.Add(this.articleMainControl1);
+            this.Controls.Add(this.articleTitleBarControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ArticleForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ArticleForm";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblMainContent;
+        private User_Controls.ArticleTitleBarControl articleTitleBarControl1;
+        private User_Controls.ArticleMainControl articleMainControl1;
     }
 }

@@ -43,3 +43,7 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Cont
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.SearchBarControl.resources
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.UserKeywordListControl.resources
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.SignUpForm.resources
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\IronPython.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\bin\Debug\IronPython.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.ArticleMainControl.resources
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UI\obj\Debug\NewsABGN.UI.User_Controls.ArticleTitleBarControl.resources

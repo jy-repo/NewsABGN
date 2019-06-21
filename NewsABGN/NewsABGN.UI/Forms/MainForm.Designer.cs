@@ -31,16 +31,17 @@
             this.spcKeyword_News = new System.Windows.Forms.SplitContainer();
             this.lblKeywordTItleAlt = new System.Windows.Forms.Label();
             this.lblKeywordTitle = new System.Windows.Forms.Label();
-            this.uscUserKeywordPanelControl = new NewsABGN.UI.User_Controls.UserKeywordListControl();
-            this.uscRealTimeKeywordPanelControl = new NewsABGN.UI.User_Controls.RealTimeKeywordPanelControl();
             this.spcSearch_Scrap = new System.Windows.Forms.SplitContainer();
-            this.uscResultPanel = new NewsABGN.UI.User_Controls.Result.ArticleListControl();
-            this.uscSearchBar = new NewsABGN.UI.User_Controls.SearchBarControl();
             this.lblLoginWarning = new System.Windows.Forms.Label();
-            this.uscScrapListControl = new NewsABGN.UI.User_Controls.ScrapListControl();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblScrapTitle = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.uscSignInControl = new NewsABGN.UI.User_Controls.SignInControl();
             this.uscSignInPanel = new NewsABGN.UI.User_Controls.SignInPanel();
+            this.uscUserKeywordPanelControl = new NewsABGN.UI.User_Controls.UserKeywordListControl();
+            this.uscRealTimeKeywordPanelControl = new NewsABGN.UI.User_Controls.RealTimeKeywordPanelControl();
+            this.uscResultPanel = new NewsABGN.UI.User_Controls.Result.ArticleListControl();
+            this.uscSearchBar = new NewsABGN.UI.User_Controls.SearchBarControl();
+            this.uscScrapListControl = new NewsABGN.UI.User_Controls.ScrapListControl();
             this.uscTitleBar = new NewsABGN.UI.User_Controls.TitleBar.TitleBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.spcKeyword_News)).BeginInit();
             this.spcKeyword_News.Panel1.SuspendLayout();
@@ -97,23 +98,6 @@
             this.lblKeywordTitle.TabIndex = 2;
             this.lblKeywordTitle.Text = "실시간 검색어";
             // 
-            // uscUserKeywordPanelControl
-            // 
-            this.uscUserKeywordPanelControl.Location = new System.Drawing.Point(4, 64);
-            this.uscUserKeywordPanelControl.Name = "uscUserKeywordPanelControl";
-            this.uscUserKeywordPanelControl.Size = new System.Drawing.Size(229, 576);
-            this.uscUserKeywordPanelControl.TabIndex = 1;
-            this.uscUserKeywordPanelControl.Visible = false;
-            // 
-            // uscRealTimeKeywordPanelControl
-            // 
-            this.uscRealTimeKeywordPanelControl.Location = new System.Drawing.Point(4, 64);
-            this.uscRealTimeKeywordPanelControl.MinimumSize = new System.Drawing.Size(225, 340);
-            this.uscRealTimeKeywordPanelControl.Name = "uscRealTimeKeywordPanelControl";
-            this.uscRealTimeKeywordPanelControl.Size = new System.Drawing.Size(229, 344);
-            this.uscRealTimeKeywordPanelControl.TabIndex = 0;
-            this.uscRealTimeKeywordPanelControl.KeywordClicked += new System.EventHandler<NewsABGN.UI.User_Controls.RealTimeKeywordPanelControl.KeywordClickedEventArgs>(this.UscRealTimeKeywordPanel_KeywordClicked);
-            // 
             // spcSearch_Scrap
             // 
             this.spcSearch_Scrap.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -123,6 +107,7 @@
             // spcSearch_Scrap.Panel1
             // 
             this.spcSearch_Scrap.Panel1.BackColor = System.Drawing.Color.White;
+            this.spcSearch_Scrap.Panel1.Controls.Add(this.label2);
             this.spcSearch_Scrap.Panel1.Controls.Add(this.uscResultPanel);
             this.spcSearch_Scrap.Panel1.Controls.Add(this.uscSearchBar);
             // 
@@ -130,33 +115,11 @@
             // 
             this.spcSearch_Scrap.Panel2.Controls.Add(this.lblLoginWarning);
             this.spcSearch_Scrap.Panel2.Controls.Add(this.uscScrapListControl);
-            this.spcSearch_Scrap.Panel2.Controls.Add(this.label1);
+            this.spcSearch_Scrap.Panel2.Controls.Add(this.lblScrapTitle);
             this.spcSearch_Scrap.Size = new System.Drawing.Size(1037, 823);
             this.spcSearch_Scrap.SplitterDistance = 661;
             this.spcSearch_Scrap.SplitterWidth = 15;
             this.spcSearch_Scrap.TabIndex = 3;
-            // 
-            // uscResultPanel
-            // 
-            this.uscResultPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uscResultPanel.BackColor = System.Drawing.Color.Transparent;
-            this.uscResultPanel.Location = new System.Drawing.Point(3, 64);
-            this.uscResultPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.uscResultPanel.Name = "uscResultPanel";
-            this.uscResultPanel.Size = new System.Drawing.Size(655, 566);
-            this.uscResultPanel.TabIndex = 2;
-            // 
-            // uscSearchBar
-            // 
-            this.uscSearchBar.Location = new System.Drawing.Point(3, 16);
-            this.uscSearchBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.uscSearchBar.Name = "uscSearchBar";
-            this.uscSearchBar.Size = new System.Drawing.Size(571, 40);
-            this.uscSearchBar.TabIndex = 1;
-            this.uscSearchBar.SearchCatClicked += new System.EventHandler<NewsABGN.UI.User_Controls.SearchBarControl.SearchCatClickedEventArgs>(this.SearchKeyword);
-            this.uscSearchBar.AddKeywordCatClicked += new System.EventHandler<NewsABGN.UI.User_Controls.SearchBarControl.AddKeywordCatClickedEventArgs>(this.UscSearchBar_AddKeywordCatClicked);
             // 
             // lblLoginWarning
             // 
@@ -168,27 +131,24 @@
             this.lblLoginWarning.TabIndex = 3;
             this.lblLoginWarning.Text = "로그인 해라";
             // 
-            // uscScrapListControl
+            // lblScrapTitle
             // 
-            this.uscScrapListControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uscScrapListControl.Location = new System.Drawing.Point(8, 41);
-            this.uscScrapListControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uscScrapListControl.Name = "uscScrapListControl";
-            this.uscScrapListControl.Size = new System.Drawing.Size(345, 589);
-            this.uscScrapListControl.TabIndex = 0;
-            this.uscScrapListControl.Visible = false;
+            this.lblScrapTitle.AutoSize = true;
+            this.lblScrapTitle.Font = new System.Drawing.Font("Haan Sale M", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblScrapTitle.Location = new System.Drawing.Point(28, 12);
+            this.lblScrapTitle.Name = "lblScrapTitle";
+            this.lblScrapTitle.Size = new System.Drawing.Size(151, 24);
+            this.lblScrapTitle.TabIndex = 2;
+            this.lblScrapTitle.Text = "내가 스크랩 한 기사";
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Haan Sale M", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(28, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "내가 스크랩 한 기사";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(52, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 12);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "label2";
             // 
             // uscSignInControl
             // 
@@ -213,6 +173,57 @@
             this.uscSignInPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseDown);
             this.uscSignInPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseMove);
             this.uscSignInPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseUp);
+            // 
+            // uscUserKeywordPanelControl
+            // 
+            this.uscUserKeywordPanelControl.Location = new System.Drawing.Point(4, 64);
+            this.uscUserKeywordPanelControl.Name = "uscUserKeywordPanelControl";
+            this.uscUserKeywordPanelControl.Size = new System.Drawing.Size(229, 576);
+            this.uscUserKeywordPanelControl.TabIndex = 1;
+            this.uscUserKeywordPanelControl.Visible = false;
+            // 
+            // uscRealTimeKeywordPanelControl
+            // 
+            this.uscRealTimeKeywordPanelControl.Location = new System.Drawing.Point(4, 64);
+            this.uscRealTimeKeywordPanelControl.MinimumSize = new System.Drawing.Size(225, 340);
+            this.uscRealTimeKeywordPanelControl.Name = "uscRealTimeKeywordPanelControl";
+            this.uscRealTimeKeywordPanelControl.Size = new System.Drawing.Size(229, 344);
+            this.uscRealTimeKeywordPanelControl.TabIndex = 0;
+            this.uscRealTimeKeywordPanelControl.KeywordClicked += new System.EventHandler<NewsABGN.UI.User_Controls.RealTimeKeywordPanelControl.KeywordClickedEventArgs>(this.UscRealTimeKeywordPanel_KeywordClicked);
+            // 
+            // uscResultPanel
+            // 
+            this.uscResultPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uscResultPanel.BackColor = System.Drawing.Color.Transparent;
+            this.uscResultPanel.Location = new System.Drawing.Point(3, 64);
+            this.uscResultPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.uscResultPanel.Name = "uscResultPanel";
+            this.uscResultPanel.Size = new System.Drawing.Size(655, 566);
+            this.uscResultPanel.TabIndex = 2;
+            // 
+            // uscSearchBar
+            // 
+            this.uscSearchBar.Location = new System.Drawing.Point(3, 16);
+            this.uscSearchBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.uscSearchBar.Name = "uscSearchBar";
+            this.uscSearchBar.Size = new System.Drawing.Size(571, 40);
+            this.uscSearchBar.TabIndex = 1;
+            this.uscSearchBar.SearchCatClicked += new System.EventHandler<NewsABGN.UI.User_Controls.SearchBarControl.SearchCatClickedEventArgs>(this.SearchKeyword);
+            this.uscSearchBar.AddKeywordCatClicked += new System.EventHandler<NewsABGN.UI.User_Controls.SearchBarControl.AddKeywordCatClickedEventArgs>(this.UscSearchBar_AddKeywordCatClicked);
+            // 
+            // uscScrapListControl
+            // 
+            this.uscScrapListControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uscScrapListControl.Location = new System.Drawing.Point(8, 41);
+            this.uscScrapListControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uscScrapListControl.Name = "uscScrapListControl";
+            this.uscScrapListControl.Size = new System.Drawing.Size(312, 589);
+            this.uscScrapListControl.TabIndex = 0;
+            this.uscScrapListControl.Visible = false;
             // 
             // uscTitleBar
             // 
@@ -250,6 +261,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.spcKeyword_News)).EndInit();
             this.spcKeyword_News.ResumeLayout(false);
             this.spcSearch_Scrap.Panel1.ResumeLayout(false);
+            this.spcSearch_Scrap.Panel1.PerformLayout();
             this.spcSearch_Scrap.Panel2.ResumeLayout(false);
             this.spcSearch_Scrap.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spcSearch_Scrap)).EndInit();
@@ -266,7 +278,7 @@
         private User_Controls.Result.ArticleListControl uscResultPanel;
         private System.Windows.Forms.SplitContainer spcSearch_Scrap;
         private User_Controls.ScrapListControl uscScrapListControl;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblScrapTitle;
         private System.Windows.Forms.Label lblLoginWarning;
         private User_Controls.RealTimeKeywordPanelControl uscRealTimeKeywordPanelControl;
         private User_Controls.SignInPanel uscSignInPanel;
@@ -274,5 +286,6 @@
         private User_Controls.UserKeywordListControl uscUserKeywordPanelControl;
         private System.Windows.Forms.Label lblKeywordTitle;
         private System.Windows.Forms.Label lblKeywordTItleAlt;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -19,6 +19,12 @@ namespace NewsABGN.UI
         {
             InitializeComponent();
             uscRealTimeKeywordPanelControl.FillKeywords();
+
+            string title = LogicRepository.Controller.WebCrawlbot.GetArticleContents("http://news.g-enews.com/view.php?ud=2019061000011141379ecba8d8b8_1&md=20190610000338_K").FirstOrDefault().Value;
+            if (string.IsNullOrEmpty(title))
+                label2.Text = "empty";
+            else
+                label2.Text = title;
         }
 
 
@@ -139,7 +145,7 @@ namespace NewsABGN.UI
                 FillUserKeywords(memberId);
                 foreach (var article in _newsResults)
                 {
-                    article.ToggleScrapButton();
+                    article.ToggleScrapButton(_loginState);
                     article.Refresh();
                 }
                 FillUserScraps(memberId);
@@ -152,7 +158,7 @@ namespace NewsABGN.UI
                     SwapKeywordPanels();
                 foreach (var article in _newsResults)
                 {
-                    article.ToggleScrapButton();
+                    article.ToggleScrapButton(_loginState);
                     article.Refresh();
                 }
                 uscScrapListControl.EmptyScraps();
@@ -296,6 +302,7 @@ namespace NewsABGN.UI
                     new EventHandler<ArticleControl.ResultDoubleClickedEventArgs>(Open_Article);
                 result.ScrapCatClicked +=
                     new EventHandler<ArticleControl.ScrapCatClickedEventArgs>(Scrap_Article);
+                result.ToggleScrapButton(_loginState);
             }
 
             // save added news results to a list : for access to each control

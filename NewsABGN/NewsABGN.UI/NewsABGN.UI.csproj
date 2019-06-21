@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -83,6 +84,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Controls\ArticleMainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ArticleMainControl.Designer.cs">
+      <DependentUpon>ArticleMainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\ArticleTitleBarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ArticleTitleBarControl.Designer.cs">
+      <DependentUpon>ArticleTitleBarControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\RealTimeKeywordPanelControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -168,6 +181,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="User Controls\ArticleMainControl.resx">
+      <DependentUpon>ArticleMainControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\ArticleTitleBarControl.resx">
+      <DependentUpon>ArticleTitleBarControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\RealTimeKeywordPanelControl.resx">
       <DependentUpon>RealTimeKeywordPanelControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +273,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\output-onlinepngtools %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

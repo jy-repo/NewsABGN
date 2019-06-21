@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txbBody.Text" xml:space="preserve">
+    <value>Stack Overflow
+Products
+Customers
+Use cases
+Search…
+Log in Sign up
+By using our site, you acknowledge that you have read and understand our Cookie Policy, Privacy Policy, and our Terms of Service.
+
+Home
+PUBLIC
+Stack Overflow
+Tags
+Users
+Jobs
+Teams
+Q&amp;A for work
+Learn More
+C# WinForms: Make panel scrollbar invisible
+Ask Question
+
+7
+
+
+I have a panel1 with AutoScroll = true.I have to make panel1 scroll with btnUp and btnDown. So far I've made what I was asked for
+
+private void btnUpClicked(Object sender, EventArgs e)
+{
+    if (panel1.VerticalScroll.Value - 55 &gt; 0)
+        panel1.VerticalScroll.Value -= 55;
+    else  panel1.VerticalScroll.Value = 0;
+}
+
+private void btnDownClicked(Object sender, EventArgs e)
+{
+    panel1.VerticalScroll.Value += 55;
+}
+But now I need to hide Scrollbar or make it invisible. I tried
+
+panel1.VerticalScroll.Visible = false;
+but it doesn't work. Any ideas guys?
+
+c# winforms scroll scrollbar panel
+shareimprove this question
+edited Jun 12 '14 at 9:11
+asked May 28 '14 at 11:58
+
+GugaMelkadze
+7711 gold badge22 silver badges99 bronze badges
+That's what AutoScroll=true does...gives you a scrollbar automatically. You can't do both unless you take over the behavior entirely. – DonBoitnott May 28 '14 at 12:00
+Yeah I was afraid of that. What can I do ? – GugaMelkadze May 28 '14 at 12:02
+Well, if you want it bad enough, you could create a new control inheriting from Panel and then implement your own scrolling. Not trivial, of course, but doable. Lots of examples out there for rolling your own scroll with a timer and such. – DonBoitnott May 28 '14 at 12:04
+@user3683349 I gave you the whole solution, just copy paste it. Check it out ;) – msmolcic May 28 '14 at 14:00
+add a comment
+3 Answers
+active oldest votes
+
+8
+
+Ok, I've done the working example of this for you. All you have to do is to change the max value depending on the total size of all the items inside your panel.
+
+Form code:
+
+public partial class Form1 : Form
+{
+    private int location = 0;
+
+    public Form1()
+    {
+        InitializeComponent();
+
+        // Set position on top of your panel
+        pnlPanel.AutoScrollPosition = new Point(0, 0);
+
+        // Set maximum position of your panel beyond the point your panel items reach.
+        // You'll have to change this size depending on the total size of items for your case.
+        pnlPanel.VerticalScroll.Maximum = 280;
+    }
+
+    private void btnUp_Click(object sender, EventArgs e)
+    {
+        if (location - 20 &gt; 0)
+        {
+            location -= 20;
+            pnlPanel.VerticalScroll.Value = location;
+        }
+        else
+        {
+            // If scroll position is below 0 set the position to 0 (MIN)
+            location = 0;
+            pnlPanel.AutoScrollPosition = new Point(0, location);
+        }
+    }
+
+    private void btnDown_Click(object sender, EventArgs e)
+    {
+        if (location + 20 &lt; pnlPanel.VerticalScroll.Maximum)
+        {
+            location += 20;
+            pnlPanel.VerticalScroll.Value = location;
+        }
+        else
+        {
+            // If scroll position is above 280 set the position to 280 (MAX)
+            location = pnlPanel.VerticalScroll.Maximum;
+            pnlPanel.AutoScrollPosition = new Point(0, location);
+        }
+    }
+}
+Picture example:
+
+Pic1 Pic2
+
+You have to set AutoScroll option to False on your panel. I hope you understand what I've done and will get your panel running the way you want. Feel free to ask if you have any questions.
+
+shareimprove this answer
+answered May 28 '14 at 13:48
+
+msmolcic
+3,51577 gold badges2020 silver badges4545 bronze badges
+Wow. Thank you @msmolcic92. It worked! I apriciate your help – GugaMelkadze May 28 '14 at 19:35 
+add a comment
+
+3
+
+The Panel control takes on the duty you gave it by setting AutoScroll to true pretty serious. This always includes displaying the scrollbar gadget if it is necessary. So what you tried cannot work, hiding the vertical scrollbar forces Panel to recalculate layout since doing so altered the client area. It will of course discover that the scrollbar is required and promptly make it visible again.
+
+The code that does this, Panel inherits it from ScrollableControl, is internal and cannot be overridden. This was intentional.
+
+So using AutoScroll isn't going to get you anywhere. As an alternative, do keep in mind what you really want to accomplish. You simply want to move controls up and down. Easy to do, just change their Location property. That in turn is easiest to do if you put the controls on another panel, big enough to contain them. Set its AutoSize property to True. And implement you buttons' Click event handlers by simply changing that panel's Location property:
+
+    private const int ScrollIncrement = 10;
+
+    private void ScrollUpButton_Click(object sender, EventArgs e) {
+        int limit = 0;
+        panel2.Location = new Point(0, 
+            Math.Min(limit, panel2.Location.Y + ScrollIncrement));
+    }
+
+    private void ScrollDownButton_Click(object sender, EventArgs e) {
+        int limit = panel1.ClientSize.Height - panel2.Height;
+        panel2.Location = new Point(0, 
+            Math.Max(limit, panel2.Location.Y - ScrollIncrement));
+    }
+Where panel1 is the outer panel and panel2 is the inner one that contains the controls. Be careful when you use the designer to put controls on it, it has a knack for giving them the wrong Parent. Be sure to use the View + Other Windows + Document Layout helper window so you can see this going wrong. After you filled it, set its AutoSizeMode property to GrowAndShrink so it snaps to its minimum size.
+
+shareimprove this answer
+answered May 28 '14 at 13:43
+
+Hans Passant
+805k112112 gold badges13671367 silver badges21472147 bronze badges
+add a comment
+
+-3
+
+Try this:
+
+panel.AutoScroll = true;
+panel.VerticalScroll.Enabled = false;
+panel.VerticalScroll.Visible = false;
+Edit:
+
+Actually when AutoScroll = true; It will take care of hscroll and vscroll automatically and you wont be able to change it. I found this on Panel.AutoScroll Property on MSDN
+
+ AutoScroll maintains the visibility of the scrollbars automatically. Therefore, setting the HScroll or VScroll property to true has no effect when AutoScroll is enabled.
+You may try this to workaround this problem, I have copied it from this Link.
+
+Behavior Observations 1:
+If AutoScroll is set to true, you can't modify anything in VerticalScroll or HorizontalScroll. AutoScroll means AutoScroll; the control decides when scrollbars are visible, what the min/max is, etc. and you can't change a thing. So if you want to customize the scrolling (e.g. hide scrollbars), you must set AutoScroll to false.
+
+Looking at the source code for the ScrollableControl with Lutz Roeder's .NET Reflecter, you can see that if AutoScroll is set to true, it ignores your attempts to change property values within the VerticalScroll or HorizontalScroll properties such as MinValue, MaxValue, Visible etc.
+
+Behavior Observations 2:
+With AutoScroll set to false, you can change VerticalScroll.Minimum, VerticalScroll.Maximum, VerticalScroll.Visible values. However, you cannot change VerticalScroll.Value!!! Wtf! If you set it to a non-zero value, it resets itself to zero. Instead, you must set AutoScrollPosition = new Point( 0, desired_vertical_scroll_value ); And finally, SURPRISE, when you assign positive values, it flips them to negative values, so if you check AutoScrollPosition.X, it will be negative! Assign it positive, it comes back negative. So yeah, if you want custom scrolling, set AutoScroll to false. Then set the VerticalScroll and HorizontalScroll properties (except Value). Then to change the scroll value, you need to set AutoScrollPosition, even though you aren't using auto scrolling! Finally, when you set the AutoScrollPosition, it will take on the opposite (i.e. negative) value that you assign to it, so if you want to retrieve the current AutoScrollPosition later, for example if you want to offset the scroll value by dragging the mouse to pan, then you need to remember to negate the value returned by AutoScrollPosition before reassigning it to AutoScrollPosition with some offset. WOW. Wtf.
+
+One other thing, if you are trying to pan with the mouse, use the values of Cursor.Position rather than any mouse locations returned by the mouse events parameters. Scrolling the control will cause the event parameter values to be offset as well, which will cause it to start firing mouse move events complete with undesired values. Just use Cursor.Position, because it will use mouse screen coordinates as a fixed frame of reference, which is what you want when you're trying to pan/offset the scroll value.
+
+shareimprove this answer
+edited May 28 '14 at 12:22
+answered May 28 '14 at 12:06
+
+Syed Farjad Zia Zaidi
+2,59333 gold badges2020 silver badges4343 bronze badges
+Farjad Zua Zaidi it didn't work, thanks anyways. – GugaMelkadze May 28 '14 at 12:16
+@user3683349 Check the edit... – Syed Farjad Zia Zaidi May 28 '14 at 12:22
+add a comment
+Your Answer
+Sign up or log in
+ Sign up using Google
+ Sign up using Facebook
+ Sign up using Email and Password
+Post as a guest
+Name
+Email
+Required, but never shown
+
+Post Your Answer
+By clicking “Post Your Answer”, you agree to our terms of service, privacy policy and cookie policy
+
+Not the answer you're looking for? Browse other questions tagged c# winforms scroll scrollbar panel or ask your own question.
+asked
+
+5 years ago
+
+viewed
+
+11,420 times
+
+active
+
+5 years ago
+
+Blog
+Adios to Unfriendly Badges: Ahoy, Lifejacket and Lifeboat
+Knowledge Engineering: Intuit’s Chief Innovation Officer Explains Their…
+Featured on Meta
+Tag synonym dashboard 2.0
+We're testing advertisements across the network
+Data science time! June 2019 and the Tumbleweed badge
+Looking for a job?
+iOS Developer 개발자
+PIXO Inc.Yeonnam-dong, South Korea
+$40K - $90K
+androidios
+Customer Engineer, Google Cloud
+GoogleSeoul, South Korea
+pythonjava
+Software Engineer (NetSuite)
+TaxJarNo office location
+REMOTE
+javascriptnetsuite
+Full Stack Senior Software Engineer (React Apollo Graphql Python Docker Django)
+FineTune LearningNo office location
+REMOTE
+pythondocker
+Linked
+1
+Autoscroll bar position and size
+Related
+1742
+How do I calculate someone's age in C#?
+5991
+What is the difference between String and string in C#?
+1476
+Hidden Features of C#?
+2875
+Cast int to enum in C#
+1669
+How do you give a C# Auto-Property a default value?
+3465
+How do I enumerate an enum in C#?
+2323
+What are the correct version numbers for C#?
+2059
+How do I get a consistent byte representation of strings in C# without manually specifying an encoding?
+4
+WinForm Panel scrolling without a scrollbar?
+673
+Hiding the scrollbar on an HTML page
+Hot Network Questions
+Did Karl Marx ever use any example that involved cotton and dollars to illustrate the way capital and surplus value were generated?
+Is this one of the engines from the 9/11 aircraft?
+C-152 carb heat on before landing in hot weather?
+Should developer taking test phones home or put in office?
+Inverse-quotes-quine
+How to split an equation in two lines?
+Folding basket - is there such a thing?
+If the world have massive single giant world tree can it stop earthquake?
+Is adding a new player (or players) a DM decision, or a group decision?
+Is it damaging to turn off a small fridge for two days every week?
+Interaction between Leyline of Anticipation and Teferi, Time Raveler
+What reason would an alien civilization have for building a Dyson Sphere (or Swarm) if cheap Nuclear fusion is available?
+How would a drone work in centrifugal force generated "gravity"?
+What is the origin of Scooby-Doo's name?
+Apply brace expansion in "reverse order"
+Hand soldering SMD 1206 components
+Hot coffee brewing solutions for deep woods camping
+Is a single radon-daughter atom in air a solid?
+What's currently blocking the construction of the wall between Mexico and the US?
+If I wouldn't want to read the story, is writing it still a good idea?
+“D’entre eux” to mean “of them”
+Can ADFS connect to other SSO services?
+Vanishing of certain coefficients coming from Coxeter groups
+Set multicolumn to a exact width
+ Question feed
+
+STACK OVERFLOW
+Questions
+Jobs
+Developer Jobs Directory
+Salary Calculator
+Help
+Mobile
+Disable Responsiveness
+PRODUCTS
+Teams
+Talent
+Advertising
+Enterprise
+COMPANY
+About
+Press
+Work Here
+Legal
+Privacy Policy
+Contact Us
+STACK EXCHANGE
+NETWORK
+Technology
+Life / Arts
+Culture / Recreation
+Science
+Other
+Blog
+Facebook
+Twitter
+LinkedIn
+site design / logo © 2019 Stack Exchange Inc; user contributions licensed under cc by-sa 3.0 with attribution required. rev 2019.6.20.34059
+</value>
+  </data>
+</root>

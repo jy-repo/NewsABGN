@@ -16,10 +16,7 @@ namespace NewsABGN.Console
 
         private static void Test()
         {
-            var list = LogicRepository.Controller.WebCrawlbot.GetRealTimeKeywordList();
-
-            foreach(var w in list)
-                System.Console.WriteLine(w);
+            var title = LogicRepository.Controller.WebCrawlbot.GetArticleContents("http://news.g-enews.com/view.php?ud=2019061000011141379ecba8d8b8_1&md=20190610000338_K").FirstOrDefault().Value;
         }
     }
 }

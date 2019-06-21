@@ -91,9 +91,9 @@ namespace NewsABGN.UI.User_Controls.Result
             OnScrapCatClicked(_news);
         }
 
-        public void ToggleScrapButton()
+        public void ToggleScrapButton(bool loginstate)
         {
-            ptbScrap.Visible = !ptbScrap.Visible;
+            ptbScrap.Visible = loginstate;
         }
 
         #region ResultDoubleClicked event things for C# 3.0

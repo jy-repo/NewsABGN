@@ -19,3 +19,11 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\EntityFramework.
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\NewsABGN.DB.pdb
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\NewsABGN.DB.dll.config
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\EntityFramework.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\Microsoft.Scripting.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\IronPython.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\Microsoft.Dynamic.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\Microsoft.Scripting.Metadata.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\Microsoft.Scripting.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\IronPython.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\Microsoft.Dynamic.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.Console\bin\Debug\Microsoft.Scripting.Metadata.xml

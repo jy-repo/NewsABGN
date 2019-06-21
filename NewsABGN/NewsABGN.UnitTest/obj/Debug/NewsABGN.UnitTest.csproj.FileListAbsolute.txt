@@ -31,3 +31,11 @@ D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\NewsABGN.UI.exe
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\HtmlAgilityPack.pdb
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\HtmlAgilityPack.xml
 D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Newtonsoft.Json.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Microsoft.Scripting.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\IronPython.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Microsoft.Dynamic.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Microsoft.Scripting.Metadata.dll
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Microsoft.Scripting.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\IronPython.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Microsoft.Dynamic.xml
+D:\C#\NewsScrapper\NewsABGN\NewsABGN\NewsABGN.UnitTest\bin\Debug\Microsoft.Scripting.Metadata.xml
