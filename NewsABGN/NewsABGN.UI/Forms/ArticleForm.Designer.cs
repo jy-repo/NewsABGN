@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.articleMainControl1 = new NewsABGN.UI.User_Controls.ArticleMainControl();
+            this.uscArticleMainControl = new NewsABGN.UI.User_Controls.ArticleMainControl();
             this.articleTitleBarControl1 = new NewsABGN.UI.User_Controls.ArticleTitleBarControl();
             this.SuspendLayout();
             // 
-            // articleMainControl1
+            // uscArticleMainControl
             // 
-            this.articleMainControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.uscArticleMainControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.articleMainControl1.BackColor = System.Drawing.Color.Transparent;
-            this.articleMainControl1.Location = new System.Drawing.Point(8, 51);
-            this.articleMainControl1.Name = "articleMainControl1";
-            this.articleMainControl1.Size = new System.Drawing.Size(580, 440);
-            this.articleMainControl1.TabIndex = 1;
+            this.uscArticleMainControl.BackColor = System.Drawing.Color.Transparent;
+            this.uscArticleMainControl.Location = new System.Drawing.Point(8, 51);
+            this.uscArticleMainControl.Name = "uscArticleMainControl";
+            this.uscArticleMainControl.Size = new System.Drawing.Size(580, 440);
+            this.uscArticleMainControl.TabIndex = 1;
+            this.uscArticleMainControl.LinkClicked += new System.EventHandler<NewsABGN.UI.User_Controls.ArticleMainControl.LinkClickedEventArgs>(this.UscArticleMainControl_LinkClicked);
             // 
             // articleTitleBarControl1
             // 
@@ -62,7 +63,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.ClientSize = new System.Drawing.Size(596, 496);
-            this.Controls.Add(this.articleMainControl1);
+            this.Controls.Add(this.uscArticleMainControl);
             this.Controls.Add(this.articleTitleBarControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ArticleForm";
@@ -75,6 +76,6 @@
         #endregion
 
         private User_Controls.ArticleTitleBarControl articleTitleBarControl1;
-        private User_Controls.ArticleMainControl articleMainControl1;
+        private User_Controls.ArticleMainControl uscArticleMainControl;
     }
 }

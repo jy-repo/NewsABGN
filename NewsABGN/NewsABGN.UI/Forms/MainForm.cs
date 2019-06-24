@@ -19,12 +19,6 @@ namespace NewsABGN.UI
         {
             InitializeComponent();
             uscRealTimeKeywordPanelControl.FillKeywords();
-
-            string title = LogicRepository.Controller.WebCrawlbot.GetArticleContents("http://news.g-enews.com/view.php?ud=2019061000011141379ecba8d8b8_1&md=20190610000338_K").FirstOrDefault().Value;
-            if (string.IsNullOrEmpty(title))
-                label2.Text = "empty";
-            else
-                label2.Text = title;
         }
 
 

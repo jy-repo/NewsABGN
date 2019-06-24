@@ -29,10 +29,12 @@ namespace NewsABGN.Logic
             APIbot = new APIbot();
             WebCrawlbot = new WebCrawlbot();
             DBbot = new DBbot();
+            ArticleDetail = new ArticleDetail();
         }
 
         public APIbot APIbot { get; }
         public WebCrawlbot WebCrawlbot { get; }
         public DBbot DBbot { get; }
+        public ArticleDetail ArticleDetail { get; }
     }
 }

@@ -63,7 +63,6 @@ namespace NewsABGN.Logic
             }
 
             return contents;
-
         }
        
     }

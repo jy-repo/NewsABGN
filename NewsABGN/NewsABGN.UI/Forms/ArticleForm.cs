@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Microsoft.Scripting;
 using Microsoft.Scripting.Hosting;
 using System.Diagnostics;
+using NewsABGN.Logic;
 
 namespace NewsABGN.UI
 {
@@ -20,6 +21,9 @@ namespace NewsABGN.UI
         public ArticleForm(string link)
         {
             InitializeComponent();
+            var details = LogicRepository.Controller.ArticleDetail.FillMainContent(link);
+            uscArticleMainControl.FillTitle(details["title"]);
+            uscArticleMainControl.FillContent(details["content"]);
             _link = link;            
         }
 
@@ -103,6 +107,11 @@ namespace NewsABGN.UI
         private void ArticleTitleBarControl1_ExitButtonClicked(object sender, User_Controls.ArticleTitleBarControl.ExitButtonClickedEventArgs e)
         {
             this.Close();
+        }
+
+        private void UscArticleMainControl_LinkClicked(object sender, User_Controls.ArticleMainControl.LinkClickedEventArgs e)
+        {
+            uscArticleMainControl.Open_url(_link);
         }
     }
 }
