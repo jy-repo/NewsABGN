@@ -99,10 +99,6 @@
     <Compile Include="User Controls\ArticleTitleBarControl.Designer.cs">
       <DependentUpon>ArticleTitleBarControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\KeywordSectionControl.cs" />
-    <Compile Include="User Controls\KeywordSectionControl.Designer.cs">
-      <DependentUpon>KeywordSectionControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="User Controls\RealTimeKeywordPanelControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,9 +141,11 @@
     <Compile Include="User Controls\SignInControl.Designer.cs">
       <DependentUpon>SignInControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\SignInPanelControl.cs" />
-    <Compile Include="User Controls\SignInPanelControl.Designer.cs">
-      <DependentUpon>SignInPanelControl.cs</DependentUpon>
+    <Compile Include="User Controls\SignInPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\SignInPanel.Designer.cs">
+      <DependentUpon>SignInPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="User Controls\TitleBarControl.cs">
       <SubType>UserControl</SubType>
@@ -166,6 +164,12 @@
     </Compile>
     <Compile Include="User Controls\UserKeywordListControl.Designer.cs">
       <DependentUpon>UserKeywordListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\WordCloudControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\WordCloudControl.Designer.cs">
+      <DependentUpon>WordCloudControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\ArticleForm.resx">
       <DependentUpon>ArticleForm.cs</DependentUpon>
@@ -192,9 +196,6 @@
     <EmbeddedResource Include="User Controls\ArticleTitleBarControl.resx">
       <DependentUpon>ArticleTitleBarControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\KeywordSectionControl.resx">
-      <DependentUpon>KeywordSectionControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\RealTimeKeywordPanelControl.resx">
       <DependentUpon>RealTimeKeywordPanelControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,8 +217,8 @@
     <EmbeddedResource Include="User Controls\SignInControl.resx">
       <DependentUpon>SignInControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\SignInPanelControl.resx">
-      <DependentUpon>SignInPanelControl.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls\SignInPanel.resx">
+      <DependentUpon>SignInPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\TitleBarControl.resx">
       <DependentUpon>TitleBarControl.cs</DependentUpon>
@@ -227,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\UserKeywordListControl.resx">
       <DependentUpon>UserKeywordListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\WordCloudControl.resx">
+      <DependentUpon>WordCloudControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

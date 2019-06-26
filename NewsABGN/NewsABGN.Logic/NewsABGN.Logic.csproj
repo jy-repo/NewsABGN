@@ -93,6 +93,7 @@
     <Compile Include="MainAccessPoint\LogicRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Python\ArticleDetail.cs" />
+    <Compile Include="Python\WordCloud.cs" />
     <Compile Include="Robots\WebCrawlbot.cs" />
     <Compile Include="Robots\DBbot.cs" />
     <Compile Include="Robots\APIbot.cs" />

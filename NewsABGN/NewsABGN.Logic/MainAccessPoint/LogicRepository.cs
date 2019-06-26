@@ -30,11 +30,13 @@ namespace NewsABGN.Logic
             WebCrawlbot = new WebCrawlbot();
             DBbot = new DBbot();
             ArticleDetail = new ArticleDetail();
+            WordCloud = new WordCloud();
         }
 
         public APIbot APIbot { get; }
         public WebCrawlbot WebCrawlbot { get; }
         public DBbot DBbot { get; }
         public ArticleDetail ArticleDetail { get; }
+        public WordCloud WordCloud { get; }
     }
 }

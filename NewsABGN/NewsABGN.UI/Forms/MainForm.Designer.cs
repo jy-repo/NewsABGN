@@ -32,16 +32,16 @@
             this.lblKeywordTitle = new System.Windows.Forms.Label();
             this.lblLoginWarning = new System.Windows.Forms.Label();
             this.lblScrapTitle = new System.Windows.Forms.Label();
+            this.pcbDidi = new System.Windows.Forms.PictureBox();
+            this.lblLoginWarningBig = new System.Windows.Forms.Label();
+            this.uscrTitleBar = new NewsABGN.UI.User_Controls.TitleBar.TitleBarControl();
+            this.uscWordCloud = new NewsABGN.UI.User_Controls.WordCloudControl();
             this.uscSignInControl = new NewsABGN.UI.User_Controls.SignInControl();
             this.uscScrapListControl = new NewsABGN.UI.User_Controls.ScrapListControl();
             this.uscRealTimeKeywordPanelControl = new NewsABGN.UI.User_Controls.RealTimeKeywordPanelControl();
-            this.uscSignInPanel = new NewsABGN.UI.User_Controls.SignInPanel();
-            this.uscTitleBar = new NewsABGN.UI.User_Controls.TitleBar.TitleBarControl();
             this.uscUserKeywordPanelControl = new NewsABGN.UI.User_Controls.UserKeywordListControl();
             this.uscSearchBar = new NewsABGN.UI.User_Controls.SearchBarControl();
             this.uscResultPanel = new NewsABGN.UI.User_Controls.Result.ArticleListControl();
-            this.pcbDidi = new System.Windows.Forms.PictureBox();
-            this.lblLoginWarningBig = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbDidi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,11 +99,56 @@
             this.lblScrapTitle.TabIndex = 2;
             this.lblScrapTitle.Text = "내가 스크랩 한 기사";
             // 
+            // pcbDidi
+            // 
+            this.pcbDidi.Location = new System.Drawing.Point(935, 155);
+            this.pcbDidi.Name = "pcbDidi";
+            this.pcbDidi.Size = new System.Drawing.Size(316, 259);
+            this.pcbDidi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbDidi.TabIndex = 6;
+            this.pcbDidi.TabStop = false;
+            // 
+            // lblLoginWarningBig
+            // 
+            this.lblLoginWarningBig.AutoSize = true;
+            this.lblLoginWarningBig.BackColor = System.Drawing.Color.White;
+            this.lblLoginWarningBig.Font = new System.Drawing.Font("중간안상수체", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblLoginWarningBig.ForeColor = System.Drawing.Color.Peru;
+            this.lblLoginWarningBig.Location = new System.Drawing.Point(966, 440);
+            this.lblLoginWarningBig.Name = "lblLoginWarningBig";
+            this.lblLoginWarningBig.Size = new System.Drawing.Size(244, 27);
+            this.lblLoginWarningBig.TabIndex = 3;
+            this.lblLoginWarningBig.Text = "로그인을 신속하게 진행해주세요";
+            // 
+            // uscrTitleBar
+            // 
+            this.uscrTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.uscrTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uscrTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.uscrTitleBar.Name = "uscrTitleBar";
+            this.uscrTitleBar.Size = new System.Drawing.Size(1263, 60);
+            this.uscrTitleBar.TabIndex = 8;
+            this.uscrTitleBar.ExitButtonClicked += new System.EventHandler<NewsABGN.UI.User_Controls.TitleBar.TitleBarControl.ExitButtonClickedEventArgs>(this.UscTitleBar_ExitButtonClicked);
+            this.uscrTitleBar.BtnSignInClick += new System.EventHandler<NewsABGN.UI.User_Controls.TitleBar.TitleBarControl.BtnSignInClickEventArgs>(this.UscrTitleBar_BtnSignInClick);
+            this.uscrTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseDown);
+            this.uscrTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseMove);
+            this.uscrTitleBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseUp);
+            // 
+            // uscWordCloud
+            // 
+            this.uscWordCloud.BackColor = System.Drawing.Color.White;
+            this.uscWordCloud.Location = new System.Drawing.Point(13, 371);
+            this.uscWordCloud.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uscWordCloud.Name = "uscWordCloud";
+            this.uscWordCloud.Size = new System.Drawing.Size(253, 316);
+            this.uscWordCloud.TabIndex = 7;
+            // 
             // uscSignInControl
             // 
             this.uscSignInControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.uscSignInControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.uscSignInControl.Location = new System.Drawing.Point(923, 49);
+            this.uscSignInControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uscSignInControl.MaximumSize = new System.Drawing.Size(265, 220);
             this.uscSignInControl.MinimumSize = new System.Drawing.Size(265, 220);
             this.uscSignInControl.Name = "uscSignInControl";
@@ -126,45 +171,19 @@
             // 
             this.uscRealTimeKeywordPanelControl.BackColor = System.Drawing.Color.White;
             this.uscRealTimeKeywordPanelControl.Location = new System.Drawing.Point(13, 106);
+            this.uscRealTimeKeywordPanelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uscRealTimeKeywordPanelControl.Name = "uscRealTimeKeywordPanelControl";
             this.uscRealTimeKeywordPanelControl.Size = new System.Drawing.Size(253, 258);
             this.uscRealTimeKeywordPanelControl.TabIndex = 0;
             this.uscRealTimeKeywordPanelControl.KeywordClicked += new System.EventHandler<NewsABGN.UI.User_Controls.RealTimeKeywordPanelControl.KeywordClickedEventArgs>(this.UscRealTimeKeywordPanel_KeywordClicked);
             // 
-            // uscSignInPanel
-            // 
-            this.uscSignInPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.uscSignInPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.uscSignInPanel.Location = new System.Drawing.Point(829, 0);
-            this.uscSignInPanel.Name = "uscSignInPanel";
-            this.uscSignInPanel.Size = new System.Drawing.Size(367, 58);
-            this.uscSignInPanel.TabIndex = 4;
-            this.uscSignInPanel.BtnSignInClick += new System.EventHandler<NewsABGN.UI.User_Controls.SignInPanel.BtnSignInClickEventArgs>(this.UscSignInPanel_BtnSignInClick);
-            this.uscSignInPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseDown);
-            this.uscSignInPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseMove);
-            this.uscSignInPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseUp);
-            // 
-            // uscTitleBar
-            // 
-            this.uscTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.uscTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uscTitleBar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.uscTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.uscTitleBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.uscTitleBar.Name = "uscTitleBar";
-            this.uscTitleBar.Size = new System.Drawing.Size(1263, 60);
-            this.uscTitleBar.TabIndex = 0;
-            this.uscTitleBar.ExitButtonClicked += new System.EventHandler<NewsABGN.UI.User_Controls.TitleBar.TitleBarControl.ExitButtonClickedEventArgs>(this.UscTitleBar_ExitButtonClicked);
-            this.uscTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseDown);
-            this.uscTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseMove);
-            this.uscTitleBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseUp);
-            // 
             // uscUserKeywordPanelControl
             // 
             this.uscUserKeywordPanelControl.BackColor = System.Drawing.Color.White;
             this.uscUserKeywordPanelControl.Location = new System.Drawing.Point(17, 107);
+            this.uscUserKeywordPanelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uscUserKeywordPanelControl.Name = "uscUserKeywordPanelControl";
-            this.uscUserKeywordPanelControl.Size = new System.Drawing.Size(245, 588);
+            this.uscUserKeywordPanelControl.Size = new System.Drawing.Size(245, 258);
             this.uscUserKeywordPanelControl.TabIndex = 1;
             this.uscUserKeywordPanelControl.Visible = false;
             // 
@@ -188,40 +207,18 @@
             this.uscResultPanel.Size = new System.Drawing.Size(646, 587);
             this.uscResultPanel.TabIndex = 2;
             // 
-            // pcbDidi
-            // 
-            this.pcbDidi.Image = global::NewsABGN.UI.Properties.Resources.didi;
-            this.pcbDidi.Location = new System.Drawing.Point(935, 155);
-            this.pcbDidi.Name = "pcbDidi";
-            this.pcbDidi.Size = new System.Drawing.Size(316, 259);
-            this.pcbDidi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbDidi.TabIndex = 6;
-            this.pcbDidi.TabStop = false;
-            // 
-            // lblLoginWarningBig
-            // 
-            this.lblLoginWarningBig.AutoSize = true;
-            this.lblLoginWarningBig.BackColor = System.Drawing.Color.White;
-            this.lblLoginWarningBig.Font = new System.Drawing.Font("중간안상수체", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblLoginWarningBig.ForeColor = System.Drawing.Color.Peru;
-            this.lblLoginWarningBig.Location = new System.Drawing.Point(966, 440);
-            this.lblLoginWarningBig.Name = "lblLoginWarningBig";
-            this.lblLoginWarningBig.Size = new System.Drawing.Size(244, 27);
-            this.lblLoginWarningBig.TabIndex = 3;
-            this.lblLoginWarningBig.Text = "로그인을 신속하게 진행해주세요";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1263, 707);
+            this.Controls.Add(this.uscrTitleBar);
+            this.Controls.Add(this.uscWordCloud);
             this.Controls.Add(this.uscSignInControl);
             this.Controls.Add(this.pcbDidi);
             this.Controls.Add(this.uscScrapListControl);
             this.Controls.Add(this.uscRealTimeKeywordPanelControl);
-            this.Controls.Add(this.uscSignInPanel);
-            this.Controls.Add(this.uscTitleBar);
             this.Controls.Add(this.lblKeywordTItleAlt);
             this.Controls.Add(this.uscUserKeywordPanelControl);
             this.Controls.Add(this.lblKeywordTitle);
@@ -233,7 +230,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximumSize = new System.Drawing.Size(1263, 707);
-            this.MinimumSize = new System.Drawing.Size(1263, 707);
+            this.MinimumSize = new System.Drawing.Size(1263, 690);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "News An Bol Ggo Nyang ?_?";
@@ -244,10 +241,7 @@
         }
 
         #endregion
-
-        private User_Controls.TitleBar.TitleBarControl uscTitleBar;
         private User_Controls.RealTimeKeywordPanelControl uscRealTimeKeywordPanelControl;
-        private User_Controls.SignInPanel uscSignInPanel;
         private User_Controls.SignInControl uscSignInControl;
         private User_Controls.UserKeywordListControl uscUserKeywordPanelControl;
         private System.Windows.Forms.Label lblKeywordTitle;
@@ -259,5 +253,7 @@
         private System.Windows.Forms.Label lblLoginWarning;
         private System.Windows.Forms.PictureBox pcbDidi;
         private System.Windows.Forms.Label lblLoginWarningBig;
+        private User_Controls.WordCloudControl uscWordCloud;
+        private User_Controls.TitleBar.TitleBarControl uscrTitleBar;
     }
 }

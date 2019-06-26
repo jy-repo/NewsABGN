@@ -37,7 +37,7 @@
             this.flpKeywordList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpKeywordList.Location = new System.Drawing.Point(3, 3);
             this.flpKeywordList.Name = "flpKeywordList";
-            this.flpKeywordList.Size = new System.Drawing.Size(280, 496);
+            this.flpKeywordList.Size = new System.Drawing.Size(280, 274);
             this.flpKeywordList.TabIndex = 0;
             this.flpKeywordList.WrapContents = false;
             // 
@@ -47,7 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flpKeywordList);
             this.Name = "UserKeywordListControl";
-            this.Size = new System.Drawing.Size(265, 514);
+            this.Size = new System.Drawing.Size(265, 280);
             this.ResumeLayout(false);
 
         }

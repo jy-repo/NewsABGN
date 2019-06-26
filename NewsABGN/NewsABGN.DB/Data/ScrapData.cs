@@ -20,7 +20,8 @@ namespace NewsABGN.DB
                                  Scrap = scrap,
                                  MemberName = member.Name,
                                  MemberId = member.MemberId
-                             }).Where(x => x.MemberId == memberId);
+                             }).Where(x => x.MemberId == memberId)
+                             .OrderByDescending(x => x.Scrap.ScrapId);
 
                 var list = query.ToList();
                 foreach (var item in list)

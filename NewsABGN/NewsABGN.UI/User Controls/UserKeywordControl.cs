@@ -108,6 +108,46 @@ namespace NewsABGN.UI.User_Controls
         }
         #endregion
 
+        #region CloudButtonClicked event things for C# 3.0
+        public event EventHandler<CloudButtonClickedEventArgs> CloudButtonClicked;
+
+        protected virtual void OnCloudButtonClicked(CloudButtonClickedEventArgs e)
+        {
+            if (CloudButtonClicked != null)
+                CloudButtonClicked(this, e);
+        }
+
+        private CloudButtonClickedEventArgs OnCloudButtonClicked(string keyword)
+        {
+            CloudButtonClickedEventArgs args = new CloudButtonClickedEventArgs(keyword);
+            OnCloudButtonClicked(args);
+
+            return args;
+        }
+
+        private CloudButtonClickedEventArgs OnCloudButtonClickedForOut()
+        {
+            CloudButtonClickedEventArgs args = new CloudButtonClickedEventArgs();
+            OnCloudButtonClicked(args);
+
+            return args;
+        }
+
+        public class CloudButtonClickedEventArgs : EventArgs
+        {
+            public string Keyword { get; set; }
+
+            public CloudButtonClickedEventArgs()
+            {
+            }
+
+            public CloudButtonClickedEventArgs(string keyword)
+            {
+                Keyword = keyword;
+            }
+        }
+        #endregion
+
         private void LblRemoveKeyword_Click(object sender, EventArgs e)
         {
             OnDeleteKeywordClicked(lblUserKeyword.Text);
@@ -115,7 +155,7 @@ namespace NewsABGN.UI.User_Controls
 
         private void LblWordFrequency_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(lblUserKeyword.Text);
+            OnCloudButtonClicked(lblUserKeyword.Text);
         }
     }
 }

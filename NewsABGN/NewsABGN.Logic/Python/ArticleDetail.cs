@@ -13,10 +13,10 @@ namespace NewsABGN.Logic
         public Dictionary<string, string> FillMainContent(string url)
         {
             // full path of python interpreter 
-            string python = @"C:\Users\kccistc\Anaconda3\python.exe";
+            string python = @"..\..\..\NewsABGN.Python\venv\Scripts\python.exe";
 
             // python app to call 
-            string myPythonApp = @"D:\python\testing.py";
+            string myPythonApp = @"..\..\..\NewsABGN.Python\NewspaperModule.py";
 
             // Create new process start info 
             ProcessStartInfo myProcessStartInfo = new ProcessStartInfo(python);
@@ -24,7 +24,7 @@ namespace NewsABGN.Logic
             // make sure we can read the output from stdout 
             myProcessStartInfo.UseShellExecute = false;
             myProcessStartInfo.RedirectStandardOutput = true;
-
+            myProcessStartInfo.CreateNoWindow = true;
             // start python app with arguments  
             myProcessStartInfo.Arguments = myPythonApp + " " + url;
 

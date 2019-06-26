@@ -93,6 +93,16 @@ namespace NewsABGN.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cat_exit1 {
+            get {
+                object obj = ResourceManager.GetObject("cat_exit1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cat_q {
             get {
                 object obj = ResourceManager.GetObject("cat_q", resourceCulture);

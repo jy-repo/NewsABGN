@@ -51,52 +51,52 @@ namespace NewsABGN.UI
             _mouseDown = false;
         }
         
-        // window resize
-        protected override void WndProc(ref Message m)
-        {
-            const int RESIZE_HANDLE_SIZE = 10;
+        //// window resize
+        //protected override void WndProc(ref Message m)
+        //{
+        //    const int RESIZE_HANDLE_SIZE = 10;
 
-            switch (m.Msg)
-            {
-                case 0x0084/*NCHITTEST*/ :
-                    base.WndProc(ref m);
+        //    switch (m.Msg)
+        //    {
+        //        case 0x0084/*NCHITTEST*/ :
+        //            base.WndProc(ref m);
 
-                    if ((int)m.Result == 0x01/*HTCLIENT*/)
-                    {
-                        Point screenPoint = new Point(m.LParam.ToInt32());
-                        Point clientPoint = this.PointToClient(screenPoint);
-                        if (clientPoint.Y <= RESIZE_HANDLE_SIZE)
-                        {
-                            if (clientPoint.X <= RESIZE_HANDLE_SIZE)
-                                m.Result = (IntPtr)13/*HTTOPLEFT*/ ;
-                            else if (clientPoint.X < (Size.Width - RESIZE_HANDLE_SIZE))
-                                m.Result = (IntPtr)12/*HTTOP*/ ;
-                            else
-                                m.Result = (IntPtr)14/*HTTOPRIGHT*/ ;
-                        }
-                        else if (clientPoint.Y <= (Size.Height - RESIZE_HANDLE_SIZE))
-                        {
-                            if (clientPoint.X <= RESIZE_HANDLE_SIZE)
-                                m.Result = (IntPtr)10/*HTLEFT*/ ;
-                            else if (clientPoint.X < (Size.Width - RESIZE_HANDLE_SIZE))
-                                m.Result = (IntPtr)2/*HTCAPTION*/ ;
-                            else
-                                m.Result = (IntPtr)11/*HTRIGHT*/ ;
-                        }
-                        else
-                        {
-                            if (clientPoint.X <= RESIZE_HANDLE_SIZE)
-                                m.Result = (IntPtr)16/*HTBOTTOMLEFT*/ ;
-                            else if (clientPoint.X < (Size.Width - RESIZE_HANDLE_SIZE))
-                                m.Result = (IntPtr)15/*HTBOTTOM*/ ;
-                            else
-                                m.Result = (IntPtr)17/*HTBOTTOMRIGHT*/ ;
-                        }
-                    }
-                    return;
-            }
-            base.WndProc(ref m);
-        }
+        //            if ((int)m.Result == 0x01/*HTCLIENT*/)
+        //            {
+        //                Point screenPoint = new Point(m.LParam.ToInt32());
+        //                Point clientPoint = this.PointToClient(screenPoint);
+        //                if (clientPoint.Y <= RESIZE_HANDLE_SIZE)
+        //                {
+        //                    if (clientPoint.X <= RESIZE_HANDLE_SIZE)
+        //                        m.Result = (IntPtr)13/*HTTOPLEFT*/ ;
+        //                    else if (clientPoint.X < (Size.Width - RESIZE_HANDLE_SIZE))
+        //                        m.Result = (IntPtr)12/*HTTOP*/ ;
+        //                    else
+        //                        m.Result = (IntPtr)14/*HTTOPRIGHT*/ ;
+        //                }
+        //                else if (clientPoint.Y <= (Size.Height - RESIZE_HANDLE_SIZE))
+        //                {
+        //                    if (clientPoint.X <= RESIZE_HANDLE_SIZE)
+        //                        m.Result = (IntPtr)10/*HTLEFT*/ ;
+        //                    else if (clientPoint.X < (Size.Width - RESIZE_HANDLE_SIZE))
+        //                        m.Result = (IntPtr)2/*HTCAPTION*/ ;
+        //                    else
+        //                        m.Result = (IntPtr)11/*HTRIGHT*/ ;
+        //                }
+        //                else
+        //                {
+        //                    if (clientPoint.X <= RESIZE_HANDLE_SIZE)
+        //                        m.Result = (IntPtr)16/*HTBOTTOMLEFT*/ ;
+        //                    else if (clientPoint.X < (Size.Width - RESIZE_HANDLE_SIZE))
+        //                        m.Result = (IntPtr)15/*HTBOTTOM*/ ;
+        //                    else
+        //                        m.Result = (IntPtr)17/*HTBOTTOMRIGHT*/ ;
+        //                }
+        //            }
+        //            return;
+        //    }
+        //    base.WndProc(ref m);
+        //}
         #endregion
 
         #region User login/logout
@@ -139,8 +139,8 @@ namespace NewsABGN.UI
             // title bar / keyword / scrap
 
             if (_loginState)  // 로그인
-            {   
-                uscSignInPanel.ShowMemberName(name);
+            {
+                uscrTitleBar.Logged_In(_memberName);
                 FillUserKeywords(memberId);
                 foreach (var article in _newsResults)
                 {
@@ -151,7 +151,7 @@ namespace NewsABGN.UI
             }
             else // 로그 아웃
             {
-                uscSignInPanel.SignOut();
+                uscrTitleBar.Logged_Out();
                 uscUserKeywordPanelControl.EmptyKeywords();
                 if (uscUserKeywordPanelControl.Visible)
                     SwapKeywordPanels();
@@ -201,8 +201,17 @@ namespace NewsABGN.UI
                     new EventHandler<UserKeywordControl.KeywordClickedEventArgs>(UserKeywordClicked);
                 uscUserKeywordContrl.DeleteKeywordClicked +=
                     new EventHandler<UserKeywordControl.DeleteKeywordClickedEventArgs>(UserDeletedKeywordClicked);
+                uscUserKeywordContrl.CloudButtonClicked +=
+                    new EventHandler<UserKeywordControl.CloudButtonClickedEventArgs>(UserCloudButtonClicked);
             }
         }
+
+        private void UserCloudButtonClicked(object sender, UserKeywordControl.CloudButtonClickedEventArgs e)
+        {
+            var cloud = LogicRepository.Controller.WordCloud.MakeWordCloud(e.Keyword);
+            uscWordCloud.FillCloud(cloud);
+        }
+
 
         private void UserKeywordClicked(object sender, UserKeywordControl.KeywordClickedEventArgs e)
         {
@@ -327,6 +336,11 @@ namespace NewsABGN.UI
         {
             var label = (Label)sender;
             label.Font = new Font(label.Font, FontStyle.Regular);
+        }
+
+        private void UscrTitleBar_BtnSignInClick(object sender, User_Controls.TitleBar.TitleBarControl.BtnSignInClickEventArgs e)
+        {
+            uscSignInControl.Visible = !uscSignInControl.Visible;
         }
     }
 }

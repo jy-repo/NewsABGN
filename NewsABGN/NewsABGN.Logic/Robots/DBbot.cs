@@ -12,13 +12,13 @@ namespace NewsABGN.Logic
         // Keywords
         public List<Keyword> GetKeywords(int memberId)
         {
+            
             return DataRepository.Keyword.GetByMemberId(memberId);
         }
 
         public void AddKeyword(int memberId, string str)
         {
             DataRepository.Keyword.InsertKeyword(memberId, str);
-
         }
 
         public void DeleteKeyword(int memberId, string str)
@@ -27,7 +27,7 @@ namespace NewsABGN.Logic
         }
         // Scraps
         public List<Scrap> GetScraps(int memberId)
-        {
+        {              
             return DataRepository.Scrap.GetByMemberId(memberId);
         }
 

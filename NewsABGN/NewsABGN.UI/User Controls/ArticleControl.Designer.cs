@@ -74,6 +74,7 @@
             // 
             // ptbScrap
             // 
+            this.ptbScrap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbScrap.Image = global::NewsABGN.UI.Properties.Resources.output_onlinepngtools__1_;
             this.ptbScrap.Location = new System.Drawing.Point(554, 124);
             this.ptbScrap.Name = "ptbScrap";

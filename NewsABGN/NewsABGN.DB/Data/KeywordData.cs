@@ -16,6 +16,7 @@ namespace NewsABGN.DB
                     .Where(x => x.MemberId == memberId)
                     .FirstOrDefault()
                     .Keywords
+                    .OrderByDescending(x => x.KeywordId)
                     .ToList();
             }
         }
