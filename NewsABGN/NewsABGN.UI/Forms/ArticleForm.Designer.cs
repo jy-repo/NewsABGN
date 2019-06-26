@@ -34,23 +34,20 @@
             // 
             // uscArticleMainControl
             // 
-            this.uscArticleMainControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.uscArticleMainControl.BackColor = System.Drawing.Color.Transparent;
-            this.uscArticleMainControl.Location = new System.Drawing.Point(8, 51);
+            this.uscArticleMainControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uscArticleMainControl.Location = new System.Drawing.Point(0, 44);
             this.uscArticleMainControl.Name = "uscArticleMainControl";
-            this.uscArticleMainControl.Size = new System.Drawing.Size(580, 440);
+            this.uscArticleMainControl.Size = new System.Drawing.Size(596, 452);
             this.uscArticleMainControl.TabIndex = 1;
             this.uscArticleMainControl.LinkClicked += new System.EventHandler<NewsABGN.UI.User_Controls.ArticleMainControl.LinkClickedEventArgs>(this.UscArticleMainControl_LinkClicked);
             // 
             // articleTitleBarControl1
             // 
-            this.articleTitleBarControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.articleTitleBarControl1.Location = new System.Drawing.Point(3, 3);
+            this.articleTitleBarControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.articleTitleBarControl1.Location = new System.Drawing.Point(0, 0);
             this.articleTitleBarControl1.Name = "articleTitleBarControl1";
-            this.articleTitleBarControl1.Size = new System.Drawing.Size(590, 44);
+            this.articleTitleBarControl1.Size = new System.Drawing.Size(596, 44);
             this.articleTitleBarControl1.TabIndex = 0;
             this.articleTitleBarControl1.ExitButtonClicked += new System.EventHandler<NewsABGN.UI.User_Controls.ArticleTitleBarControl.ExitButtonClickedEventArgs>(this.ArticleTitleBarControl1_ExitButtonClicked);
             this.articleTitleBarControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UscTitleBar_MouseDown);
@@ -61,7 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(596, 496);
             this.Controls.Add(this.uscArticleMainControl);
             this.Controls.Add(this.articleTitleBarControl1);

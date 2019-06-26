@@ -27,7 +27,7 @@ namespace NewsABGN.UI.User_Controls
             lblPubDate.Text = scrap.PubDate.ToString();
         }
 
-        private void ScrapControl_DoubleClick(object sender, EventArgs e)
+        private void ScrapControl_Click(object sender, EventArgs e)
         {
             OnScrapDoubleClicked(_link);
         }
@@ -142,5 +142,17 @@ namespace NewsABGN.UI.User_Controls
             }
         }
         #endregion
+
+        private void LblTitle_MouseHover(object sender, EventArgs e)
+        {
+            var label = (Label)sender;
+            label.ForeColor = Color.Gray;
+        }
+
+        private void LblTitle_MouseLeave(object sender, EventArgs e)
+        {
+            var label = (Label)sender;
+            label.ForeColor = Color.Black;
+        }
     }
 }

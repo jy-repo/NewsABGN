@@ -34,11 +34,10 @@
             // flpResultPanel
             // 
             this.flpResultPanel.AutoScroll = true;
-            this.flpResultPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpResultPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpResultPanel.Location = new System.Drawing.Point(0, 0);
             this.flpResultPanel.Name = "flpResultPanel";
-            this.flpResultPanel.Size = new System.Drawing.Size(678, 579);
+            this.flpResultPanel.Size = new System.Drawing.Size(687, 579);
             this.flpResultPanel.TabIndex = 0;
             this.flpResultPanel.WrapContents = false;
             // 

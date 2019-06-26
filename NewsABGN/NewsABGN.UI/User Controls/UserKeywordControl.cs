@@ -112,5 +112,10 @@ namespace NewsABGN.UI.User_Controls
         {
             OnDeleteKeywordClicked(lblUserKeyword.Text);
         }
+
+        private void LblWordFrequency_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(lblUserKeyword.Text);
+        }
     }
 }

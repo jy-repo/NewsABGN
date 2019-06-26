@@ -35,18 +35,18 @@
             // 
             this.flpKeywordList.AutoScroll = true;
             this.flpKeywordList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpKeywordList.Location = new System.Drawing.Point(10, 3);
+            this.flpKeywordList.Location = new System.Drawing.Point(3, 3);
             this.flpKeywordList.Name = "flpKeywordList";
-            this.flpKeywordList.Size = new System.Drawing.Size(243, 496);
+            this.flpKeywordList.Size = new System.Drawing.Size(280, 496);
             this.flpKeywordList.TabIndex = 0;
             this.flpKeywordList.WrapContents = false;
             // 
-            // UserKeywordPanelControl
+            // UserKeywordListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flpKeywordList);
-            this.Name = "UserKeywordPanelControl";
+            this.Name = "UserKeywordListControl";
             this.Size = new System.Drawing.Size(265, 514);
             this.ResumeLayout(false);
 

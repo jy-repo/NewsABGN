@@ -17,9 +17,10 @@ namespace NewsABGN.UI.User_Controls
         {
             InitializeComponent();
         }
+
         private void BtnSignIn_Click(object sender, EventArgs e)
         {
-                OnBtnSignInClick();
+            OnBtnSignInClick();
         }
 
         #region BtnSignInClick event things for C# 3.0

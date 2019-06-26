@@ -40,9 +40,9 @@
             // 
             this.lblTItle.BackColor = System.Drawing.Color.Transparent;
             this.lblTItle.Font = new System.Drawing.Font("Gulim", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblTItle.Location = new System.Drawing.Point(3, 13);
+            this.lblTItle.Location = new System.Drawing.Point(3, 5);
             this.lblTItle.Name = "lblTItle";
-            this.lblTItle.Size = new System.Drawing.Size(369, 23);
+            this.lblTItle.Size = new System.Drawing.Size(503, 23);
             this.lblTItle.TabIndex = 0;
             this.lblTItle.Text = "쌰싣";
             // 
@@ -64,15 +64,17 @@
             this.txbBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbBody.BackColor = System.Drawing.Color.Linen;
+            this.txbBody.BackColor = System.Drawing.Color.White;
             this.txbBody.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbBody.Location = new System.Drawing.Point(0, 0);
+            this.txbBody.Font = new System.Drawing.Font("Gulim", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txbBody.Location = new System.Drawing.Point(8, 8);
+            this.txbBody.Margin = new System.Windows.Forms.Padding(5);
             this.txbBody.Multiline = true;
             this.txbBody.Name = "txbBody";
             this.txbBody.ReadOnly = true;
             this.txbBody.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txbBody.ShortcutsEnabled = false;
-            this.txbBody.Size = new System.Drawing.Size(585, 376);
+            this.txbBody.Size = new System.Drawing.Size(576, 363);
             this.txbBody.TabIndex = 2;
             this.txbBody.TabStop = false;
             this.txbBody.Text = resources.GetString("txbBody.Text");
@@ -82,9 +84,11 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.txbBody);
             this.panel1.Location = new System.Drawing.Point(3, 58);
             this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(3);
             this.panel1.Size = new System.Drawing.Size(569, 379);
             this.panel1.TabIndex = 3;
             // 

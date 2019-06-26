@@ -38,20 +38,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpScrapPanel.AutoScroll = true;
             this.flpScrapPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpScrapPanel.Location = new System.Drawing.Point(3, 3);
+            this.flpScrapPanel.Location = new System.Drawing.Point(6, 3);
+            this.flpScrapPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpScrapPanel.Name = "flpScrapPanel";
-            this.flpScrapPanel.Size = new System.Drawing.Size(389, 744);
+            this.flpScrapPanel.Size = new System.Drawing.Size(350, 595);
             this.flpScrapPanel.TabIndex = 0;
             this.flpScrapPanel.WrapContents = false;
             // 
-            // ScrapPanelControl
+            // ScrapListControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flpScrapPanel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "ScrapPanelControl";
-            this.Size = new System.Drawing.Size(395, 750);
+            this.Name = "ScrapListControl";
+            this.Size = new System.Drawing.Size(334, 600);
             this.ResumeLayout(false);
 
         }

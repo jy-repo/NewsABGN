@@ -64,6 +64,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\ArticleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +98,10 @@
     </Compile>
     <Compile Include="User Controls\ArticleTitleBarControl.Designer.cs">
       <DependentUpon>ArticleTitleBarControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\KeywordSectionControl.cs" />
+    <Compile Include="User Controls\KeywordSectionControl.Designer.cs">
+      <DependentUpon>KeywordSectionControl.cs</DependentUpon>
     </Compile>
     <Compile Include="User Controls\RealTimeKeywordPanelControl.cs">
       <SubType>UserControl</SubType>
@@ -138,11 +145,9 @@
     <Compile Include="User Controls\SignInControl.Designer.cs">
       <DependentUpon>SignInControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Controls\SignInPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Controls\SignInPanel.Designer.cs">
-      <DependentUpon>SignInPanel.cs</DependentUpon>
+    <Compile Include="User Controls\SignInPanelControl.cs" />
+    <Compile Include="User Controls\SignInPanelControl.Designer.cs">
+      <DependentUpon>SignInPanelControl.cs</DependentUpon>
     </Compile>
     <Compile Include="User Controls\TitleBarControl.cs">
       <SubType>UserControl</SubType>
@@ -187,6 +192,9 @@
     <EmbeddedResource Include="User Controls\ArticleTitleBarControl.resx">
       <DependentUpon>ArticleTitleBarControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\KeywordSectionControl.resx">
+      <DependentUpon>KeywordSectionControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\RealTimeKeywordPanelControl.resx">
       <DependentUpon>RealTimeKeywordPanelControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,8 +216,8 @@
     <EmbeddedResource Include="User Controls\SignInControl.resx">
       <DependentUpon>SignInControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controls\SignInPanel.resx">
-      <DependentUpon>SignInPanel.cs</DependentUpon>
+    <EmbeddedResource Include="User Controls\SignInPanelControl.resx">
+      <DependentUpon>SignInPanelControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\TitleBarControl.resx">
       <DependentUpon>TitleBarControl.cs</DependentUpon>
@@ -276,6 +284,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\cat_exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\hqdefault.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
