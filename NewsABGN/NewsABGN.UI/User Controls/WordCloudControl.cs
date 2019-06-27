@@ -19,22 +19,16 @@ namespace NewsABGN.UI.User_Controls
 
         public void FillCloud(string words)
         {
-            var wordList = words.Trim().Substring(1, words.Length - 4).Replace("(", "").Split(')').ToList();
-            wordList.Reverse();
-            var cloud = "";
-            //for(int i=0; i < wordList.Count; i++)
-            //{
-            //    if (wordList[i] == "]")
-            //        continue;
-            //    if(wordList[i].ElementAt(0) == ',')
-            //    {
-            //        wordList[i] = wordList[i].Substring(1);
-            //    }
-            //    wordList[i] = wordList[i].Replace(",", " ");
-            //    cloud += wordList[i] + "\r\n";
-            //}
+            var wordListTmp = words.Trim().Substring(1, words.Length - 4).Replace("(", "").Replace("), ", "|").Replace(")", "").Split('|');
 
-            lblWords.Text = words.Trim().Substring(1, words.Length - 4).Replace("(", "").Replace("), ", "\r\n").Replace(")", "").Replace(",", "   ");
+            foreach (var word in wordListTmp.Reverse())
+            {
+                var NewWord = word.Replace(", ", "|").Split('|');
+                Label wordLabel = new Label();
+                wordLabel.Width = 200;
+                wordLabel.Text = $"{NewWord[0],-10} ---- {NewWord[1],5}";
+                flpWordCloudList.Controls.Add(wordLabel);
+            }
         }
     }
 }

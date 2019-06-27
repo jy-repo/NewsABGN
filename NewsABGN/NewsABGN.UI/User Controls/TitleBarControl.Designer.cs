@@ -52,7 +52,6 @@
             // 
             // btnSignIn
             // 
-            this.btnSignIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSignIn.BackColor = System.Drawing.Color.White;
             this.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignIn.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -70,7 +69,6 @@
             // 
             // lblSignInName
             // 
-            this.lblSignInName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSignInName.Font = new System.Drawing.Font("중간안상수체", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblSignInName.ForeColor = System.Drawing.Color.White;
             this.lblSignInName.Location = new System.Drawing.Point(861, 19);
@@ -83,7 +81,6 @@
             // 
             // lblSignInSuccess
             // 
-            this.lblSignInSuccess.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSignInSuccess.AutoSize = true;
             this.lblSignInSuccess.Font = new System.Drawing.Font("중간안상수체", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lblSignInSuccess.ForeColor = System.Drawing.Color.White;
@@ -97,7 +94,6 @@
             // picbExit
             // 
             this.picbExit.AccessibleName = "";
-            this.picbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picbExit.BackColor = System.Drawing.Color.Transparent;
             this.picbExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picbExit.Image = global::NewsABGN.UI.Properties.Resources.cat_exit1;

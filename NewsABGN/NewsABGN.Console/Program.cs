@@ -16,9 +16,17 @@ namespace NewsABGN.Console
 
         private static void Test()
         {
-            var title = LogicRepository.Controller.WordCloud.MakeWordCloud("백종원");
+            var words = LogicRepository.Controller.WordCloud.MakeWordCloud("일동제약");
 
-            System.Console.WriteLine(title[0]);
+            var wordListTmp = words.Trim().Substring(1, words.Length - 4).Replace("(", "").Replace("), ", "|").Replace(")", "").Split('|');
+
+            foreach (var word in wordListTmp.Reverse())
+            {
+                var NewWord = word.Replace(", ", "|").Split('|');
+
+                System.Console.WriteLine($"{NewWord[0],20}" + " ---- " + $"{NewWord[1],5}");
+                
+            }
         }
     }
 }
