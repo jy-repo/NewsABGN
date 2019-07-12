@@ -15,10 +15,10 @@
   - UI<C#-winform>: GUI 제작
   
 <프로젝트 환경>
- 하드웨어 자원
+   하드웨어 자원
   - 노트북 (삼성 NT371B5L)
   - Google Cloud Platform
- 소프트웨어 자원
+   소프트웨어 자원
   - Visual Studio
   - PyCharm
   - GitHub
