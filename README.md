@@ -14,10 +14,10 @@
   - Logic<Python>: 뉴스 기사 검색, 조회, 크롤링 역할 설계 및 분석
   - UI<C#-winform>: GUI 제작
   
-<프로젝트 환경>
+<프로젝트 환경>\
    하드웨어 자원
   - 노트북 (삼성 NT371B5L)
-  - Google Cloud Platform
+  - Google Cloud Platform\
    소프트웨어 자원
   - Visual Studio
   - PyCharm
